@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.huflDf {
+  display: none !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e2af6b;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ec8e50;
+}
+
+.service-card {
+  position: relative;
+}
+
+.service-card .ellipse {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(to bottom, #F17720, #FFAF76);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+  filter: blur(35px);
+}
+
+.service-card:hover .ellipse {
+  opacity: 1;
+}
+
+.value-card {
+  position: relative;
+}
+
+.value-ellipse {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to right, #007bff, #ff7f50);
+  filter: blur(35px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  transform: translateY(-35%);
+}
+
+.value-card:hover .value-ellipse {
+  opacity: 1;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  will-change: transform;
+}
+
+.circle-blue {
+  background-color: #00CCCC;
+  filter: blur(80px);
+}
+
+.circle-orange {
+  background-color: #FF3805;
+  filter: blur(80px);
+}
+
+.circle-purple {
+  background-color: #6800F8;
+  filter: blur(80px);
+}
