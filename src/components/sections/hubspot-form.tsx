@@ -1,5 +1,6 @@
 import { IHubSpotForm } from "@/types";
 import React from "react";
+import HubSpotFormEmbed from "../elements/hubSpotForm";
 
 const HubSpotForm: React.FC<IHubSpotForm> = ({ heading, subHeading }) => {
   return (
@@ -13,13 +14,7 @@ const HubSpotForm: React.FC<IHubSpotForm> = ({ heading, subHeading }) => {
             {subHeading || ""}
           </p>
         </div>
-        <iframe
-          id="booking"
-          height={700}
-          width={350}
-          className="w-full mt-[48px]"
-          src="https://www.google.com"
-        ></iframe>
+        <HubSpotFormEmbed/>
       </div>
     </div>
   );
