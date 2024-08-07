@@ -25,6 +25,7 @@ const config: Config = {
         'brand-blue': '#00CCCC',
         'brand-black': '#141414',
         'brand-gray': '#7E7E7E',
+        'brand-border-gray': '#E6E6E6',
       },
       fontSize: {
         'h1': '56px',

@@ -55,6 +55,12 @@ export interface ITeamMember {
   socials: ISocial[];
 }
 
+export interface IWhyChooseUsCard {
+  icon: IImage;
+  heading: string;
+  description: string;
+}
+
 export interface IHero {
   tag?: string;
   heading: string;
@@ -108,4 +114,18 @@ export interface ITeamMembers {
   heading: string;
   subHeading: string;
   teamMembers: ITeamMember[];
+}
+
+export interface IWhyChooseUs {
+  heading: string;
+  description: string;
+  link: IButton;
+  image: IImage;
+  cards: IWhyChooseUsCard[];
+}
+
+export interface IOurProcess {
+  heading: string;
+  description: string;
+  cards: IWhyChooseUsCard[];
 }
