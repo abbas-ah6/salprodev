@@ -3,6 +3,7 @@ import { Raleway } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/sections/footer";
 import Header from "@/components/sections/header";
+import ScrollIndicator from "@/components/elements/ScrollIndicator";
 
 export const metadata: Metadata = {
   title: "AZ & Partners | Accounting & Taxation in Paramatta",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ScrollIndicator />
       </body>
     </html>
   );

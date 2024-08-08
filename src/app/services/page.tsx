@@ -230,42 +230,60 @@ const whyChooseUsData = {
 const ourProcessData = {
   heading: "Our Process",
   description:
-    "Explore our step-by-step approach to turning your ideas into reality with precision, creativity, and ongoing support.",
+    "Explore our comprehensive, step-by-step approach to transforming your ideas into reality. Our process is designed to ensure precision, creativity, and continuous support throughout the project lifecycle.",
   cards: [
     {
       heading: "Discovery & Planning",
       description:
-        "We begin by getting to know you and your goals. Through in-depth conversations and research, we uncover the core of your needs and craft a detailed plan that sets a clear direction for the project. This stage ensures that we’re all aligned on what success looks like.",
+        "We start by deeply understanding your vision and goals. This phase involves detailed conversations and research to uncover your needs and challenges. We develop a strategic plan that outlines project milestones, deliverables, and success criteria. This foundation ensures alignment and clarity for all stakeholders before moving forward.",
       icon: {
-        src: "/icons/trophy.svg",
+        src: "/icons/magnifying-glass.svg",
         alt: "Discovery & Planning",
       },
     },
     {
       heading: "Design & Prototyping",
       description:
-        "Our design team transforms ideas into tangible visuals. We create detailed wireframes and interactive prototypes to give you a clear picture of how your software will look and function. This stage is all about refining and validating the design to ensure it meets your expectations before development begins.",
+        "Our design team translates your ideas into visual concepts. We create detailed wireframes and interactive prototypes that illustrate how your product will look and function. This phase allows you to visualize the end result, refine the design, and make adjustments based on feedback. Our goal is to ensure the design meets your expectations and is ready for development.",
       icon: {
-        src: "/icons/trophy.svg",
+        src: "/icons/pencil.svg",
         alt: "Design & Prototyping",
       },
     },
     {
       heading: "Development & Quality Assurance",
       description:
-        "With the design finalized, our developers bring it to life using the latest technologies. We build your software with a focus on performance and user experience. Throughout development, our quality assurance team rigorously tests every feature to ensure the final product is robust, secure, and bug-free.",
+        "With the design approved, our developers begin the implementation process using cutting-edge technologies. We focus on creating a high-performance and user-friendly product. Our quality assurance team rigorously tests every feature to identify and resolve issues, ensuring the final product is reliable, secure, and free of bugs.",
       icon: {
-        src: "/icons/trophy.svg",
+        src: "/icons/code-brackets.svg",
         alt: "Development & Quality Assurance",
       },
     },
     {
       heading: "Launch & Ongoing Support",
       description:
-        "After a successful launch, we don’t just walk away. We’re here to support you with ongoing maintenance, updates, and troubleshooting. Our goal is to ensure your software continues to perform at its best and evolves with your needs.",
+        "Once development is complete, we launch your product with a thorough deployment strategy. Post-launch, our support team provides ongoing maintenance, updates, and troubleshooting to address any issues that arise. We are committed to ensuring your product continues to perform optimally and evolves according to your needs.",
       icon: {
-        src: "/icons/trophy.svg",
+        src: "/icons/rocket-md.svg",
         alt: "Launch & Ongoing Support",
+      },
+    },
+    {
+      heading: "Feedback & Iteration",
+      description:
+        "Following the launch, we actively seek your feedback and gather user insights to assess the product’s performance. This phase involves analyzing feedback, identifying areas for improvement, and implementing necessary updates. Iteration ensures that the product evolves based on real-world use and meets the changing needs of your users.",
+      icon: {
+        src: "/icons/feedback-form.svg",
+        alt: "Feedback & Iteration",
+      },
+    },
+    {
+      heading: "Optimization & Growth",
+      description:
+        "As your product matures, we focus on optimizing its performance and scaling it to support growth. This includes performance enhancements, feature expansions, and adapting to market trends. We work closely with you to ensure the product remains competitive and continues to deliver value as your business and technology landscape evolve.",
+      icon: {
+        src: "/icons/upward-arrow.svg",
+        alt: "Optimization & Growth",
       },
     },
   ],

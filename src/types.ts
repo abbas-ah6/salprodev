@@ -59,6 +59,7 @@ export interface IWhyChooseUsCard {
   icon: IImage;
   heading: string;
   description: string;
+  index?: number; 
 }
 
 export interface IHero {
@@ -128,4 +129,10 @@ export interface IOurProcess {
   heading: string;
   description: string;
   cards: IWhyChooseUsCard[];
+}
+
+export interface GradientTextProps {
+  children: React.ReactNode;
+  className?: string;
+  tag: keyof JSX.IntrinsicElements;
 }

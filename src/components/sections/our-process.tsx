@@ -1,17 +1,30 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import { IOurProcess, IWhyChooseUsCard } from "@/types";
-import Carousel from "react-multi-carousel";
+
+const backgroundColors = [
+  "bg-[#fff0eb40]", 
+  "bg-[#f0e6fe40]", 
+  "bg-[#ffe1d740]",
+  "bg-[#e1ccfe40]", 
+  "bg-[#ffd3c240]", 
+  "bg-[#d2b3fd40]",
+];
+
+const getColorForIndex = (index: number) => {
+  return backgroundColors[index % backgroundColors.length];
+};
 
 const OurProcesssCard: React.FC<IWhyChooseUsCard> = ({
   icon,
   heading,
   description,
+  index, // Add index as a prop to get a unique color
 }) => (
-  <div className="group relative flex flex-col p-[24px] border border-solid border-brand-border-gray lg:justify-start justify-center lg:items-start items-center lg:text-start text-center">
-    <div className="absolute right-0 w-0 group-hover:w-full duration-500 ease-in-out bottom-0 h-[2px] bg-gradient-to-l from-brand-purple to-white"></div>
+  <div
+    className={`group relative flex flex-col p-[24px] border border-solid border-brand-border-gray lg:justify-start justify-center lg:items-start items-center lg:text-start text-center transition-all duration-300 ease-in-out ${getColorForIndex(index)}`}
+  >
+    <div className="absolute right-[50%] w-0 group-hover:right-0 group-hover:w-full duration-500 ease-in-out bottom-0 h-[1px] bg-gradient-to-l from-brand-purple to-brand-orange"></div>
     <div>
       <Image
         loading="lazy"
@@ -22,33 +35,14 @@ const OurProcesssCard: React.FC<IWhyChooseUsCard> = ({
         className="w-full h-full max-w-[60px] max-h-[60px] object-contain object-center"
       />
     </div>
-    <h3 className="m-0 mt-[24px] text-h6 text-brand-purple leading-small w-full lg:max-w-[520px] max-w-full">
+    <h3 className="m-0 mt-[24px] text-lB text-brand-purple leading-small w-full lg:max-w-[520px] max-w-full">
       {heading || ""}
     </h3>
-    <p className="m-0 mt-[12px] text-b16 text-brand-gray leading-large text-ellipsis line-clamp-3 w-full lg:max-w-[520px] max-w-full">
+    <p className="m-0 mt-[12px] z-[1] text-b14 text-brand-gray leading-large text-justify w-full lg:max-w-[520px] max-w-full">
       {description || ""}
     </p>
   </div>
 );
-
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 3,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
 
 const OurProcess: React.FC<IOurProcess> = ({ heading, description, cards }) => {
   return (
@@ -62,21 +56,13 @@ const OurProcess: React.FC<IOurProcess> = ({ heading, description, cards }) => {
             {description || ""}
           </p>
         </div>
-        <div className="mt-[48px] w-full">
-          {cards && cards.length > 0 && (
-            <Carousel
-              responsive={responsive}
-              infinite
-              autoPlay
-              autoPlaySpeed={3000}
-              transitionDuration={500}
-            >
-              {cards?.map((card, index) => (
-                <OurProcesssCard key={index} {...card} />
-              ))}
-            </Carousel>
-          )}
-        </div>
+        {cards && cards.length > 0 && (
+          <div className="mt-[48px] w-full grid grid-cols-1 lg:grid-cols-3 gap-[32px]">
+            {cards.map((card, index) => (
+              <OurProcesssCard key={index} {...card} index={index} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

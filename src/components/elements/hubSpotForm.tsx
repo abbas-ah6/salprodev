@@ -19,5 +19,5 @@ export default function HubSpotFormEmbed() {
     });
   }, []);
 
-  return <div id="hubspotForm" className="hubspotForm"></div>;
+  return <div id="hubspotForm" className="hubspotForm mt-[48px]"></div>;
 }
