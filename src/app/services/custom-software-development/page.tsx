@@ -1,130 +1,75 @@
-import React, { Children } from "react";
+import React from "react";
 import { Metadata } from "next";
-import "../globals.css";
-import Hero from "@/components/sections/hero";
 import {
-  IAboutUs,
-  IBlogCarousel,
   IFaqs,
-  IHero,
   IHubSpotForm,
   IOurProcess,
-  IOurProjects,
-  IServicesGrid,
+  IServiceHero,
+  ITextWithImage,
   IWhyChooseUs,
 } from "@/types";
-import AboutUsBanner from "@/components/sections/about-us";
-import OurServicesGrid from "@/components/sections/our-services-grid";
-import OurProjects from "@/components/sections/our-projects";
-import OurBlogsCarousel from "@/components/sections/our-blogs-carousel";
 import Faqs from "@/components/sections/faqs";
 import CallToAction from "@/components/sections/call-to-action";
 import HubSpotForm from "@/components/sections/hubspot-form";
 import WhyChooseUs from "@/components/sections/why-choose-us";
 import OurProcess from "@/components/sections/our-process";
+import ServiceHero from "@/components/sections/service-hero";
+import TextWithImage from "@/components/sections/text-with-image";
 
 export const metadata: Metadata = {
-  title: "Exceptional Services Tailored to Your Needs",
+  title: "Custom Software Development | SalPro DEV",
   description:
-    "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
+    "At SalPro DEV, we specialize in delivering custom software development services that drive innovation and growth. Whether you're looking to streamline operations, enhance customer experiences, or create a unique digital product, our team of experts is here to turn your vision into reality with precision and efficiency.",
 };
 
 const heroData = {
-  tag: "POWERED BY AI",
-  heading: "Exceptional Services Tailored to Your Needs",
+  heading: "Custom Software Development",
   subHeading:
-    "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
+    "At SalPro DEV, we specialize in delivering custom software development services that drive innovation and growth. Whether you're looking to streamline operations, enhance customer experiences, or create a unique digital product, our team of experts is here to turn your vision into reality with precision and efficiency.",
   buttons: [
     {
       type: "primary",
-      children: "Explore Services",
+      children: "Contact Now!",
       loading: false,
     },
   ],
-} as IHero;
+  image: {
+    src: "/images/custom-software-development.png",
+    alt: "Custom Software Development Image",
+  },
+} as IServiceHero;
 
-const ourServiceData = {
-  heading: "Our Services",
+const textWithImageData = {
+  heading: "Why Choose Custom Software Development?",
   description:
-    "Check out our extensive list of services, each one designed to fulfill your particular company's requirements and promote your success.",
+    "In a rapidly evolving digital landscape, off-the-shelf solutions often fall short of addressing specific business needs. Custom software development offers a tailored approach, providing solutions that are built to match your unique requirements, ensuring scalability, efficiency, and a competitive edge.",
+  image: {
+    src: "/images/why-custom-software.png",
+    alt: "Why Custom Software Development Image",
+  },
   link: {
-    type: "primary",
     children: "Contact Us",
     loading: false,
+    type: "primary",
   },
-  services: [
+  bulletPoints: [
     {
-      name: "Custom Software Development",
-      serviceImage: {
-        src: "/images/custom-software-development.png",
-        alt: "Custom Software Development",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Tailored software solutions to streamline your business processes and enhance efficiency. From web applications to enterprise systems, we build software that fits your needs.",
+      text: "Tailored Solutions: Software designed to fit your exact business processes and goals.",
     },
     {
-      name: "Digital Marketing",
-      serviceImage: {
-        src: "/images/digital-marketing.png",
-        alt: "Digital Marketing",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Innovative marketing strategies to boost your online presence. We offer SEO, social media marketing, and PPC campaigns to connect you with your target audience.",
+      text: "Scalability: Easily adapt and scale the software as your business grows.",
     },
     {
-      name: "UI/UX Designt",
-      serviceImage: {
-        src: "/images/ui-ux-design.png",
-        alt: "UI/UX Design",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Crafting user-friendly and visually appealing interfaces. Our design team ensures an intuitive user experience that enhances engagement and satisfaction.",
+      text: "Enhanced Security: Custom-built solutions offer robust security features specific to your needs.",
     },
     {
-      name: "Mobile App Development",
-      serviceImage: {
-        src: "/images/mobile-app-development.png",
-        alt: "Mobile App Development",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
+      text: "Integration: Seamlessly integrate with existing systems and platforms.",
     },
     {
-      name: "E-commerce Solutions",
-      serviceImage: {
-        src: "/images/e-commerce-solutions.png",
-        alt: "E-commerce Solutions",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Comprehensive e-commerce solutions, including website development, payment gateway integration, and inventory management. We help you build a thriving online store.",
-    },
-    {
-      name: "Deployment Services",
-      serviceImage: {
-        src: "/images/deployment-services.png",
-        alt: "Deployment Services",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
-    },
-    {
-      name: "CMS Development",
-      serviceImage: {
-        src: "/images/cms-development.png",
-        alt: "CMS Development",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Expert guidance on technology strategy and implementation. Our consulting services help you navigate the complexities of IT and leverage technology to achieve your business goals.",
+      text: "Competitive Advantage: Gain a unique edge with software designed to stand out.",
     },
   ],
-} as IServicesGrid;
+} as ITextWithImage;
 
 const faqsData = {
   heading: "Got Questions?",
@@ -228,6 +173,75 @@ const whyChooseUsData = {
   imageAlignment: "left",
 } as IWhyChooseUs;
 
+const customSoftwareServicesData = {
+  heading: "Our Custom Software Development Services",
+  description:
+    "Explore our range of custom software development services designed to meet diverse business needs.",
+  link: {
+    children: "About Us",
+    loading: false,
+    type: "primary",
+  },
+  image: {
+    src: "/images/checklist-image.png",
+    alt: "Whu Choose Us Image",
+  },
+  cards: [
+    {
+      heading: "Enterprise Software Solutions",
+      description:
+        "Large-scale, complex software tailored for enterprise-level operations.",
+      icon: {
+        src: "/icons/server.svg",
+        alt: "Enterprise Software Solutions",
+      },
+    },
+    {
+      heading: "Mobile App Development",
+      description: "Custom mobile applications for iOS and Android platforms.",
+      icon: {
+        src: "/icons/smartphone.svg",
+        alt: "Mobile App Development",
+      },
+    },
+    {
+      heading: "Web Application Development",
+      description: "Interactive and user-friendly web applications.",
+      icon: {
+        src: "/icons/monitor.svg",
+        alt: "Web Application Development",
+      },
+    },
+    {
+      heading: "CRM and ERP Systems",
+      description:
+        "Tailored solutions for managing customer relationships and enterprise resources.",
+      icon: {
+        src: "/icons/database.svg",
+        alt: "CRM and ERP Systems",
+      },
+    },
+    {
+      heading: "Software Integration Services",
+      description: "Seamless integration with existing systems and platforms.",
+      icon: {
+        src: "/icons/workflow.svg",
+        alt: "Software Integration Services",
+      },
+    },
+    {
+      heading: "Custom APIs and Middleware",
+      description:
+        "Develop APIs and middleware solutions to enhance connectivity and functionality.",
+      icon: {
+        src: "/icons/link.svg",
+        alt: "CRM and ERP Systems",
+      },
+    },
+  ],
+  imageAlignment: "right",
+} as IWhyChooseUs;
+
 const ourProcessData = {
   heading: "Our Process",
   description:
@@ -290,13 +304,14 @@ const ourProcessData = {
   ],
 } as IOurProcess;
 
-const Services: React.FC = () => {
+const Page: React.FC = () => {
   return (
     <div>
-      <Hero {...heroData} />
-      <OurServicesGrid {...ourServiceData} />
-      <WhyChooseUs {...whyChooseUsData} />
+      <ServiceHero {...heroData} />
+      <TextWithImage {...textWithImageData} />
       <OurProcess {...ourProcessData} />
+      <WhyChooseUs {...customSoftwareServicesData} />
+      <WhyChooseUs {...whyChooseUsData} />
       <Faqs {...faqsData} />
       <HubSpotForm {...hubSpotFormData} />
       <CallToAction />
@@ -304,4 +319,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default Page;

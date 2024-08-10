@@ -59,7 +59,11 @@ export interface IWhyChooseUsCard {
   icon: IImage;
   heading: string;
   description: string;
-  index?: number; 
+  index?: number;
+}
+
+export interface IBulletPoint {
+  text: string;
 }
 
 export interface IHero {
@@ -123,6 +127,7 @@ export interface IWhyChooseUs {
   link: IButton;
   image: IImage;
   cards: IWhyChooseUsCard[];
+  imageAlignment: "left" | "right";
 }
 
 export interface IOurProcess {
@@ -135,4 +140,27 @@ export interface GradientTextProps {
   children: React.ReactNode;
   className?: string;
   tag: keyof JSX.IntrinsicElements;
+}
+
+export interface IServiceHero {
+  tag: string;
+  heading: string;
+  subHeading: string;
+  buttons: IButton[];
+  image: IImage;
+}
+
+export interface ITextWithImage {
+  heading: string;
+  description: string;
+  image: IImage;
+  bulletPoints?: IBulletPoint[];
+  link: IButton;
+}
+
+export interface IBlogHero {
+  heading: string;
+  authorImage?: IImage;
+  authorName?: string;
+  image?: IImage;
 }

@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/sections/footer";
 import Header from "@/components/sections/header";
 import ScrollIndicator from "@/components/elements/ScrollIndicator";
+import Breadcrumbs from "@/components/sections/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "AZ & Partners | Accounting & Taxation in Paramatta",

@@ -15,12 +15,12 @@ const Header: React.FC = () => {
 
   const linkClass = (path: string) =>
     `hover:text-brand-orange p-[12px] duration-300 flex justify-center items-center flex-col ${
-      pathname === path ? 'border-b border-brand-orange text-brand-orange' : ''
+      pathname === path ? "border-b border-brand-orange text-brand-orange" : ""
     }`;
 
   return (
     <div className="flex justify-between w-full">
-      <header className="flex container mx-auto gap-5 px-8 py-5 max-w-full justify-between items-center border-b border-solid border-b-[#00000015] border-b-opacity-10">
+      <header className="flex container mx-auto gap-5 px-8 py-5 justify-between items-center border-b border-solid border-b-[#00000015] border-b-opacity-10">
         <Link href={"/home"}>
           <Image
             width={124}
@@ -33,20 +33,14 @@ const Header: React.FC = () => {
         </Link>
         {!isLandingPage && !isContact ? (
           <nav className="lg:flex hidden gap-14 max-md:flex-wrap max-md:max-w-full">
-            <ul className="flex gap-6 whitespace-nowrap leading-small text-brand-black">
+            <ul className="flex list-none gap-6 whitespace-nowrap leading-small text-brand-black">
               <li>
-                <Link
-                  className={linkClass('/home')}
-                  href="/home"
-                >
+                <Link className={linkClass("/home")} href="/home">
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  className={linkClass('/about-us')}
-                  href="/about-us"
-                >
+                <Link className={linkClass("/about-us")} href="/about-us">
                   Company
                 </Link>
               </li>
@@ -59,10 +53,7 @@ const Header: React.FC = () => {
                 </Link>
               </li> */}
               <li>
-                <Link
-                  className={linkClass('/contact-us')}
-                  href="/contact-us"
-                >
+                <Link className={linkClass("/contact-us")} href="/contact-us">
                   Contact
                 </Link>
               </li>

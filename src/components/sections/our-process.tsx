@@ -46,7 +46,7 @@ const OurProcesssCard: React.FC<IWhyChooseUsCard> = ({
 
 const OurProcess: React.FC<IOurProcess> = ({ heading, description, cards }) => {
   return (
-    <section className="flex flex-col w-full bg-white">
+    <section className="flex flex-col w-full bg-brand-offwhite">
       <div className="flex flex-col px-[30px] py-[60px] w-full container mx-auto">
         <div className="flex flex-col max-w-[725px] w-full lg:justify-start justify-center text-center lg:text-start items-center lg:items-start">
           <h3 className="mt-4 text-h3 leading-small text-center lg:text-start text-brand-purple">

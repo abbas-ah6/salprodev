@@ -36,6 +36,7 @@ const WhyChooseUs: React.FC<IWhyChooseUs> = ({
   link,
   image,
   cards,
+  imageAlignment = "left", // Default alignment to 'left'
 }) => {
   return (
     <section className="flex flex-col w-full bg-white">
@@ -55,7 +56,13 @@ const WhyChooseUs: React.FC<IWhyChooseUs> = ({
             />
           </Link>
         </div>
-        <div className="flex lg:flex-row flex-col w-full gap-[60px] mt-[48px] justify-start lg:justify-center lg:items-start items-center">
+        <div
+          className={`flex w-full lg:items-end items-center gap-[60px] mt-[48px] ${
+            imageAlignment === "right"
+              ? "lg:flex-row-reverse flex-col"
+              : "lg:flex-row flex-col"
+          }`}
+        >
           <div className="w-full h-full max-w-[420px] max-h-[420px]">
             <Image
               className="w-full h-full max-w-[420px] max-h-[420px] object-contain object-center"
@@ -66,7 +73,7 @@ const WhyChooseUs: React.FC<IWhyChooseUs> = ({
             />
           </div>
           {cards && cards.length > 0 && (
-            <div className="w-full grid lg:grid-cols-2 gird-cols-1 justify-center gap-[24px]">
+            <div className="w-full grid lg:grid-cols-2 grid-cols-1 justify-center gap-[24px]">
               {cards?.map((card, index) => (
                 <WhuChooseUsCard key={index} {...card} />
               ))}
