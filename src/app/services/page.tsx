@@ -51,6 +51,7 @@ const ourServiceData = {
     type: "primary",
     children: "Contact Us",
     loading: false,
+    url: 'contact-us'
   },
   services: [
     {
@@ -59,7 +60,7 @@ const ourServiceData = {
         src: "/images/custom-software-development.png",
         alt: "Custom Software Development",
       },
-      serviceUrl: "#",
+      serviceUrl: "services/custom-software-development",
       shortDescription:
         "Tailored software solutions to streamline your business processes and enhance efficiency. From web applications to enterprise systems, we build software that fits your needs.",
     },
@@ -182,6 +183,7 @@ const whyChooseUsData = {
     children: "About Us",
     loading: false,
     type: "primary",
+    url: "about-us"
   },
   image: {
     src: "/images/why-choose-us-image.png",

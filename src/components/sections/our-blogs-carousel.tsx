@@ -7,6 +7,7 @@ import Button from "../elements/button";
 import { IBlog, IBlogCarousel } from "@/types";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import CustomLink from "../elements/CustomLink";
 
 const OurBlogCard: React.FC<IBlog> = ({
   name,
@@ -91,13 +92,14 @@ const OurBlogsCarousel: React.FC<IBlogCarousel> = ({
           <p className="text-b18 text-brand-gray leading-medium mt-[24px]">
             {description || ""}
           </p>
-          <Link className="mt-[24px] w-fit" href={"#"}>
-            <Button
+          <div className="mt-[24px] w-fit">
+            <CustomLink
               type={link?.type}
               loading={false}
               children={link?.children || ""}
+              url={link?.url}
             />
-          </Link>
+          </div>
         </div>
         <div className="mt-[48px] w-full">
           {loading ? (

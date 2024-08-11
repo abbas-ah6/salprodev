@@ -10,6 +10,14 @@ export interface IImage {
   alt: string;
 }
 
+export interface ILink {
+  children: React.ReactNode;
+  url?: string;
+  type?: "primary" | "secondary";
+  loading?: boolean;
+  newTab?: boolean;
+}
+
 export interface IProject {
   image: IImage;
   name: string;
@@ -20,7 +28,7 @@ export interface IProject {
 export interface IOurProjects {
   heading: string;
   description: string;
-  link: IButton;
+  link: ILink;
   projects: IProject[];
 }
 
@@ -71,12 +79,13 @@ export interface IHero {
   heading: string;
   subHeading: string;
   buttons: IButton[];
+  links: ILink[];
 }
 
 export interface IAboutUs {
   heading: string;
   description: string;
-  link: IButton;
+  link: ILink;
   showBanner: boolean;
   image?: IImage;
 }
@@ -84,14 +93,14 @@ export interface IAboutUs {
 export interface IServicesGrid {
   heading: string;
   description: string;
-  link: IButton;
+  link: ILink;
   services: IService[];
 }
 
 export interface IBlogCarousel {
   heading: string;
   description: string;
-  link: IButton;
+  link: ILink;
   blogs: IBlog[];
 }
 
@@ -124,7 +133,7 @@ export interface ITeamMembers {
 export interface IWhyChooseUs {
   heading: string;
   description: string;
-  link: IButton;
+  link: ILink;
   image: IImage;
   cards: IWhyChooseUsCard[];
   imageAlignment: "left" | "right";
@@ -147,6 +156,7 @@ export interface IServiceHero {
   heading: string;
   subHeading: string;
   buttons: IButton[];
+  links: ILink[];
   image: IImage;
 }
 
@@ -155,7 +165,7 @@ export interface ITextWithImage {
   description: string;
   image: IImage;
   bulletPoints?: IBulletPoint[];
-  link: IButton;
+  link: ILink;
 }
 
 export interface IBlogHero {

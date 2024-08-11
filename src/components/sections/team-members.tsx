@@ -98,6 +98,7 @@ const TeamMemebers: React.FC<ITeamMembers> = ({
                             className="hover:translate-y-[-4px] duration-300 ease-in-out"
                             target="_blank"
                             href={item?.socialUrl || "#"}
+                            key={index}
                           >
                             <Image
                               className="w-full h-full max-w-[24px] max-h-[24px] object-contain object-center"

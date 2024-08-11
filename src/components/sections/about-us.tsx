@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { IAboutUs } from "@/types";
-import Button from "../elements/button";
-import Link from "next/link";
+import CustomLink from "../elements/CustomLink";
 
 const AboutUsBanner: React.FC<IAboutUs> = ({
   heading,
@@ -21,9 +20,7 @@ const AboutUsBanner: React.FC<IAboutUs> = ({
           <p className="mt-[16px] text-b18 font-normal leading-medium text-center text-brand-gray">
             {description || ""}
           </p>
-          <Link className="mt-[16px]" href={"#"}>
-            <Button children={link?.children} loading={false} type="primary" />
-          </Link>
+          <CustomLink children={link?.children} loading={false} type="primary" url={link?.url} />
         </div>
         {showBanner && (
           <div className="mt-[48px] flex w-full justify-center items-center">

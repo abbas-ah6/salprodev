@@ -47,6 +47,7 @@ const aboutUsBannerData = {
     children: "Contact Us",
     loading: false,
     type: "primary",
+    url: "contact-us",
   },
   showBanner: true,
   image: {

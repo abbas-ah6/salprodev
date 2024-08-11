@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IService, IServicesGrid } from "@/types";
 import Button from "../elements/button";
+import CustomLink from "../elements/CustomLink";
 
 const ServiceCard: React.FC<IService> = ({
   name,
@@ -52,13 +53,14 @@ const OurServicesGrid: React.FC<IServicesGrid> = ({
           <p className="text-b18 text-brand-gray leading-medium mt-[24px]">
             {description || ""}
           </p>
-          <Link className="mt-[24px] w-fit" href={"#"}>
-            <Button
+          <div className="mt-[24px] w-fit" href={"#"}>
+            <CustomLink
               type={link?.type}
               loading={false}
               children={link?.children || ""}
+              url={link?.url}
             />
-          </Link>
+          </div>
         </div>
         {services && services.length > 0 && (
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-[32px] mt-[48px] w-full">

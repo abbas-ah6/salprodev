@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IOurProjects, IProject } from "@/types";
 import Button from "../elements/button";
+import CustomLink from "../elements/CustomLink";
 
 const ProjectCard: React.FC<{
   project: IProject;
@@ -51,13 +52,14 @@ const OurProjects: React.FC<IOurProjects> = ({
           <p className="text-b18 text-brand-gray leading-medium mt-[24px]">
             {description || ""}
           </p>
-          <Link className="mt-[24px] w-fit" href={"#"}>
-            <Button
+          <div className="mt-[24px] w-fit" href={"#"}>
+            <CustomLink
               type={link?.type}
               loading={false}
               children={link?.children || ""}
+              url={link?.url}
             />
-          </Link>
+          </div>
         </div>
         <div className="relative mt-[48px] flex flex-col-reverse lg:flex-row w-full gap-[42px]">
           <div className="flex-1 flex flex-col relative">

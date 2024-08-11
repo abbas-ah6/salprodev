@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Button from "../elements/button";
 import MobileHeader from "./MobileHeader";
+import CustomLink from "../elements/CustomLink";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
@@ -65,9 +65,9 @@ const Header: React.FC = () => {
               className="lg:flex hidden"
               href={isContact ? "#booking" : "/book-consultation"}
             >
-              <Button type="primary" loading={false}>
+              <CustomLink type="primary" loading={false} url="contact-us">
                 Book Consultation
-              </Button>
+              </CustomLink>
             </Link>
             <Link
               className="flex lg:hidden hover:-translate-y-2 duration-300 ease-in-out"

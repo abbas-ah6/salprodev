@@ -30,16 +30,20 @@ const heroData = {
   heading: "Building community standard projects and solutions!",
   subHeading:
     "Delivering High-Quality Tech Solutions That Drive Community Growth and Engagement",
-  buttons: [
+  links: [
     {
       type: "primary",
       children: "Book Consultation",
       loading: false,
+      newTab: false,
+      url: 'contact-us'
     },
     {
       type: "secondary",
       children: "About Us",
       loading: false,
+      newTab: false,
+      url: 'about-us'
     },
   ],
 } as IHero;
@@ -51,6 +55,7 @@ const AboutBannerData = {
   link: {
     type: "primary",
     children: "About Us",
+    url: "about-us"
   },
   showBanner: false,
 } as IAboutUs;
@@ -63,6 +68,7 @@ const OurServiceData = {
     type: "primary",
     children: "See All Services",
     loading: false,
+    url: "services"
   },
   services: [
     {
@@ -71,7 +77,7 @@ const OurServiceData = {
         src: "/images/custom-software-development.png",
         alt: "Custom Software Development",
       },
-      serviceUrl: "#",
+      serviceUrl: "services/custom-software-development",
       shortDescription:
         "Tailored software solutions to streamline your business processes and enhance efficiency. From web applications to enterprise systems, we build software that fits your needs.",
     },
@@ -146,6 +152,7 @@ const OurProjectsData = {
     children: "See All Projects",
     type: "primary",
     loading: false,
+    url: "projects"
   },
   projects: [
     {
@@ -219,6 +226,7 @@ const OurBlogsData = {
     children: "See All Blogs",
     type: "primary",
     loading: false,
+    url: "blogs"
   },
   blogs: [
     {
@@ -229,7 +237,7 @@ const OurBlogsData = {
       name: "Innovative E-commerce Platform",
       shortDescription:
         "We developed a cutting-edge e-commerce platform for a leading retail brand, integrating seamless shopping experiences with advanced analytics. Our solution",
-      blogUrl: "#",
+      blogUrl: "blogs/innovative-e-commerce-platform",
     },
     {
       blogImage: {

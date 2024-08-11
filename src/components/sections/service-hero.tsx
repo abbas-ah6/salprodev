@@ -3,9 +3,10 @@ import React from "react";
 import Button from "../elements/button";
 import { IServiceHero } from "@/types";
 import Image from "next/image";
+import CustomLink from "../elements/CustomLink";
 
 const ServiceHero: React.FC<IServiceHero> = ({
-  buttons,
+  links,
   heading,
   subHeading,
   tag,
@@ -27,15 +28,16 @@ const ServiceHero: React.FC<IServiceHero> = ({
             {subHeading || ""}
           </p>
           <div className="mt-[56px] flex flex-col lg:items-start items-center w-full justify-center lg:justify-start gap-[24px] lg:flex-row">
-            {buttons &&
-              buttons.length > 0 &&
-              buttons.map((item, index) => {
+            {links &&
+              links.length > 0 &&
+              links.map((item, index) => {
                 return (
                   <div key={index}>
-                    <Button
+                    <CustomLink
                       loading={item?.loading}
                       type={item?.type}
                       children={item?.children}
+                      url={item?.url}
                     />
                   </div>
                 );

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../elements/button";
 import { IBlog, IBlogCarousel } from "@/types";
+import CustomLink from "../elements/CustomLink";
 
 const OurBlogCard: React.FC<IBlog> = ({
   name,
@@ -70,13 +71,14 @@ const OurBlogsGrid: React.FC<IBlogCarousel> = ({
           <p className="text-b18 text-brand-gray leading-medium mt-[24px]">
             {description || ""}
           </p>
-          <Link className="mt-[24px] w-fit" href={"#"}>
-            <Button
+          <div className="mt-[24px] w-fit" href={"#"}>
+            <CustomLink
               type={link?.type}
               loading={false}
               children={link?.children || ""}
+              url={link?.url}
             />
-          </Link>
+          </div>
         </div>
         <div className="mt-[48px] w-full">
           {loading ? (

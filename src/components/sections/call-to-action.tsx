@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../elements/button";
+import CustomLink from "../elements/CustomLink";
 
 const CallToAction: React.FC = () => {
   return (
@@ -12,10 +13,12 @@ const CallToAction: React.FC = () => {
         </div>
         <div className="flex flex-1 justify-center items-center">
           <div>
-            <Button
+            <CustomLink
               children="Book Consultation"
               loading={false}
               type="primary"
+              url="contact-us"
+            
             />
           </div>
         </div>

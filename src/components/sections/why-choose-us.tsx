@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../elements/button";
 import { IWhyChooseUs, IWhyChooseUsCard } from "@/types";
+import CustomLink from "../elements/CustomLink";
 
 const WhuChooseUsCard: React.FC<IWhyChooseUsCard> = ({
   icon,
@@ -48,13 +49,14 @@ const WhyChooseUs: React.FC<IWhyChooseUs> = ({
           <p className="text-b18 text-brand-gray leading-medium mt-[24px]">
             {description || ""}
           </p>
-          <Link className="mt-[24px] w-fit" href={"#"}>
-            <Button
+          <div className="mt-[24px] w-fit" href={"#"}>
+            <CustomLink
               type={link?.type}
               loading={false}
               children={link?.children || ""}
+              url={link.url}
             />
-          </Link>
+          </div>
         </div>
         <div
           className={`flex w-full lg:items-end items-center gap-[60px] mt-[48px] ${

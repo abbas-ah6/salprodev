@@ -26,11 +26,12 @@ const heroData = {
   heading: "Custom Software Development",
   subHeading:
     "At SalPro DEV, we specialize in delivering custom software development services that drive innovation and growth. Whether you're looking to streamline operations, enhance customer experiences, or create a unique digital product, our team of experts is here to turn your vision into reality with precision and efficiency.",
-  buttons: [
+  links: [
     {
       type: "primary",
       children: "Contact Now!",
       loading: false,
+      url: "/contact-us"
     },
   ],
   image: {
@@ -51,6 +52,7 @@ const textWithImageData = {
     children: "Contact Us",
     loading: false,
     type: "primary",
+    url: "/contact-us"
   },
   bulletPoints: [
     {
@@ -127,6 +129,7 @@ const whyChooseUsData = {
     children: "About Us",
     loading: false,
     type: "primary",
+    url: "/about-us"
   },
   image: {
     src: "/images/why-choose-us-image.png",
@@ -181,6 +184,7 @@ const customSoftwareServicesData = {
     children: "About Us",
     loading: false,
     type: "primary",
+    url: "/about-us"
   },
   image: {
     src: "/images/checklist-image.png",

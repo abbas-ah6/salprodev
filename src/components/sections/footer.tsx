@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                         Home
                       </a>
                       <a
-                        href="/about"
+                        href="/about-us"
                         className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
                         About
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                         Team
                       </a>
                       <a
-                        href="/contact"
+                        href="/contact-us"
                         className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
                         Contact

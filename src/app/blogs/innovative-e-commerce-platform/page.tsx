@@ -35,6 +35,7 @@ const ourBlogsData = {
     children: "See All Blogs",
     type: "primary",
     loading: false,
+    url: '/blogs'
   },
   blogs: [
     {

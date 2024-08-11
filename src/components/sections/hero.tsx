@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 import { IHero } from "@/types";
 import Button from "../elements/button";
 import { gsap } from "gsap";
+import CustomLink from "../elements/CustomLink";
 
-const Hero: React.FC<IHero> = ({ buttons, heading, subHeading, tag }) => {
+const Hero: React.FC<IHero> = ({ links, heading, subHeading, tag }) => {
   const [mousePosition, setMousePosition] = useState<{
     x: number;
     y: number;
@@ -136,15 +137,18 @@ const Hero: React.FC<IHero> = ({ buttons, heading, subHeading, tag }) => {
           </p>
         </div>
         <div className="z-10 mt-[56px] flex flex-col items-center w-full justify-center gap-14 lg:flex-row">
-          {buttons &&
-            buttons.length > 0 &&
-            buttons.map((item, index) => {
+          {links &&
+            links.length > 0 &&
+            links.map((item, index) => {
               return (
                 <div key={index}>
-                  <Button
+                  <CustomLink
+                    children={item?.children}
                     loading={item?.loading}
                     type={item?.type}
-                    children={item?.children}
+                    newTab={item?.newTab}
+                    key={index}
+                    url={item?.url}
                   />
                 </div>
               );

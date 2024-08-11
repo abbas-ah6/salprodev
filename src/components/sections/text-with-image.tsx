@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../elements/button";
 import { ITextWithImage } from "@/types";
+import CustomLink from "../elements/CustomLink";
 
 const TextWithImage: React.FC<ITextWithImage> = ({
   heading,
@@ -39,13 +40,14 @@ const TextWithImage: React.FC<ITextWithImage> = ({
                 ))}
               </ul>
             )}
-            <Link className="mt-[24px] w-fit" href={"#"}>
-              <Button
+            <div className="mt-[24px] w-fit" href={"#"}>
+              <CustomLink
                 type={link?.type}
                 loading={false}
                 children={link?.children || ""}
+                url={link?.url}
               />
-            </Link>
+            </div>
           </div>
         </div>
       </div>
