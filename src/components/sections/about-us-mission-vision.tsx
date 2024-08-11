@@ -11,7 +11,7 @@ const AboutUsMissionVision: React.FC<IAboutUsMissionVision> = ({
 }) => {
   return (
     <section className="flex flex-col bg-white w-full">
-      <div className="container mx-auto px-[30px] py-[60px] grid lg:grid-cols-3 grid-cols-1 gap-[24px]">
+      <div className="container mx-auto lg:px-[30px] lg:py-[60px] py-[36px] px-[24px] grid lg:grid-cols-3 grid-cols-1 gap-[24px]">
         <div className="flex flex-col gap-[16px] lg:justify-start lg:text-left justify-center text-center">
           <h6 className="text-h6 text-brand-purple leading-small">
             {missionHeading || ""}

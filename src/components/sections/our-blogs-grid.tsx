@@ -63,9 +63,9 @@ const OurBlogsGrid: React.FC<IBlogCarousel> = ({
 
   return (
     <section className="flex flex-col w-full bg-white">
-      <div className="flex flex-col px-[30px] py-[60px] w-full container mx-auto">
+      <div className="flex flex-col lg:px-[30px] lg:py-[60px] py-[36px] px-[24px] w-full container mx-auto">
         <div className="flex flex-col max-w-[725px] w-full items-center lg:items-start lg:justify-start justify-center lg:text-start text-center">
-          <h3 className="mt-4 text-h3 leading-small text-center lg:text-start text-brand-purple">
+          <h3 className="mt-4 lg:text-h3 text-h3M leading-small text-center lg:text-start text-brand-purple">
             {heading || ""}
           </h3>
           <p className="text-b18 text-brand-gray leading-medium mt-[24px]">

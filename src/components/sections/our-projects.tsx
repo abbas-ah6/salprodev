@@ -44,9 +44,9 @@ const OurProjects: React.FC<IOurProjects> = ({
 
   return (
     <section className="flex flex-col w-full bg-white">
-      <div className="flex flex-col px-[30px] py-[60px] w-full container mx-auto">
+      <div className="flex flex-col lg:px-[30px] lg:py-[60px] py-[36px] px-[24px] w-full container mx-auto">
         <div className="flex flex-col max-w-[725px] w-full justify-start lgjustify-center lg:items-start text-center lg:text-start items-center">
-          <h3 className="mt-4 text-h3 leading-small text-center lg:text-start text-brand-purple">
+          <h3 className="mt-4 lg:text-h3 text-h3M leading-small text-center lg:text-start text-brand-purple">
             {heading || ""}
           </h3>
           <p className="text-b18 text-brand-gray leading-medium mt-[24px]">

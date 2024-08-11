@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
     <>
       {!isLandingPage && !isContact && (
         <section className="flex flex-col w-full bg-brand-orange-alt">
-          <div className="flex flex-col container mx-auto px-[30px] py-[60px]">
+          <div className="flex flex-col container mx-auto lg:px-[30px] lg:py-[60px] py-[36px] px-[24px]">
             <div className="flex flex-col lg:flex-row gap-5 justify-between mt-4 w-full max-md:flex-wrap max-md:max-w-full">
               <div className="flex flex-col justify-center lg:justify-center lg:items-start items-center">
                 <Link href={"/"}>
@@ -166,7 +166,7 @@ const Footer: React.FC = () => {
               <p className="text-b12 text-white leading-small">
                 © 2024 SalPro DEV. All rights reserved.
               </p>
-              <div className="flex gap-5 px-1.5 mt-4 max-md:pr-5">
+              <div className="flex gap-5 px-1.5 mt-4 max-md:pr-5 w-full justify-center flex-wrap">
                 <Link
                   target="_blank"
                   href={"https://www.facebook.com"}
