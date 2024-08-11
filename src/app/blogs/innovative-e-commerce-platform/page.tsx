@@ -1,12 +1,20 @@
 import React from "react";
 import { Metadata } from "next";
 import Hero from "@/components/sections/hero";
-import { IBlogCarousel, IBlogHero, IFaqs, IHero, IHubSpotForm } from "@/types";
+import {
+  IBlogCarousel,
+  IBlogDetails,
+  IBlogHero,
+  IFaqs,
+  IHero,
+  IHubSpotForm,
+} from "@/types";
 import Faqs from "@/components/sections/faqs";
 import CallToAction from "@/components/sections/call-to-action";
 import HubSpotForm from "@/components/sections/hubspot-form";
 import OurBlogsGrid from "@/components/sections/our-blogs-grid";
 import BlogHero from "@/components/sections/blog-hero";
+import BlogDetails from "@/components/sections/blog-details";
 
 export const metadata: Metadata = {
   title: "Latest Insights & Articles",
@@ -118,10 +126,49 @@ const hubSpotFormData = {
     "Get in touch with our team and get professional services from our experts.",
 } as IHubSpotForm;
 
+const blogContentData = {
+  blogContent: `
+    <h2>Revolutionizing Online Shopping: The Innovative E-Commerce Platform</h2>
+    <p>The <strong>e-commerce industry</strong> is undergoing a significant transformation, driven by the need for more <em>efficient</em>, <em>user-friendly</em>, and <strong>innovative solutions</strong>. Our new e-commerce platform is designed to meet these demands and elevate the online shopping experience.</p>
+    <br>
+    <h3>Features of the Innovative E-Commerce Platform</h3>
+    <p>Our platform introduces several <strong>cutting-edge features</strong> that set it apart from traditional e-commerce solutions. Here are some highlights:</p>
+    <ul>
+      <li><strong>AI-Powered Recommendations</strong> - Personalized shopping experiences based on user behavior and preferences.</li>
+      <li><strong>Seamless Integration</strong> - Easily integrates with existing systems and third-party applications.</li>
+      <li><strong>Enhanced Security</strong> - Advanced security measures to protect user data and transactions.</li>
+      <li><strong>Multi-Channel Support</strong> - Engage customers across various channels, including social media and mobile apps.</li>
+    </ul>
+    <br>
+    <h3>How It Works</h3>
+    <p>Our e-commerce platform utilizes <strong>state-of-the-art technology</strong> to provide a seamless experience from browsing to checkout. Here's a brief overview:</p>
+    <ol>
+      <li><strong>Intelligent Search</strong> - Users can quickly find products using advanced search algorithms.</li>
+      <li><strong>Customizable User Profiles</strong> - Allows users to tailor their shopping experience based on personal preferences.</li>
+      <li><strong>Real-Time Analytics</strong> - Track user behavior and sales performance in real time.</li>
+      <li><strong>Efficient Order Processing</strong> - Streamlined processes ensure quick and accurate order fulfillment.</li>
+    </ol>
+    <br>
+    <h2>Benefits of Adopting the Platform</h2>
+    <p>By choosing our innovative e-commerce platform, businesses can enjoy numerous benefits:</p>
+    <ul>
+      <li><strong>Increased Sales</strong> - Enhanced customer engagement and targeted marketing drive higher sales.</li>
+      <li><strong>Improved Customer Satisfaction</strong> - A user-friendly interface and personalized experience lead to happier customers.</li>
+      <li><strong>Scalability</strong> - The platform grows with your business, handling increasing traffic and transactions effortlessly.</li>
+    </ul>
+    <br>
+    <h3>Get Started Today</h3>
+    <p>Ready to revolutionize your online shopping experience? <a href="https://www.example.com/get-started" target="_blank" rel="noopener noreferrer">Sign up</a> for a free demo or <a href="https://www.example.com/contact" target="_blank" rel="noopener noreferrer">contact us</a> to learn more about how our platform can benefit your business.</p>
+
+    <p>For more information and updates, follow us on <a href="https://twitter.com/example" target="_blank" rel="noopener noreferrer">Twitter</a> and <a href="https://facebook.com/example" target="_blank" rel="noopener noreferrer">Facebook</a>.</p>
+  `,
+} as IBlogDetails;
+
 const Page: React.FC = () => {
   return (
     <div>
       <BlogHero {...heroData} />
+      <BlogDetails {...blogContentData} />
       <OurBlogsGrid {...ourBlogsData} />
       <Faqs {...faqsData} />
       <HubSpotForm {...hubSpotFormData} />

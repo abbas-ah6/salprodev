@@ -13,7 +13,7 @@ const TextWithImage: React.FC<ITextWithImage> = ({
 }) => {
   return (
     <section className="flex flex-col w-full bg-brand-offwhite">
-      <div className="flex flex-col px-[30px] py-[60px] w-full container mx-auto">
+      <div className="flex flex-col lg:px-[30px] lg:py-[60px] py-[36px] px-[24px] w-full container mx-auto">
         <div className="flex lg:flex-row flex-col w-full gap-[60px] mt-[48px] justify-start lg:justify-center lg:items-end items-center">
           <div className="w-full max-h-[full] max-w-[460px]">
             <Image
@@ -26,7 +26,7 @@ const TextWithImage: React.FC<ITextWithImage> = ({
             <div className="w-full h-[1px] bg-gradient-to-r from-brand-purple to-brand-orange"></div>
           </div>
           <div className="w-full flex flex-col gap-[16px]">
-            <h3 className="text-h3 leading-small text-center lg:text-start text-brand-purple">
+            <h3 className="lg:text-h3 text-h3M leading-small text-center lg:text-start text-brand-purple">
               {heading || ""}
             </h3>
             <p className="text-b18 text-brand-gray leading-medium">

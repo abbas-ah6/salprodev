@@ -121,14 +121,14 @@ const Hero: React.FC<IHero> = ({ buttons, heading, subHeading, tag }) => {
 
   return (
     <section className="relative w-full bg-white hero-container">
-      <div className="container mx-auto px-[30px] py-[60px] w-full flex justify-center items-center flex-col min-h-[580px]">
+      <div className="container mx-auto lg:px-[30px] lg:py-[60px] py-[36px] px-[24px] w-full flex justify-center items-center flex-col min-h-[580px]">
         <div className="z-10 w-full text-center max-w-[1024px]">
           {tag && (
             <span className="m-0 font-normal uppercase text-b18 text-brand-purple leading-small">
               {tag || ""}
             </span>
           )}
-          <h1 className="m-0 mt-[24px] text-h1 capitalize font-light leading-small text-brand-purple">
+          <h1 className="m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple">
             {heading || ""}
           </h1>
           <p className="m-0 mt-[24px] text-b18 capitalize font-normal leading-small text-brand-gray w-full">

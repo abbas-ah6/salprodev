@@ -137,28 +137,77 @@ ul {
   pointer-events: none;
 }
 
-
-/* masonry.css */
-.masonry-container {
-  column-count: 3; /* Number of columns for large screens */
-  column-gap: 20px; /* Gap between columns */
-  width: 100%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: linear-gradient(to right, #141414, #6800F8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.masonry-item {
-  display: inline-block;
-  margin-bottom: 20px; /* Gap between rows */
-  width: 100%; /* Full width of column */
+.prose h1 {
+  @apply lg:text-h1 text-h1M font-bold mb-4;
 }
 
-@media (max-width: 1100px) {
-  .masonry-container {
-    column-count: 2; /* Number of columns for medium screens */
-  }
+.prose h2 {
+  @apply lg:text-h2 text-h2M font-semibold mt-6 mb-4;
 }
 
-@media (max-width: 700px) {
-  .masonry-container {
-    column-count: 1; /* Number of columns for small screens */
-  }
+.prose h3 {
+  @apply lg:text-h3 text-h3M font-medium mt-5 mb-3;
+}
+
+.prose p {
+  @apply text-b16 leading-relaxed mb-4;
+}
+
+.prose strong {
+  @apply font-bold;
+}
+
+.prose em {
+  @apply italic;
+}
+
+.prose ul {
+  @apply list-disc pl-5 mb-4;
+}
+
+.prose ul li {
+  @apply mb-2;
+}
+
+.prose ol {
+  @apply list-decimal pl-5 mb-4;
+}
+
+.prose ol li {
+  @apply mb-2;
+}
+
+.prose a {
+  @apply text-brand-purple no-underline duration-300 ease-in-out;
+}
+
+.prose a:hover {
+  @apply text-brand-purple/70;
+}
+
+.prose blockquote {
+  @apply border-l-4 pl-4 italic text-brand-gray mb-4;
+}
+
+.prose blockquote p {
+  @apply mb-2;
+}
+
+.prose code {
+  @apply bg-gray-100 text-brand-black px-1 py-0.5 rounded;
+}
+
+.prose pre {
+  @apply bg-gray-100 p-4 rounded overflow-x-auto;
 }

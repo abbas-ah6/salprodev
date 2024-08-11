@@ -164,3 +164,7 @@ export interface IBlogHero {
   authorName?: string;
   image?: IImage;
 }
+
+export interface IBlogDetails {
+  blogContent: string;
+}

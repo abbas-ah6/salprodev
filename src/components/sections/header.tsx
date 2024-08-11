@@ -44,14 +44,16 @@ const Header: React.FC = () => {
                   Company
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  className={linkClass('/services')}
-                  href="/services"
-                >
+              <li>
+                <Link className={linkClass("/services")} href="/services">
                   Services
                 </Link>
-              </li> */}
+              </li>
+              <li>
+                <Link className={linkClass("/blogs")} href="/blogs">
+                  Blogs
+                </Link>
+              </li>
               <li>
                 <Link className={linkClass("/contact-us")} href="/contact-us">
                   Contact
