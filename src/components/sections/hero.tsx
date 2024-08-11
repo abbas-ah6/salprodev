@@ -1,123 +1,56 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { IHero } from "@/types";
-import Button from "../elements/button";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { IHero } from "@/types";
 import CustomLink from "../elements/CustomLink";
 
+
 const Hero: React.FC<IHero> = ({ links, heading, subHeading, tag }) => {
-  const [mousePosition, setMousePosition] = useState<{
-    x: number;
-    y: number;
-  } | null>(null);
-
-  // useEffect(() => {
-  //   const heroElement = document.querySelector(".hero-container");
-  //   if (!heroElement) return;
-
-  //   const heroRect = heroElement.getBoundingClientRect();
-  //   const circles = document.querySelectorAll(".circle");
-
-  //   // Function to update circle positions based on mouse proximity
-  //   const handleMouseMove = (event: MouseEvent) => {
-  //     const mouseX = event.clientX;
-  //     const mouseY = event.clientY;
-  //     setMousePosition({ x: mouseX, y: mouseY });
-
-  //     circles.forEach((circle: HTMLElement) => {
-  //       const circleRect = circle.getBoundingClientRect();
-  //       const dx = mouseX - (circleRect.left + circleRect.width / 2);
-  //       const dy = mouseY - (circleRect.top + circleRect.height / 2);
-  //       const distance = Math.sqrt(dx * dx + dy * dy);
-
-  //       // Define a threshold for the distance at which circles should move away
-  //       const threshold = 150;
-
-  //       if (distance < threshold) {
-  //         const angle = Math.atan2(dy, dx);
-  //         const offsetDistance = (threshold - distance) * 0.5; // Adjust this factor for subtle movement
-  //         const offsetX = Math.cos(angle) * offsetDistance;
-  //         const offsetY = Math.sin(angle) * offsetDistance;
-
-  //         gsap.to(circle, {
-  //           x: `+=${Math.max(
-  //             0,
-  //             Math.min(
-  //               heroRect.width - circleRect.width - (circleRect.left - heroRect.left) - offsetX,
-  //               heroRect.width - circleRect.width
-  //             )
-  //           )}px`,
-  //           y: `+=${Math.max(
-  //             0,
-  //             Math.min(
-  //               heroRect.height - circleRect.height - (circleRect.top - heroRect.top) - offsetY,
-  //               heroRect.height - circleRect.height
-  //             )
-  //           )}px`,
-  //           duration: 0.3, // Shorter duration for quicker response
-  //           ease: "power1.out",
-  //         });
-  //       }
-  //     });
-  //   };
-
-  //   // Attach the mouse move event listener
-  //   window.addEventListener("mousemove", handleMouseMove);
-
-  //   // Cleanup event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener("mousemove", handleMouseMove);
-  //   };
-  // }, []);
-
   useEffect(() => {
-    const heroElement = document.querySelector(".hero-container");
-    if (!heroElement) return;
+    const orangeCircle = document.querySelector(".circle-orange");
+    const blueCircle = document.querySelector(".circle-blue");
+    const purpleCircle = document.querySelector(".circle-purple");
 
-    const heroRect = heroElement.getBoundingClientRect();
-
-    const animateCircles = () => {
-      gsap.to(".circle", {
-        duration: 35, // Increase duration for slower animation
-        x: () => `random(0, ${heroRect.width - 50}px)`,
-        y: () => `random(0, ${heroRect.height - 50}px)`,
-        ease: "bounce.out",
-        repeat: -1,
-        yoyo: true,
-        stagger: 1,
-        modifiers: {
-          x: (x) =>
-            Math.max(0, Math.min(parseFloat(x), heroRect.width - 50)) + "px",
-          y: (y) =>
-            Math.max(0, Math.min(parseFloat(y), heroRect.height - 50)) + "px",
-        },
+    document.addEventListener("mousemove", (e) => {
+      gsap.to(orangeCircle, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 1.5,
+        ease: "power2.out",
       });
-    };
+    });
 
-    animateCircles();
-
-    const handleResize = () => {
-      const updatedHeroRect = heroElement.getBoundingClientRect();
-      gsap.to(".circle", {
-        x: () => `random(0, ${updatedHeroRect.width - 50}px)`,
-        y: () => `random(0, ${updatedHeroRect.height - 50}px)`,
-        modifiers: {
-          x: (x) =>
-            Math.max(0, Math.min(parseFloat(x), updatedHeroRect.width - 50)) +
-            "px",
-          y: (y) =>
-            Math.max(0, Math.min(parseFloat(y), updatedHeroRect.height - 50)) +
-            "px",
-        },
+    let angle = 0;
+    document.addEventListener("mousemove", (e) => {
+      angle += 0.05;
+      const radius = 100;
+      const orbitX = e.clientX + Math.cos(angle) * radius;
+      const orbitY = e.clientY + Math.sin(angle) * radius;
+      gsap.to(blueCircle, {
+        x: orbitX,
+        y: orbitY,
+        duration: 0.5,
+        ease: "power2.out",
       });
-    };
+    });
 
-    window.addEventListener("resize", handleResize);
+    gsap.to(purpleCircle, {
+      scale: 1.5,
+      duration: 2,
+      yoyo: true,
+      repeat: -1,
+      ease: "power1.inOut",
+    });
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    gsap.to(purpleCircle, {
+      x: () => `random(0, window.innerWidth - 50)`,
+      y: () => `random(0, window.innerHeight - 50)`,
+      duration: 10,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
   }, []);
 
   return (
@@ -141,7 +74,7 @@ const Hero: React.FC<IHero> = ({ links, heading, subHeading, tag }) => {
             links.length > 0 &&
             links.map((item, index) => {
               return (
-                <div key={index}>
+              <div key={index}>
                   <CustomLink
                     children={item?.children}
                     loading={item?.loading}
@@ -150,7 +83,7 @@ const Hero: React.FC<IHero> = ({ links, heading, subHeading, tag }) => {
                     key={index}
                     url={item?.url}
                   />
-                </div>
+              </div>
               );
             })}
         </div>
