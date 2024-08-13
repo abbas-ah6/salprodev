@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Salpro DEV",
     images: [
       {
-        url: "/images/blog-1.png",
+        url: "https://salprodev-2hoy.vercel.app/images/blog-1.png",
         width: 1200,
         height: 630,
         alt: "Revolutionary e-Commerce Platform",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "Discover how our innovative e-commerce platform is transforming online shopping with cutting-edge technology and seamless user experiences.",
     images: [
       {
-        url: "/images/blog-1.png",
+        url: "https://salprodev-2hoy.vercel.app/images/blog-1.png",
         width: 1200,
         height: 630,
         alt: "Revolutionary e-Commerce Platform",

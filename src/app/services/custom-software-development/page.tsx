@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Salpro DEV",
     images: [
       {
-        url: "/images/custom-software-development.png",
+        url: "https://salprodev-2hoy.vercel.app/images/custom-software-development.png",
         width: 1200,
         height: 630,
         alt: "Custom Software Development Services",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "Explore SalPro DEV's custom software development services designed to drive innovation and growth. Our expert team is dedicated to turning your vision into reality with precision and efficiency.",
     images: [
       {
-        url: "/images/custom-software-development.png",
+        url: "https://salprodev-2hoy.vercel.app/images/custom-software-development.png",
         width: 1200,
         height: 630,
         alt: "Custom Software Development Services",

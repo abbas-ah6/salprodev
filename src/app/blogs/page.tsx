@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Salpro DEV",
     images: [
       {
-        url: "/images/blogs-hero.png",
+        url: "https://salprodev-2hoy.vercel.app/images/blogs-hero.png",
         width: 1200,
         height: 630,
         alt: "Explore the Latest Insights & Articles",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
       "Discover a curated collection of articles and resources at SalPro DEV. Stay informed on current trends, challenges, and industry insights.",
     images: [
       {
-        url: "/images/blogs-hero.png",
-        width: 1200,
+        url: "https://salprodev-2hoy.vercel.app/images/blogs-hero.png",
+        width: 120,
         height: 630,
         alt: "Explore the Latest Insights & Articles",
       },

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Salpro DEV",
     images: [
       {
-        url: "/images/services-hero.png",
+        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
         width: 1200,
         height: 630,
         alt: "Exceptional Services Tailored to Meet Your Business Needs",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       "Discover our range of professional services designed to help you achieve your business goals efficiently and with expertise in various fields.",
     images: [
       {
-        url: "/images/services-hero.png",
+        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
         width: 1200,
         height: 630,
         alt: "Exceptional Services Tailored to Meet Your Business Needs",

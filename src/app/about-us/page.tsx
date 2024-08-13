@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Salpro DEV",
     images: [
       {
-        url: "/images/about-us-banner.png",
+        url: "https://salprodev-2hoy.vercel.app/images/about-us-banner.png",
         width: 1200,
         height: 630,
         alt: "Unlock Your Potential with Our Expert Solutions",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       "Salpro DEV offers innovative software, marketing, and design services tailored to drive success and growth for businesses of all sizes.",
     images: [
       {
-        url: "/images/about-us-banner.png",
+        url: "https://salprodev-2hoy.vercel.app/images/about-us-banner.png",
         width: 1200,
         height: 630,
         alt: "Unlock Your Potential with Our Expert Solutions",

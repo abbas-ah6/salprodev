@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Salpro DEV",
     images: [
       {
-        url: "/images/salprodev-contact.png",
+        url: "https://salprodev-2hoy.vercel.app/images/salprodev-contact.png",
         width: 1200,
         height: 630,
         alt: "Get in Touch with SalPro DEV",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "We value your questions and feedback. Contact SalPro DEV today for any inquiries or support. We're here to help you with your needs!",
     images: [
       {
-        url: "/images/salprodev-contact.png",
+        url: "https://salprodev-2hoy.vercel.app/images/salprodev-contact.png",
         width: 1200,
         height: 630,
         alt: "Get in Touch with SalPro DEV",
