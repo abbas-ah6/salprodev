@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
   return (
     <>
       {!isLandingPage && !isContact && (
-        <section className="flex flex-col w-full bg-brand-orange-alt">
+        <section className="flex flex-col w-full bg-brand-orange-alt z-[2] relative">
           <div className="flex flex-col container mx-auto lg:px-[30px] lg:py-[60px] py-[36px] px-[24px]">
             <div className="flex flex-col lg:flex-row gap-5 justify-between mt-4 w-full max-md:flex-wrap max-md:max-w-full">
               <div className="flex flex-col justify-center lg:justify-center lg:items-start items-center">
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 <div className="flex gap-5 max-md:flex-col max-md:gap-0">
                   <div className="flex flex-col grow max-md:ml-0 max-md:w-full">
                     <div className="flex flex-col min-w-[150px] text-b18 leading-6 text-white max-md:mt-8 text-center lg:text-start">
-                      <div className="font-medium leading-[156%]">
+                      <div className="font-medium text-lB leading-[120%]">
                         Quick Links
                       </div>
                       <a
@@ -82,7 +82,9 @@ const Footer: React.FC = () => {
                   </div>
                   <div className="flex flex-col ml-5 min-w-[150px] max-md:ml-0 max-md:w-full">
                     <div className="flex flex-col text-b18 leading-6 text-white max-md:mt-8 text-center lg:text-start">
-                      <div className="font-medium leading-[156%]">Services</div>
+                      <div className="font-medium text-lB leading-[120%]">
+                        Services
+                      </div>
                       <a
                         href="/services/custom-software-development"
                         className="mt-8 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
@@ -123,7 +125,9 @@ const Footer: React.FC = () => {
                   </div>
                   <div className="flex flex-col ml-5 min-w-[150px] max-md:ml-0 max-md:w-full">
                     <div className="flex flex-col text-b18 leading-6 text-white max-md:mt-8 text-center lg:text-start">
-                      <div className="font-medium leading-[156%]">Contact</div>
+                      <div className="font-medium text-lB leading-[120%]">
+                        Contact
+                      </div>
                       <a
                         href="mailto:info@salprodev.com"
                         className="mt-8 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
@@ -163,10 +167,10 @@ const Footer: React.FC = () => {
               }}
             />
             <div className="lg:justify-between justify-center text-center lg:text-left items-center py-[12px] w-full flex flex-col lg:flex-row">
-              <p className="text-b12 text-white leading-small">
+              <p className="text-b12 w-full text-white leading-small">
                 © 2024 SalPro DEV. All rights reserved.
               </p>
-              <div className="flex gap-5 px-1.5 mt-4 max-md:pr-5 w-full justify-center flex-wrap">
+              <div className="flex gap-5 px-1.5 mt-4 max-md:pr-5 w-full justify-center lg:justify-end flex-wrap">
                 <Link
                   target="_blank"
                   href={"https://www.facebook.com"}

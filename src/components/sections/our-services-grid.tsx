@@ -12,7 +12,7 @@ const ServiceCard: React.FC<IService> = ({
   shortDescription,
 }) => (
   <Link href={serviceUrl || "#"}>
-    <div className="group relative flex flex-col p-[24px] border-b border-transparent">
+    <div className="group relative flex flex-col pb-[12px] border-b border-transparent">
       <div className="absolute right-0 w-0 group-hover:w-full duration-500 ease-in-out bottom-0 h-[2px] bg-gradient-to-l from-brand-blue to-white"></div>
       <div>
         <Image
@@ -46,11 +46,11 @@ const OurServicesGrid: React.FC<IServicesGrid> = ({
   return (
     <section className="flex flex-col w-full bg-white">
       <div className="flex flex-col lg:px-[30px] lg:py-[60px] py-[36px] px-[24px] w-full container mx-auto">
-        <div className="flex flex-col max-w-[725px] w-full justify-start">
+        <div className="flex flex-col max-w-[725px] w-full lg:justify-start justify-center lg:items-start items-center">
           <h3 className="mt-4 lg:text-h3 text-h3M leading-small text-center lg:text-start text-brand-purple">
             {heading || ""}
           </h3>
-          <p className="text-b18 text-brand-gray leading-medium mt-[24px]">
+          <p className="lg:text-b18 text-b16 text-center lg:text-start text-brand-gray leading-medium mt-[24px]">
             {description || ""}
           </p>
           <div className="mt-[24px] w-fit" href={"#"}>

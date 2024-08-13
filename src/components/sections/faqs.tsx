@@ -18,7 +18,7 @@ const FaqCard: React.FC<{
   >
     <div className="flex w-full justify-between items-center pb-[12px]">
       <span
-        className={`m-0 text-lB text-brand-black font-normal w-full max-w-full`}
+        className={`m-0 lg:text-lB text-b16 text-brand-black font-normal w-full max-w-full`}
       >
         {faq?.question || ""}
       </span>

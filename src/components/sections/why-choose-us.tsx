@@ -37,7 +37,7 @@ const WhyChooseUs: React.FC<IWhyChooseUs> = ({
   link,
   image,
   cards,
-  imageAlignment = "left", // Default alignment to 'left'
+  imageAlignment = "left",
 }) => {
   return (
     <section className="flex flex-col w-full bg-white">
@@ -65,9 +65,9 @@ const WhyChooseUs: React.FC<IWhyChooseUs> = ({
               : "lg:flex-row flex-col"
           }`}
         >
-          <div className="w-full h-full max-w-[420px] max-h-[420px]">
+          <div className="w-full h-full lg:max-w-[420px] max-w-[280px] lg:max-h-[420px] max-h-[280px]">
             <Image
-              className="w-full h-full max-w-[420px] max-h-[420px] object-contain object-center"
+              className="w-full h-full lg:max-w-[420px] max-w-[280px] lg:max-h-[420px] max-h-[280px] object-contain object-center"
               src={image?.src || ""}
               alt={image?.alt || ""}
               width={420}

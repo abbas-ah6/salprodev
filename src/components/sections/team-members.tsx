@@ -81,17 +81,17 @@ const TeamMemebers: React.FC<ITeamMembers> = ({
                   alt={selectedTeamMember.image?.alt || "Project Image"}
                   width={350}
                   height={350}
-                  className="w-full max-h-[350px] max-w-[350px] object-cover object-center transition-all duration-300 ease-in-out"
+                  className="w-full lg:max-h-[350px] max-h-[250px] lg;max-w-[350px] max-w-[250px] object-cover object-center transition-all duration-300 ease-in-out"
                 />
                 <span className="mt-[16px] text-lB text-brand-blue">
                   {selectedTeamMember.role || ""}
                 </span>
-                <p className="mt-[8px] text-b18 text-brand-gray leading-medium max-w-[640px]">
+                <p className="mt-[8px] text-b16 text-brand-gray leading-medium max-w-[640px]">
                   {selectedTeamMember.description || ""}
                 </p>
                 {selectedTeamMember?.socials &&
                   selectedTeamMember?.socials.length > 0 && (
-                    <div className="flex flex-row gap-[8px] justify-end items-center">
+                    <div className="flex flex-row gap-[8px] mt-[12px] justify-end items-center">
                       {selectedTeamMember?.socials?.map((item, index) => {
                         return (
                           <Link

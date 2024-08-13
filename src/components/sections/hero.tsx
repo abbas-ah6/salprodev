@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 import { IHero } from "@/types";
 import CustomLink from "../elements/CustomLink";
 
-
 const Hero: React.FC<IHero> = ({ links, heading, subHeading, tag }) => {
   useEffect(() => {
     const orangeCircle = document.querySelector(".circle-orange");
@@ -74,7 +73,7 @@ const Hero: React.FC<IHero> = ({ links, heading, subHeading, tag }) => {
             links.length > 0 &&
             links.map((item, index) => {
               return (
-              <div key={index}>
+                <div key={index}>
                   <CustomLink
                     children={item?.children}
                     loading={item?.loading}
@@ -83,7 +82,7 @@ const Hero: React.FC<IHero> = ({ links, heading, subHeading, tag }) => {
                     key={index}
                     url={item?.url}
                   />
-              </div>
+                </div>
               );
             })}
         </div>

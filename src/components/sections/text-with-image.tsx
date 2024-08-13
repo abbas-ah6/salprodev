@@ -15,10 +15,10 @@ const TextWithImage: React.FC<ITextWithImage> = ({
   return (
     <section className="flex flex-col w-full bg-brand-offwhite">
       <div className="flex flex-col lg:px-[30px] lg:py-[60px] py-[36px] px-[24px] w-full container mx-auto">
-        <div className="flex lg:flex-row flex-col w-full gap-[60px] mt-[48px] justify-start lg:justify-center lg:items-end items-center">
-          <div className="w-full max-h-[full] max-w-[460px]">
+        <div className="flex lg:flex-row flex-col-reverse w-full gap-[60px] mt-[48px] justify-start lg:justify-center lg:items-end items-center">
+          <div className="w-full max-h-full lg:max-w-[420px] max-w-[280px] lg:max-h-[420px]">
             <Image
-              className="w-full h-full max-w-[460px] max-h-[420px] object-contain object-center"
+              className="w-full h-full lg:max-w-[420px] max-w-[280px] lg:max-h-[420px] max-h-[280px] object-contain object-center"
               src={image?.src || ""}
               alt={image?.alt || ""}
               width={460}
@@ -40,7 +40,7 @@ const TextWithImage: React.FC<ITextWithImage> = ({
                 ))}
               </ul>
             )}
-            <div className="mt-[24px] w-fit" href={"#"}>
+            <div className="mt-[24px] lg:w-fit w-full lg:justify-start justify-center lg:items-start items-center" href={"#"}>
               <CustomLink
                 type={link?.type}
                 loading={false}
