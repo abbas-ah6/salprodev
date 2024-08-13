@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,6 +12,12 @@ const Header: React.FC = () => {
 
   const isLandingPage = pathname.startsWith("/l/");
   const isContact = pathname.startsWith("/book-consultation");
+
+  const [openMenu, setOpemMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setOpemMenu(!openMenu);
+  };
 
   const linkClass = (path: string) =>
     `hover:text-brand-orange p-[12px] duration-300 flex justify-center items-center flex-col ${
@@ -33,6 +39,7 @@ const Header: React.FC = () => {
         </Link>
         {!isLandingPage && !isContact ? (
           <nav className="lg:flex hidden gap-14 max-md:flex-wrap max-md:max-w-full">
+            {/* <button onClick={() => toggleMenu()}>CLICK ME</button> */}
             <ul className="flex list-none gap-6 whitespace-nowrap leading-small text-brand-black">
               <li>
                 <Link className={linkClass("/home")} href="/home">
@@ -85,6 +92,16 @@ const Header: React.FC = () => {
         )}
         {!isLandingPage && !isContact && <MobileHeader />}
       </header>
+      {/* <div
+        onClick={() => toggleMenu()}
+        className={`bigMenu w-full duration-500 delay-150	ease-linear absolute z-50 bg-brand-orange-alt ${
+          openMenu ? "h-full" : "h-0"
+        }`}
+      >
+        <div className="container mx-auto w-full h-full">
+
+        </div>
+      </div> */}
     </div>
   );
 };

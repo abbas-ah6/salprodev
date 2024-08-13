@@ -17,9 +17,42 @@ import ServiceHero from "@/components/sections/service-hero";
 import TextWithImage from "@/components/sections/text-with-image";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development | SalPro DEV",
+  title: "Custom Software Development Services | SalPro DEV",
   description:
-    "At SalPro DEV, we specialize in delivering custom software development services that drive innovation and growth. Whether you're looking to streamline operations, enhance customer experiences, or create a unique digital product, our team of experts is here to turn your vision into reality with precision and efficiency.",
+    "Explore SalPro DEV's custom software development services designed to drive innovation and growth. Our expert team is dedicated to turning your vision into reality with precision and efficiency.",
+  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  openGraph: {
+    title: "Custom Software Development Services | SalPro DEV",
+    description:
+      "Explore SalPro DEV's custom software development services designed to drive innovation and growth. Our expert team is dedicated to turning your vision into reality with precision and efficiency.",
+    url: "https://salprodev-2hoy.vercel.app/services/custom-software-development",
+    siteName: "Salpro DEV",
+    images: [
+      {
+        url: "/images/custom-software-development.png",
+        width: 1200,
+        height: 630,
+        alt: "Custom Software Development Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@salprodev",
+    title: "Custom Software Development Services | SalPro DEV",
+    description:
+      "Explore SalPro DEV's custom software development services designed to drive innovation and growth. Our expert team is dedicated to turning your vision into reality with precision and efficiency.",
+    images: [
+      {
+        url: "/images/custom-software-development.png",
+        width: 1200,
+        height: 630,
+        alt: "Custom Software Development Services",
+      },
+    ],
+  },
 };
 
 const heroData = {
@@ -31,7 +64,7 @@ const heroData = {
       type: "primary",
       children: "Contact Now!",
       loading: false,
-      url: "/contact-us"
+      url: "/contact-us",
     },
   ],
   image: {
@@ -52,7 +85,7 @@ const textWithImageData = {
     children: "Contact Us",
     loading: false,
     type: "primary",
-    url: "/contact-us"
+    url: "/contact-us",
   },
   bulletPoints: [
     {
@@ -129,7 +162,7 @@ const whyChooseUsData = {
     children: "About Us",
     loading: false,
     type: "primary",
-    url: "/about-us"
+    url: "/about-us",
   },
   image: {
     src: "/images/why-choose-us-image.png",
@@ -184,7 +217,7 @@ const customSoftwareServicesData = {
     children: "About Us",
     loading: false,
     type: "primary",
-    url: "/about-us"
+    url: "/about-us",
   },
   image: {
     src: "/images/checklist-image.png",

@@ -7,7 +7,6 @@ import * as React from "react";
 
 const Footer: React.FC = () => {
   const pathname = usePathname();
-  console.log(pathname);
 
   const isLandingPage = pathname.startsWith("/l/");
   const isContact = pathname.startsWith("/book-consultation");

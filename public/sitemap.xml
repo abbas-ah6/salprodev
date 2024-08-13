@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://salprodev-2hoy.vercel.app/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://salprodev-2hoy.vercel.app/about-us</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://salprodev-2hoy.vercel.app/contact-us</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://salprodev-2hoy.vercel.app/services</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://salprodev-2hoy.vercel.app/services/custom-software-development</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://salprodev-2hoy.vercel.app/blogs</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://salprodev-2hoy.vercel.app/blogs/innovative-e-commerce-platform</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

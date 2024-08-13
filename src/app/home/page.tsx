@@ -20,9 +20,42 @@ import CallToAction from "@/components/sections/call-to-action";
 import HubSpotForm from "@/components/sections/hubspot-form";
 
 export const metadata: Metadata = {
-  title: "Building community standard projects and solutions!",
+  title: "Building High-Quality Tech Solutions for Community Growth",
   description:
-    "Delivering High-Quality Tech Solutions That Drive Community Growth and Engagement",
+    "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
+  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  openGraph: {
+    title: "Building High-Quality Tech Solutions for Community Growth",
+    description:
+      "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
+    url: "https://salprodev-2hoy.vercel.app",
+    siteName: "Salpro DEV",
+    images: [
+      {
+        url: "/images/salprodev-home.png",
+        width: 1200,
+        height: 630,
+        alt: "Building High-Quality Tech Solutions for Community Growth",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@salprodev",
+    title: "Building High-Quality Tech Solutions for Community Growth",
+    description:
+      "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
+    images: [
+      {
+        url: "/images/salprodev-home.png",
+        width: 1200,
+        height: 630,
+        alt: "Building High-Quality Tech Solutions for Community Growth",
+      },
+    ],
+  },
 };
 
 const heroData = {
@@ -36,14 +69,14 @@ const heroData = {
       children: "Book Consultation",
       loading: false,
       newTab: false,
-      url: 'contact-us'
+      url: "contact-us",
     },
     {
       type: "secondary",
       children: "About Us",
       loading: false,
       newTab: false,
-      url: 'about-us'
+      url: "about-us",
     },
   ],
 } as IHero;
@@ -55,7 +88,7 @@ const AboutBannerData = {
   link: {
     type: "primary",
     children: "About Us",
-    url: "about-us"
+    url: "about-us",
   },
   showBanner: false,
 } as IAboutUs;
@@ -68,7 +101,7 @@ const OurServiceData = {
     type: "primary",
     children: "See All Services",
     loading: false,
-    url: "services"
+    url: "services",
   },
   services: [
     {
@@ -152,7 +185,7 @@ const OurProjectsData = {
     children: "See All Projects",
     type: "primary",
     loading: false,
-    url: "projects"
+    url: "projects",
   },
   projects: [
     {
@@ -226,7 +259,7 @@ const OurBlogsData = {
     children: "See All Blogs",
     type: "primary",
     loading: false,
-    url: "blogs"
+    url: "blogs",
   },
   blogs: [
     {

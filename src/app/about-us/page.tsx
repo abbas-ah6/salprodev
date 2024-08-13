@@ -16,9 +16,42 @@ import CallToAction from "@/components/sections/call-to-action";
 import Faqs from "@/components/sections/faqs";
 
 export const metadata: Metadata = {
-  title: "Unlock Your Potential with Our Comprehensive Solutions",
+  title: "Unlock Your Potential with Our Expert Solutions",
   description:
-    "At Salpro DEV, we specialize in crafting innovative software, marketing, and design services that drive success and growth for businesses like yours.",
+    "Salpro DEV offers innovative software, marketing, and design services tailored to drive success and growth for businesses of all sizes.",
+  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  openGraph: {
+    title: "Unlock Your Potential with Our Expert Solutions",
+    description:
+      "Salpro DEV offers innovative software, marketing, and design services tailored to drive success and growth for businesses of all sizes.",
+    url: "https://salprodev-2hoy.vercel.app/about-us",
+    siteName: "Salpro DEV",
+    images: [
+      {
+        url: "/images/about-us-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Unlock Your Potential with Our Expert Solutions",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@salprodev",
+    title: "Unlock Your Potential with Our Expert Solutions",
+    description:
+      "Salpro DEV offers innovative software, marketing, and design services tailored to drive success and growth for businesses of all sizes.",
+    images: [
+      {
+        url: "/images/about-us-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Unlock Your Potential with Our Expert Solutions",
+      },
+    ],
+  },
 };
 
 const heroData = {

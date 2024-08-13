@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Allow: /
+
+Sitemap: https://salprodev-2hoy.vercel.app/sitemap.xml

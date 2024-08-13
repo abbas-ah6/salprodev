@@ -8,9 +8,42 @@ import HubSpotForm from "@/components/sections/hubspot-form";
 import OurBlogsGrid from "@/components/sections/our-blogs-grid";
 
 export const metadata: Metadata = {
-  title: "Latest Insights & Articles",
+  title: "Explore the Latest Insights & Articles | SalPro DEV",
   description:
-    "Explore a collection of articles and resources designed to help you navigate current trends and challenges.",
+    "Discover a curated collection of articles and resources at SalPro DEV. Stay informed on current trends, challenges, and industry insights.",
+  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  openGraph: {
+    title: "Explore the Latest Insights & Articles | SalPro DEV",
+    description:
+      "Discover a curated collection of articles and resources at SalPro DEV. Stay informed on current trends, challenges, and industry insights.",
+    url: "https://salprodev-2hoy.vercel.app/blogs",
+    siteName: "Salpro DEV",
+    images: [
+      {
+        url: "/images/blogs-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Explore the Latest Insights & Articles",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@salprodev",
+    title: "Explore the Latest Insights & Articles | SalPro DEV",
+    description:
+      "Discover a curated collection of articles and resources at SalPro DEV. Stay informed on current trends, challenges, and industry insights.",
+    images: [
+      {
+        url: "/images/blogs-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Explore the Latest Insights & Articles",
+      },
+    ],
+  },
 };
 
 const heroData = {
@@ -34,7 +67,7 @@ const ourBlogsData = {
     children: "See All Blogs",
     type: "primary",
     loading: false,
-    url: "blogs"
+    url: "blogs",
   },
   blogs: [
     {

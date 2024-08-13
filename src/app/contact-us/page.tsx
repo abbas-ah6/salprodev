@@ -8,21 +8,55 @@ import Faqs from "@/components/sections/faqs";
 import HubSpotForm from "@/components/sections/hubspot-form";
 
 export const metadata: Metadata = {
-  title: "Ready to get in touch with us?",
+  title: "Get in Touch with SalPro DEV | Contact Us Today",
   description:
-    "Your questions and feedback are important to us. Contact Salpro DEV today!",
+    "We value your questions and feedback. Contact SalPro DEV today for any inquiries or support. We're here to help you with your needs!",
+  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  openGraph: {
+    title: "Get in Touch with SalPro DEV | Contact Us Today",
+    description:
+      "We value your questions and feedback. Contact SalPro DEV today for any inquiries or support. We're here to help you with your needs!",
+    url: "https://salprodev-2hoy.vercel.app/contact-us",
+    siteName: "Salpro DEV",
+    images: [
+      {
+        url: "/images/salprodev-contact.png",
+        width: 1200,
+        height: 630,
+        alt: "Get in Touch with SalPro DEV",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@salprodev",
+    title: "Get in Touch with SalPro DEV | Contact Us Today",
+    description:
+      "We value your questions and feedback. Contact SalPro DEV today for any inquiries or support. We're here to help you with your needs!",
+    images: [
+      {
+        url: "/images/salprodev-contact.png",
+        width: 1200,
+        height: 630,
+        alt: "Get in Touch with SalPro DEV",
+      },
+    ],
+  },
 };
 
 const heroData = {
-  heading: 'Talk to Us',
-  subHeading: 'Your questions and feedback are important to us. Contact Salpro DEV today!',
+  heading: "Talk to Us",
+  subHeading:
+    "Your questions and feedback are important to us. Contact Salpro DEV today!",
   buttons: [
     {
-      children: 'Fill contact form',
+      children: "Fill contact form",
       loading: false,
-      type: 'primary',
-    }
-  ]
+      type: "primary",
+    },
+  ],
 } as IHero;
 
 const faqsData = {
@@ -76,10 +110,10 @@ const hubSpotFormData = {
 const ContactUs: React.FC = () => {
   return (
     <div>
-      <Hero {...heroData}/>
+      <Hero {...heroData} />
       <HubSpotForm {...hubSpotFormData} />
-      <Faqs {...faqsData}/>
-      <CallToAction/>
+      <Faqs {...faqsData} />
+      <CallToAction />
     </div>
   );
 };

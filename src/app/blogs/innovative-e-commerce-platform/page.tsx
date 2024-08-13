@@ -17,9 +17,42 @@ import BlogHero from "@/components/sections/blog-hero";
 import BlogDetails from "@/components/sections/blog-details";
 
 export const metadata: Metadata = {
-  title: "Latest Insights & Articles",
+  title: "Revolutionary e-Commerce Platform | SalPro DEV",
   description:
-    "Explore a collection of articles and resources designed to help you navigate current trends and challenges.",
+    "Discover how our innovative e-commerce platform is transforming online shopping with cutting-edge technology and seamless user experiences.",
+  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  openGraph: {
+    title: "Revolutionary e-Commerce Platform | SalPro DEV",
+    description:
+      "Discover how our innovative e-commerce platform is transforming online shopping with cutting-edge technology and seamless user experiences.",
+    url: "https://salprodev-2hoy.vercel.app/blogs/innovative-e-commerce-platform",
+    siteName: "Salpro DEV",
+    images: [
+      {
+        url: "/images/blog-1.png",
+        width: 1200,
+        height: 630,
+        alt: "Revolutionary e-Commerce Platform",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@salprodev",
+    title: "Revolutionary e-Commerce Platform | SalPro DEV",
+    description:
+      "Discover how our innovative e-commerce platform is transforming online shopping with cutting-edge technology and seamless user experiences.",
+    images: [
+      {
+        url: "/images/blog-1.png",
+        width: 1200,
+        height: 630,
+        alt: "Revolutionary e-Commerce Platform",
+      },
+    ],
+  },
 };
 
 const heroData = {
@@ -43,7 +76,7 @@ const ourBlogsData = {
     children: "See All Blogs",
     type: "primary",
     loading: false,
-    url: '/blogs'
+    url: "/blogs",
   },
   blogs: [
     {
