@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
 
   const isLandingPage = pathname.startsWith("/l/");
   const isContact = pathname.startsWith("/book-consultation");
-
+ 
   return (
     <>
       {!isLandingPage && !isContact && (
