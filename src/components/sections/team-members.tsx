@@ -26,6 +26,73 @@ const TeamMemberCard: React.FC<{
   </div>
 );
 
+const MobileTeamCard: React.FC<{
+  member: ITeamMember;
+  isActive: boolean;
+  onClick: () => void;
+}> = ({ member, isActive, onClick }) => (
+  <div
+    onClick={onClick}
+    className={`px-[8px] py-[12px] border border-solid cursor-pointer transition-all duration-300 ease-in-out ${
+      isActive ? "border-brand-purple" : "border-transparent"
+    }`}
+  >
+    <div className="flex w-full pb-[12px]">
+      <span
+        className={`m-0 lg:text-lB text-b16 text-brand-black font-normal w-full max-w-full ${
+          isActive ? "text-brand-purple" : "text-brand-black"
+        }`}
+      >
+        {member?.name || ""}
+      </span>
+    </div>
+    <div
+      className={`duration-500 ease-in-out flex flex-col ${
+        isActive ? "max-h-fit opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+      }`}
+    >
+      <Image
+        loading="lazy"
+        src={member?.image?.src || ""}
+        alt={member?.image?.alt || "Project Image"}
+        width={520}
+        height={380}
+        className="w-full max-w-full max-h-[380px] object-cover object-center transition-all duration-300 ease-in-out"
+      />
+      <span className="mt-[16px] text-b16 text-brand-purple">
+        {member?.role || ""}
+      </span>
+      <p
+        className={`m-0 text-b14 leading-medium font-normal w-full max-w-full pt-[12px] transition-all duration-300 ease-in-out`}
+      >
+        {member?.description || ""}
+      </p>
+      {member?.socials && member?.socials.length > 0 && (
+        <div className="flex flex-row gap-[8px] mt-[12px] justify-end items-center">
+          {member?.socials?.map((item, index) => {
+            return (
+              <Link
+                className="hover:translate-y-[-4px] duration-300 ease-in-out"
+                target="_blank"
+                href={item?.socialUrl || "#"}
+                key={index}
+              >
+                <Image
+                  className="w-full h-full max-w-[24px] max-h-[24px] object-contain object-center"
+                  src={item?.icon?.src || ""}
+                  width={24}
+                  height={24}
+                  alt={item?.icon?.alt || "Social Button"}
+                />
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  </div>
+);
+
 const TeamMemebers: React.FC<ITeamMembers> = ({
   heading,
   subHeading,
@@ -35,6 +102,12 @@ const TeamMemebers: React.FC<ITeamMembers> = ({
     useState<ITeamMember | null>(
       teamMembers && teamMembers.length > 0 ? teamMembers[0] : null
     );
+
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleMobileTeamClick = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   const handleMemberClick = (teamMember: ITeamMember) => {
     setSelectedTeamMember(teamMember);
@@ -58,7 +131,7 @@ const TeamMemebers: React.FC<ITeamMembers> = ({
             />
           </Link> */}
         </div>
-        <div className="relative mt-[48px] flex flex-col-reverse lg:flex-row w-full gap-[42px]">
+        <div className="lg:flex hidden relative mt-[48px] flex-col-reverse lg:flex-row w-full gap-[42px]">
           <div className="flex-1 grid lg:grid-cols-1 grid-cols-1 gap-[24px] h-fit">
             {teamMembers &&
               teamMembers.length > 0 &&
@@ -83,7 +156,7 @@ const TeamMemebers: React.FC<ITeamMembers> = ({
                   height={350}
                   className="w-full lg:max-h-[350px] max-h-[250px] lg;max-w-[350px] max-w-[250px] object-cover object-center transition-all duration-300 ease-in-out"
                 />
-                <span className="mt-[16px] text-lB text-brand-blue">
+                <span className="mt-[16px] text-lB text-brand-purple">
                   {selectedTeamMember.role || ""}
                 </span>
                 <p className="mt-[8px] text-b16 text-brand-gray leading-medium max-w-[640px]">
@@ -118,6 +191,18 @@ const TeamMemebers: React.FC<ITeamMembers> = ({
               </div>
             )}
           </div>
+        </div>
+        <div className="lg:hidden flex flex-col w-full gap-[6px] mt-[32px]">
+          {teamMembers &&
+            teamMembers.length > 0 &&
+            teamMembers.map((member, index) => (
+              <MobileTeamCard
+                key={index}
+                member={member}
+                isActive={activeIndex === index}
+                onClick={() => handleMobileTeamClick(index)}
+              />
+            ))}
         </div>
       </div>
     </section>

@@ -28,6 +28,54 @@ const ProjectCard: React.FC<{
   </div>
 );
 
+const MobileProjectCard: React.FC<{
+  project: IProject;
+  isActive: boolean;
+  onClick: () => void;
+}> = ({ project, isActive, onClick }) => (
+  <div
+    onClick={onClick}
+    className={`px-[8px] py-[12px] border border-solid cursor-pointer transition-all duration-300 ease-in-out ${
+      isActive ? "border-brand-purple" : "border-transparent"
+    }`}
+  >
+    <div className="flex w-full pb-[12px]">
+      <span
+        className={`m-0 lg:text-lB text-b16 text-brand-black font-normal w-full max-w-full ${
+          isActive ? "text-brand-purple" : "text-brand-black"
+        }`}
+      >
+        {project?.name || ""}
+      </span>
+    </div>
+    <div
+      className={`duration-500 ease-in-out flex flex-col ${
+        isActive ? "max-h-fit opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+      }`}
+    >
+      <Image
+        loading="lazy"
+        src={project.image?.src || ""}
+        alt={project.image?.alt || "Project Image"}
+        width={520}
+        height={380}
+        className="w-full max-w-full max-h-[380px] object-cover object-center transition-all duration-300 ease-in-out"
+      />
+      <p
+        className={`m-0 text-b14 leading-medium font-normal w-full max-w-full pt-[12px] transition-all duration-300 ease-in-out`}
+      >
+        {project?.shortDescription || ""}
+      </p>
+      <Link
+        className="z-[1] hover:text-brand-purple mt-[24px] text-b16 text-brand-black duration-500 ease-in-out leading-medium no-underline"
+        href={"#"}
+      >
+        Learn More
+      </Link>
+    </div>
+  </div>
+);
+
 const OurProjects: React.FC<IOurProjects> = ({
   description,
   heading,
@@ -37,6 +85,11 @@ const OurProjects: React.FC<IOurProjects> = ({
   const [selectedProject, setSelectedProject] = useState<IProject | null>(
     projects && projects.length > 0 ? projects[0] : null
   );
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleMobileProjectClick = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   const handleProjectClick = (project: IProject) => {
     setSelectedProject(project);
@@ -61,7 +114,7 @@ const OurProjects: React.FC<IOurProjects> = ({
             />
           </div>
         </div>
-        <div className="relative mt-[48px] flex flex-col-reverse lg:flex-row w-full gap-[42px]">
+        <div className="relative mt-[48px] lg:flex hidden flex-col-reverse lg:flex-row w-full gap-[42px]">
           <div className="flex-1 flex flex-col relative">
             {selectedProject && (
               <Link href={selectedProject?.url || "#"}>
@@ -81,7 +134,7 @@ const OurProjects: React.FC<IOurProjects> = ({
                   <p className="mt-[8px] text-b18 text-brand-gray leading-medium">
                     {selectedProject.shortDescription || ""}
                   </p>
-                  <span className="group-hover:text-brand-blue mt-[24px] text-lB text-brand-black duration-500 ease-in-out leading-medium">
+                  <span className="group-hover:text-brand-purple mt-[24px] text-lB text-brand-black duration-500 ease-in-out leading-medium">
                     Learn More
                   </span>
                 </div>
@@ -100,6 +153,18 @@ const OurProjects: React.FC<IOurProjects> = ({
                 />
               ))}
           </div>
+        </div>
+        <div className="lg:hidden flex w-full gap-[12px]">
+          {projects &&
+            projects.length > 0 &&
+            projects.map((project, index) => (
+              <MobileProjectCard
+                key={index}
+                project={project}
+                isActive={activeIndex === index}
+                onClick={() => handleMobileProjectClick(index)}
+              />
+            ))}
         </div>
       </div>
     </section>
