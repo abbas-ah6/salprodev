@@ -30,7 +30,7 @@ const ServiceCard: React.FC<IService> = ({
       <p className="m-0 mt-[12px] text-b16 text-brand-gray leading-large text-ellipsis line-clamp-3 w-full lg:max-w-[520px] max-w-full">
         {shortDescription || ""}
       </p>
-      <span className="text-b18 text-brand-blue leading-small mt-[16px] m-0 font-normal">
+      <span className="text-b18 text-brand-purple leading-small mt-[16px] m-0 font-normal">
         Learn More
       </span>
     </div>
