@@ -24,6 +24,18 @@ export const metadata: Metadata = {
   description:
     "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
   metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  keywords: [
+    "tech solutions", 
+    "community growth", 
+    "innovative technology", 
+    "software development", 
+    "web development", 
+    "digital transformation", 
+    "Salpro DEV", 
+    "custom tech services", 
+    "high-quality tech solutions", 
+    "business growth"
+  ],
   openGraph: {
     title: "Building High-Quality Tech Solutions for Community Growth",
     description:
