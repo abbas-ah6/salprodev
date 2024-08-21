@@ -4,6 +4,13 @@ import Footer from "@/components/sections/footer";
 import Header from "@/components/sections/header";
 import ScrollIndicator from "@/components/elements/ScrollIndicator";
 
+const raleway = Raleway({
+  subsets: ['latin'],
+  variable: '--ralway',
+  display: 'swap',
+  weight: ["400", "700"]
+});
+
 export const metadata: Metadata = {
   title: "Building High-Quality Tech Solutions for Community Growth",
   description:
@@ -61,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${raleway.className}`}>
       <head>
         <link rel="icon" href="/next.svg" type="image/svg+xml" />
       </head>
