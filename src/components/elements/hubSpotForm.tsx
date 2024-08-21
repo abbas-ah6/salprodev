@@ -7,7 +7,12 @@ export default function HubSpotFormEmbed() {
 
   useEffect(() => {
     const loadScript = () => {
-      if (isScriptLoaded || document.querySelector("script[src='https://js.hsforms.net/forms/v2.js']")) {
+      if (
+        isScriptLoaded ||
+        document.querySelector(
+          "script[src='https://js.hsforms.net/forms/v2.js']"
+        )
+      ) {
         // Script is already loaded
         return;
       }
@@ -25,7 +30,7 @@ export default function HubSpotFormEmbed() {
               formId: "852f55df-d7d9-40e4-97d9-01c5d2f9678d",
               target: "#hubspotForm",
               onFormSubmit: (formData) => {
-                console.log("Form submitted successfully", formData);
+                console.log("Form submitted successfully");
               },
               onFormReady: () => {
                 console.log("HubSpot form is ready.");
@@ -50,7 +55,9 @@ export default function HubSpotFormEmbed() {
     loadScript();
 
     return () => {
-      const script = document.querySelector("script[src='https://js.hsforms.net/forms/v2.js']");
+      const script = document.querySelector(
+        "script[src='https://js.hsforms.net/forms/v2.js']"
+      );
       if (script) {
         script.remove();
       }
