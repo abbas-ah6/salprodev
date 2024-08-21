@@ -13,14 +13,16 @@ const AboutUsBanner: React.FC<IAboutUs> = ({
   return (
     <section className="flex flex-col bg-white w-full bg-grid-bg bg-cover bg-center bg-no-repeat">
       <div className="container mx-auto flex flex-col justify-center items-center lg:px-[30px] lg:py-[60px] py-[36px] px-[24px] w-full">
-        <div className="max-w-[680px] w-full flex flex-col">
+        <div className="max-w-[680px] w-full flex flex-col justify-center items-center">
           <h2 className="lg:text-h2 text-h2M font-light text-center leading-small text-brand-purple">
             {heading || ""}
           </h2>
           <p className="mt-[16px] text-b18 font-normal leading-medium text-center text-brand-gray">
             {description || ""}
           </p>
-          <CustomLink children={link?.children} loading={false} type="primary" url={link?.url} />
+          <div className="w-fit mt-[16px]">
+            <CustomLink children={link?.children} loading={false} type="primary" url={link?.url} />
+          </div>
         </div>
         {showBanner && (
           <div className="mt-[48px] flex w-full justify-center items-center">

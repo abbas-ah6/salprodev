@@ -8,14 +8,14 @@ import Faqs from "@/components/sections/faqs";
 import HubSpotForm from "@/components/sections/hubspot-form";
 
 export const metadata: Metadata = {
-  title: "Get in Touch with SalPro DEV | Contact Us Today",
+  title: "Get in Touch with Us",
   description:
-    "We value your questions and feedback. Contact SalPro DEV today for any inquiries or support. We're here to help you with your needs!",
+    "Whether you're ready to start a new project, have questions about our services, or just want to learn more about how we can help your business grow, we're here to assist you. Let's discuss how we can collaborate to achieve your digital goals.",
   metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
   openGraph: {
-    title: "Get in Touch with SalPro DEV | Contact Us Today",
+    title: "Get in Touch with Us",
     description:
-      "We value your questions and feedback. Contact SalPro DEV today for any inquiries or support. We're here to help you with your needs!",
+      "Whether you're ready to start a new project, have questions about our services, or just want to learn more about how we can help your business grow, we're here to assist you. Let's discuss how we can collaborate to achieve your digital goals.",
     url: "https://salprodev-2hoy.vercel.app/contact-us",
     siteName: "Salpro DEV",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: "https://salprodev-2hoy.vercel.app/images/salprodev-contact.png",
         width: 1200,
         height: 630,
-        alt: "Get in Touch with SalPro DEV",
+        alt: "Get in Touch with Us",
       },
     ],
     locale: "en_US",
@@ -32,24 +32,24 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@salprodev",
-    title: "Get in Touch with SalPro DEV | Contact Us Today",
+    title: "Get in Touch with Us",
     description:
-      "We value your questions and feedback. Contact SalPro DEV today for any inquiries or support. We're here to help you with your needs!",
+      "Whether you're ready to start a new project, have questions about our services, or just want to learn more about how we can help your business grow, we're here to assist you. Let's discuss how we can collaborate to achieve your digital goals.",
     images: [
       {
         url: "https://salprodev-2hoy.vercel.app/images/salprodev-contact.png",
         width: 1200,
         height: 630,
-        alt: "Get in Touch with SalPro DEV",
+        alt: "Get in Touch with Us",
       },
     ],
   },
 };
 
 const heroData = {
-  heading: "Talk to Us",
+  heading: "Get in Touch with Us",
   subHeading:
-    "Your questions and feedback are important to us. Contact Salpro DEV today!",
+    "Whether you're ready to start a new project, have questions about our services, or just want to learn more about how we can help your business grow, we're here to assist you. Let's discuss how we can collaborate to achieve your digital goals.",
   buttons: [
     {
       children: "Fill contact form",

@@ -27,7 +27,7 @@ const ServiceCard: React.FC<IService> = ({
       <h3 className="m-0 mt-[24px] text-h6 text-brand-purple leading-small w-full lg:max-w-[520px] max-w-full">
         {name || ""}
       </h3>
-      <p className="m-0 mt-[12px] text-b16 text-brand-gray leading-large text-ellipsis line-clamp-3 w-full lg:max-w-[520px] max-w-full">
+      <p className="m-0 mt-[12px] text-b16 text-brand-gray leading-large text-ellipsis line-clamp-2 w-full lg:max-w-[520px] max-w-full">
         {shortDescription || ""}
       </p>
       <span className="text-b18 text-brand-purple leading-small mt-[16px] m-0 font-normal">
@@ -53,7 +53,7 @@ const OurServicesGrid: React.FC<IServicesGrid> = ({
           <p className="lg:text-b18 text-b16 text-center lg:text-start text-brand-gray leading-medium mt-[24px]">
             {description || ""}
           </p>
-          <div className="mt-[24px] w-fit" href={"#"}>
+          <div className="mt-[24px] w-fit">
             <CustomLink
               type={link?.type}
               loading={false}

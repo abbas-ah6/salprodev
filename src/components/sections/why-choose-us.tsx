@@ -22,7 +22,7 @@ const WhuChooseUsCard: React.FC<IWhyChooseUsCard> = ({
         className="w-full h-full max-w-[32px] max-h-[32px] object-contain object-center"
       />
     </div>
-    <h3 className="m-0 mt-[16px] text-h6 text-brand-purple leading-small w-full lg:max-w-[520px] max-w-full">
+    <h3 className="m-0 mt-[16px] text-lB text-balance text-brand-purple leading-small w-full lg:max-w-[520px] max-w-full">
       {heading || ""}
     </h3>
     <p className="m-0 mt-[10px] text-b16 text-brand-gray leading-large text-ellipsis line-clamp-3 w-full lg:max-w-[520px] max-w-full">

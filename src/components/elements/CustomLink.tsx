@@ -12,9 +12,9 @@ const CustomLink: React.FC<ILink> = ({
   url = "#",
 }) => {
   const linkClass = classNames(
-    "w-full text-base focus:outline-none leading-[120%] px-[32px] py-[16px] min-w-[216px] flex items-center gap-[10px] justify-center",
+    "relative w-full text-base focus:outline-none leading-[120%] px-[32px] py-[16px] min-w-[216px] flex items-center gap-[10px] justify-center overflow-hidden group",
     {
-      "bg-white font-normal text-brand-black duration-500":
+      "bg-white font-normal text-brand-black group-hover:text-white duration-500":
         type === "primary" && !loading,
       "bg-brand-orange font-normal text-white":
         type === "secondary" && !loading,
@@ -22,11 +22,9 @@ const CustomLink: React.FC<ILink> = ({
     }
   );
 
-  const linkCubeClass = classNames({
-    "w-[8px] h-[8px] bg-white bg-gradient-to-r from-brand-orange to-brand-purple":
-      type === "primary",
-    "w-[8px] h-[8px] bg-white": type === "secondary",
-  });
+  const linkCubeClass = classNames(
+    "absolute group-hover:left-0 left-[2vw] w-[8px] h-[8px] bg-gradient-to-r from-brand-orange to-brand-purple transition-all duration-500 ease-in-out group-hover:w-full group-hover:h-full"
+  );
 
   return (
     <NextLink href={url} legacyBehavior>
@@ -35,8 +33,10 @@ const CustomLink: React.FC<ILink> = ({
         target={newTab ? "_blank" : "_self"}
         rel={newTab ? "noopener noreferrer" : undefined}
       >
+        {/* Animation Cube */}
         <div className={linkCubeClass}></div>
-        {children}
+        {/* Button Content */}
+        <span className="group-hover:text-white duration-500 ease-in-out relative z-10">{children}</span>
       </a>
     </NextLink>
   );

@@ -8,8 +8,10 @@ import {
   IFaqs,
   IHero,
   IHubSpotForm,
+  IOurProcess,
   IOurProjects,
   IServicesGrid,
+  IWhyChooseUs,
 } from "@/types";
 import AboutUsBanner from "@/components/sections/about-us";
 import OurServicesGrid from "@/components/sections/our-services-grid";
@@ -18,6 +20,9 @@ import OurBlogsCarousel from "@/components/sections/our-blogs-carousel";
 import Faqs from "@/components/sections/faqs";
 import CallToAction from "@/components/sections/call-to-action";
 import HubSpotForm from "@/components/sections/hubspot-form";
+import WhyChooseUs from "@/components/sections/why-choose-us";
+import OurProcess from "@/components/sections/our-process";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Building High-Quality Tech Solutions for Community Growth",
@@ -25,16 +30,16 @@ export const metadata: Metadata = {
     "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
   metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
   keywords: [
-    "tech solutions", 
-    "community growth", 
-    "innovative technology", 
-    "software development", 
-    "web development", 
-    "digital transformation", 
-    "Salpro DEV", 
-    "custom tech services", 
-    "high-quality tech solutions", 
-    "business growth"
+    "tech solutions",
+    "community growth",
+    "innovative technology",
+    "software development",
+    "web development",
+    "digital transformation",
+    "Salpro DEV",
+    "custom tech services",
+    "high-quality tech solutions",
+    "business growth",
   ],
   openGraph: {
     title: "Building High-Quality Tech Solutions for Community Growth",
@@ -72,13 +77,13 @@ export const metadata: Metadata = {
 
 const heroData = {
   tag: "POWERED BY AI",
-  heading: "Building community standard projects and solutions!",
+  heading: "We Help You Excel in",
   subHeading:
-    "Delivering High-Quality Tech Solutions That Drive Community Growth and Engagement",
+    "At SalPro Dev, we transform your business ideas into powerful digital experiences. From creating compelling brand identities to developing cutting-edge web and mobile applications, our expert team delivers solutions that drive growth and success.",
   links: [
     {
       type: "primary",
-      children: "Book Consultation",
+      children: "Get in Touch",
       loading: false,
       newTab: false,
       url: "contact-us",
@@ -90,6 +95,13 @@ const heroData = {
       newTab: false,
       url: "about-us",
     },
+  ],
+  asTypeWriterHeading: true,
+  typingTexts: [
+    "Custom Software Development",
+    "Web Development",
+    "App Development",
+    "Branding",
   ],
 } as IHero;
 
@@ -117,14 +129,24 @@ const OurServiceData = {
   },
   services: [
     {
-      name: "Custom Software Development",
+      name: "Branding",
+      serviceImage: {
+        src: "/images/ui-ux-design.png",
+        alt: "UI/UX Design",
+      },
+      serviceUrl: "/services/branding",
+      shortDescription:
+        "Build a brand that speaks volumes. We craft distinctive brand identities that resonate with your target audience and leave a lasting impression.",
+    },
+    {
+      name: "Web Development",
       serviceImage: {
         src: "/images/custom-software-development.png",
-        alt: "Custom Software Development",
+        alt: "Web Development",
       },
-      serviceUrl: "services/custom-software-development",
+      serviceUrl: "services/web-development",
       shortDescription:
-        "Tailored software solutions to streamline your business processes and enhance efficiency. From web applications to enterprise systems, we build software that fits your needs.",
+        "Your website is your digital storefront. We create responsive, user-friendly websites that not only look great but also deliver exceptional performance.",
     },
     {
       name: "Digital Marketing",
@@ -132,19 +154,9 @@ const OurServiceData = {
         src: "/images/digital-marketing.png",
         alt: "Digital Marketing",
       },
-      serviceUrl: "#",
+      serviceUrl: "/services/digital-marketing",
       shortDescription:
-        "Innovative marketing strategies to boost your online presence. We offer SEO, social media marketing, and PPC campaigns to connect you with your target audience.",
-    },
-    {
-      name: "UI/UX Designt",
-      serviceImage: {
-        src: "/images/ui-ux-design.png",
-        alt: "UI/UX Design",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Crafting user-friendly and visually appealing interfaces. Our design team ensures an intuitive user experience that enhances engagement and satisfaction.",
+        "Drive traffic, engage customers, and boost your bottom line. Our data-driven marketing strategies help you reach and convert your ideal audience.",
     },
     {
       name: "Mobile App Development",
@@ -152,40 +164,40 @@ const OurServiceData = {
         src: "/images/mobile-app-development.png",
         alt: "Mobile App Development",
       },
-      serviceUrl: "#",
+      serviceUrl: "/services/mobile-app-development",
       shortDescription:
-        "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
+        "Transform your vision into reality. Our expert developers build scalable, high-performance mobile apps tailored to your business needs.",
     },
-    {
-      name: "E-commerce Solutions",
-      serviceImage: {
-        src: "/images/e-commerce-solutions.png",
-        alt: "E-commerce Solutions",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Comprehensive e-commerce solutions, including website development, payment gateway integration, and inventory management. We help you build a thriving online store.",
-    },
-    {
-      name: "Deployment Services",
-      serviceImage: {
-        src: "/images/deployment-services.png",
-        alt: "Deployment Services",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
-    },
-    {
-      name: "CMS Development",
-      serviceImage: {
-        src: "/images/cms-development.png",
-        alt: "CMS Development",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Expert guidance on technology strategy and implementation. Our consulting services help you navigate the complexities of IT and leverage technology to achieve your business goals.",
-    },
+    // {
+    //   name: "E-commerce Solutions",
+    //   serviceImage: {
+    //     src: "/images/e-commerce-solutions.png",
+    //     alt: "E-commerce Solutions",
+    //   },
+    //   serviceUrl: "#",
+    //   shortDescription:
+    //     "Comprehensive e-commerce solutions, including website development, payment gateway integration, and inventory management. We help you build a thriving online store.",
+    // },
+    // {
+    //   name: "Deployment Services",
+    //   serviceImage: {
+    //     src: "/images/deployment-services.png",
+    //     alt: "Deployment Services",
+    //   },
+    //   serviceUrl: "#",
+    //   shortDescription:
+    //     "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
+    // },
+    // {
+    //   name: "CMS Development",
+    //   serviceImage: {
+    //     src: "/images/cms-development.png",
+    //     alt: "CMS Development",
+    //   },
+    //   serviceUrl: "#",
+    //   shortDescription:
+    //     "Expert guidance on technology strategy and implementation. Our consulting services help you navigate the complexities of IT and leverage technology to achieve your business goals.",
+    // },
   ],
 } as IServicesGrid;
 
@@ -355,13 +367,123 @@ const HubSpotFormData = {
     "Get in touch with our team and get professional services from our experts.",
 } as IHubSpotForm;
 
+const whyChooseUsData = {
+  heading: "Why Choose Us",
+  description:
+    "Our team comprises seasoned professionals with deep expertise in branding, web development, app development, and digital marketing, ensuring top-notch results every time.",
+  link: {
+    children: "About Us",
+    loading: false,
+    type: "primary",
+    url: "about-us",
+  },
+  image: {
+    src: "/images/why-choose-us-image.png",
+    alt: "Whu Choose Us Image",
+  },
+  cards: [
+    {
+      heading: "Tailored Solutions for Your Business",
+      description:
+        "We don’t believe in one-size-fits-all. We provide customized solutions that align with your unique business goals and industry needs.",
+      icon: {
+        src: "/icons/bulb.svg",
+        alt: "Innovative Solutions",
+      },
+    },
+    {
+      heading: "Proven Track Record of Success",
+      description:
+        "With a portfolio of successful projects and satisfied clients, we have a proven track record of delivering digital solutions that drive growth.",
+      icon: {
+        src: "/icons/trophy.svg",
+        alt: "Proven Track Record",
+      },
+    },
+    {
+      heading: "End-to-End Project Management",
+      description:
+        "From initial concept to final deployment, we manage every aspect of your project, ensuring a seamless and stress-free experience.",
+      icon: {
+        src: "/icons/handshake.svg",
+        alt: "Client-Centric Approach",
+      },
+    },
+    {
+      heading: "Agile and Adaptable",
+      description:
+        "Our flexible and agile methodologies ensure that we can quickly adapt to changes and deliver timely solutions.",
+      icon: {
+        src: "/icons/rocket.svg",
+        alt: "Innovative Solutions",
+      },
+    },
+  ],
+  imageAlignment: "left",
+} as IWhyChooseUs;
+
+const ourProcessData = {
+  heading: "Our Process",
+  description:
+    "Explore our comprehensive, step-by-step approach to transforming your ideas into reality. Our process is designed to ensure precision, creativity, and continuous support throughout the project lifecycle.",
+  cards: [
+    {
+      heading: "Research",
+      description:
+        "We dive deep into understanding your business, market, and customers to develop a strategy that sets you apart.",
+      icon: {
+        src: "/icons/magnifying-glass.svg",
+        alt: "Discovery & Planning",
+      },
+    },
+    {
+      heading: "Design & Prototype",
+      description:
+        "Our creative team crafts innovative designs and interactive prototypes that align with your brand and user needs.",
+      icon: {
+        src: "/icons/pencil.svg",
+        alt: "Design & Planning",
+      },
+    },
+    {
+      heading: "Development",
+      description:
+        "We turn your vision into reality with clean, efficient code, ensuring your website or app performs flawlessly.",
+      icon: {
+        src: "/icons/code-brackets.svg",
+        alt: "Development",
+      },
+    },
+    {
+      heading: "Testing",
+      description:
+        "Rigorous testing guarantees a bug-free, user-friendly experience, ensuring everything works as intended before launch.",
+      icon: {
+        src: "/icons/feedback-form.svg",
+        alt: "Testing",
+      },
+    },
+    {
+      heading: "Deployment",
+      description:
+        "We launch your project with precision, ensuring a smooth go-live process and providing ongoing support as needed.",
+      icon: {
+        src: "/icons/rocket-md.svg",
+        alt: "Deployment",
+      },
+    },
+  ],
+} as IOurProcess;
+
 const HomePage: React.FC = () => {
   return (
     <div>
       <Hero {...heroData} />
       <AboutUsBanner {...AboutBannerData} />
       <OurServicesGrid {...OurServiceData} />
-      <OurProjects {...OurProjectsData} />
+      <WhyChooseUs {...whyChooseUsData} />
+      {/* <OurProjects {...OurProjectsData} /> */}
+      <OurProcess {...ourProcessData} />
       <OurBlogsCarousel {...OurBlogsData} />
       <Faqs {...FaqsData} />
       <HubSpotForm {...HubSpotFormData} />

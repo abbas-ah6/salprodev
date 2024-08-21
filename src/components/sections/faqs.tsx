@@ -12,7 +12,7 @@ const FaqCard: React.FC<{
 }> = ({ faq, isActive, onClick }) => (
   <div
     onClick={onClick}
-    className={`px-[24px] py-[12px] border border-solid cursor-pointer transition-all duration-300 ease-in-out ${
+    className={`px-[24px] py-[2px] border border-solid cursor-pointer transition-all duration-300 ease-in-out ${
       isActive ? "border-brand-purple" : "border-transparent"
     }`}
   >

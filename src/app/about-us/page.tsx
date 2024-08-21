@@ -16,14 +16,14 @@ import CallToAction from "@/components/sections/call-to-action";
 import Faqs from "@/components/sections/faqs";
 
 export const metadata: Metadata = {
-  title: "Unlock Your Potential with Our Expert Solutions",
+  title: "Empowering Businesses with Innovative Digital Solutions",
   description:
-    "Salpro DEV offers innovative software, marketing, and design services tailored to drive success and growth for businesses of all sizes.",
+    "At Salpro DEV, we specialize in crafting innovative software, marketing, and design services that drive success and growth for businesses like yours.",
   metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
   openGraph: {
-    title: "Unlock Your Potential with Our Expert Solutions",
+    title: "Empowering Businesses with Innovative Digital Solutions",
     description:
-      "Salpro DEV offers innovative software, marketing, and design services tailored to drive success and growth for businesses of all sizes.",
+      "At Salpro DEV, we specialize in crafting innovative software, marketing, and design services that drive success and growth for businesses like yours.",
     url: "https://salprodev-2hoy.vercel.app/about-us",
     siteName: "Salpro DEV",
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "https://salprodev-2hoy.vercel.app/images/about-us-banner.png",
         width: 1200,
         height: 630,
-        alt: "Unlock Your Potential with Our Expert Solutions",
+        alt: "Empowering Businesses with Innovative Digital Solutions",
       },
     ],
     locale: "en_US",
@@ -55,12 +55,12 @@ export const metadata: Metadata = {
 };
 
 const heroData = {
-  heading: "Unlock Your Potential with Our Comprehensive Solutions",
+  heading: "Empowering Businesses with Innovative Digital Solutions",
   subHeading:
     "At Salpro DEV, we specialize in crafting innovative software, marketing, and design services that drive success and growth for businesses like yours.",
   buttons: [
     {
-      children: "Book Consultation",
+      children: "Get in Touch",
       loading: false,
       type: "primary",
     },
@@ -73,9 +73,9 @@ const heroData = {
 } as IHero;
 
 const aboutUsBannerData = {
-  heading: "Innovative Solutions for Business Growth",
+  heading: "Partner with Us for Success",
   description:
-    "We empower businesses through innovative digital solutions. Specializing in software development, marketing, and design, we partner with clients to create tailored strategies that drive growth. Our team values collaboration, creativity, and excellence, delivering results that exceed expectations. Together, we build a brighter future for your business.",
+    "Collaboration is at the heart of what we do. We work closely with our clients to understand their unique needs and deliver tailored solutions that exceed expectations. Let’s embark on this journey together and achieve extraordinary results.",
   link: {
     children: "Contact Us",
     loading: false,
@@ -92,7 +92,7 @@ const aboutUsBannerData = {
 const aboutUsMissionVisionData = {
   missionHeading: "Our Mission",
   missionDescription:
-    "At Salpro DEV, our mission is to empower businesses through cutting-edge technology, creative solutions, and exceptional service. We are dedicated to delivering innovative software development, impactful marketing strategies, and outstanding design services that drive growth and success for our clients.",
+    "Our mission is to deliver tailored software solutions that meet our clients' unique needs, fostering innovation and driving measurable results. We are committed to excellence and collaboration, ensuring that every project supports our clients' growth and success.",
   image: {
     src: "/images/mission-vision-banner.png",
     alt: "Mission Vision Banner",
@@ -114,7 +114,7 @@ const teamMembersData = {
       },
       name: "Muhammad Abbas",
       description:
-        "Muhammad Abbas is a talented Frontend Developer at Salpro DEV, known for his expertise in creating responsive and visually appealing web interfaces. He is passionate about leveraging the latest technologies to enhance user experiences and continuously refine his skills. Outside of work, Muhammad enjoys exploring new design trends and engaging.",
+        "Muhammed Abbas brings over a 3 years of experience in frontend development, specializing in creating visually stunning, responsive, and user-friendly interfaces. His attention to detail and passion for design ensures that every project not only looks great but also delivers an exceptional user experience.",
       role: "Frontend Developer",
       socials: [
         {

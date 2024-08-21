@@ -154,61 +154,6 @@ const hubSpotFormData = {
     "Get in touch with our team and get professional services from our experts.",
 } as IHubSpotForm;
 
-const whyChooseUsData = {
-  heading: "Why Choose SalPro DEV",
-  description:
-    "Unmatched Expertise, Proven Results—Discover why our clients trust SalPro DEV to deliver exceptional software solutions and outstanding service every time.",
-  link: {
-    children: "About Us",
-    loading: false,
-    type: "primary",
-    url: "/about-us",
-  },
-  image: {
-    src: "/images/why-choose-us-image.png",
-    alt: "Whu Choose Us Image",
-  },
-  cards: [
-    {
-      heading: "Innovative Solutions",
-      description:
-        "We leverage cutting-edge technology and creative approaches to deliver solutions that drive growth and efficiency.",
-      icon: {
-        src: "/icons/bulb.svg",
-        alt: "Innovative Solutions",
-      },
-    },
-    {
-      heading: "Proven Track Record",
-      description:
-        "Our history of successful projects and satisfied clients speaks for itself. We consistently achieve results that exceed expectations.",
-      icon: {
-        src: "/icons/trophy.svg",
-        alt: "Proven Track Record",
-      },
-    },
-    {
-      heading: "Client-Centric Approach",
-      description:
-        "We prioritize your needs and work closely with you to tailor our services to your specific goals and challenges.",
-      icon: {
-        src: "/icons/handshake.svg",
-        alt: "Client-Centric Approach",
-      },
-    },
-    {
-      heading: "Agile and Adaptable",
-      description:
-        "Our flexible and agile methodologies ensure that we can quickly adapt to changes and deliver timely solutions.",
-      icon: {
-        src: "/icons/rocket.svg",
-        alt: "Innovative Solutions",
-      },
-    },
-  ],
-  imageAlignment: "left",
-} as IWhyChooseUs;
-
 const customSoftwareServicesData = {
   heading: "Our Custom Software Development Services",
   description:
@@ -279,63 +224,109 @@ const customSoftwareServicesData = {
   imageAlignment: "right",
 } as IWhyChooseUs;
 
+const whyChooseUsData = {
+  heading: "Why Choose Us",
+  description:
+    "Our team comprises seasoned professionals with deep expertise in branding, web development, app development, and digital marketing, ensuring top-notch results every time.",
+  link: {
+    children: "About Us",
+    loading: false,
+    type: "primary",
+    url: "about-us",
+  },
+  image: {
+    src: "/images/why-choose-us-image.png",
+    alt: "Whu Choose Us Image",
+  },
+  cards: [
+    {
+      heading: "Tailored Solutions for Your Business",
+      description:
+        "We don’t believe in one-size-fits-all. We provide customized solutions that align with your unique business goals and industry needs.",
+      icon: {
+        src: "/icons/bulb.svg",
+        alt: "Innovative Solutions",
+      },
+    },
+    {
+      heading: "Proven Track Record of Success",
+      description:
+        "With a portfolio of successful projects and satisfied clients, we have a proven track record of delivering digital solutions that drive growth.",
+      icon: {
+        src: "/icons/trophy.svg",
+        alt: "Proven Track Record",
+      },
+    },
+    {
+      heading: "End-to-End Project Management",
+      description:
+        "From initial concept to final deployment, we manage every aspect of your project, ensuring a seamless and stress-free experience.",
+      icon: {
+        src: "/icons/handshake.svg",
+        alt: "Client-Centric Approach",
+      },
+    },
+    {
+      heading: "Agile and Adaptable",
+      description:
+        "Our flexible and agile methodologies ensure that we can quickly adapt to changes and deliver timely solutions.",
+      icon: {
+        src: "/icons/rocket.svg",
+        alt: "Innovative Solutions",
+      },
+    },
+  ],
+  imageAlignment: "left",
+} as IWhyChooseUs;
+
 const ourProcessData = {
   heading: "Our Process",
   description:
     "Explore our comprehensive, step-by-step approach to transforming your ideas into reality. Our process is designed to ensure precision, creativity, and continuous support throughout the project lifecycle.",
   cards: [
     {
-      heading: "Discovery & Planning",
+      heading: "Research",
       description:
-        "We start by deeply understanding your vision and goals. This phase involves detailed conversations and research to uncover your needs and challenges. We develop a strategic plan that outlines project milestones, deliverables, and success criteria. This foundation ensures alignment and clarity for all stakeholders before moving forward.",
+        "We dive deep into understanding your business, market, and customers to develop a strategy that sets you apart.",
       icon: {
         src: "/icons/magnifying-glass.svg",
         alt: "Discovery & Planning",
       },
     },
     {
-      heading: "Design & Prototyping",
+      heading: "Design & Prototype",
       description:
-        "Our design team translates your ideas into visual concepts. We create detailed wireframes and interactive prototypes that illustrate how your product will look and function. This phase allows you to visualize the end result, refine the design, and make adjustments based on feedback. Our goal is to ensure the design meets your expectations and is ready for development.",
+        "Our creative team crafts innovative designs and interactive prototypes that align with your brand and user needs.",
       icon: {
         src: "/icons/pencil.svg",
-        alt: "Design & Prototyping",
+        alt: "Design & Planning",
       },
     },
     {
-      heading: "Development & Quality Assurance",
+      heading: "Development",
       description:
-        "With the design approved, our developers begin the implementation process using cutting-edge technologies. We focus on creating a high-performance and user-friendly product. Our quality assurance team rigorously tests every feature to identify and resolve issues, ensuring the final product is reliable, secure, and free of bugs.",
+        "We turn your vision into reality with clean, efficient code, ensuring your website or app performs flawlessly.",
       icon: {
         src: "/icons/code-brackets.svg",
-        alt: "Development & Quality Assurance",
+        alt: "Development",
       },
     },
     {
-      heading: "Launch & Ongoing Support",
+      heading: "Testing",
       description:
-        "Once development is complete, we launch your product with a thorough deployment strategy. Post-launch, our support team provides ongoing maintenance, updates, and troubleshooting to address any issues that arise. We are committed to ensuring your product continues to perform optimally and evolves according to your needs.",
-      icon: {
-        src: "/icons/rocket-md.svg",
-        alt: "Launch & Ongoing Support",
-      },
-    },
-    {
-      heading: "Feedback & Iteration",
-      description:
-        "Following the launch, we actively seek your feedback and gather user insights to assess the product’s performance. This phase involves analyzing feedback, identifying areas for improvement, and implementing necessary updates. Iteration ensures that the product evolves based on real-world use and meets the changing needs of your users.",
+        "Rigorous testing guarantees a bug-free, user-friendly experience, ensuring everything works as intended before launch.",
       icon: {
         src: "/icons/feedback-form.svg",
-        alt: "Feedback & Iteration",
+        alt: "Testing",
       },
     },
     {
-      heading: "Optimization & Growth",
+      heading: "Deployment",
       description:
-        "As your product matures, we focus on optimizing its performance and scaling it to support growth. This includes performance enhancements, feature expansions, and adapting to market trends. We work closely with you to ensure the product remains competitive and continues to deliver value as your business and technology landscape evolve.",
+        "We launch your project with precision, ensuring a smooth go-live process and providing ongoing support as needed.",
       icon: {
-        src: "/icons/upward-arrow.svg",
-        alt: "Optimization & Growth",
+        src: "/icons/rocket-md.svg",
+        alt: "Deployment",
       },
     },
   ],

@@ -4,8 +4,16 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { IHero } from "@/types";
 import CustomLink from "../elements/CustomLink";
+import TypewriterEffect from "../elements/TypeWriterEffect";
 
-const Hero: React.FC<IHero> = ({ links, heading, subHeading, tag }) => {
+const Hero: React.FC<IHero> = ({
+  links,
+  heading,
+  subHeading,
+  tag,
+  asTypeWriterHeading = false,
+  typingTexts,
+}) => {
   useEffect(() => {
     const orangeCircle = document.querySelector(".circle-orange");
     const blueCircle = document.querySelector(".circle-blue");
@@ -61,10 +69,14 @@ const Hero: React.FC<IHero> = ({ links, heading, subHeading, tag }) => {
               {tag || ""}
             </span>
           )}
-          <h1 className="m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple">
-            {heading || ""}
-          </h1>
-          <p className="m-0 mt-[24px] text-b18 capitalize font-normal leading-small text-brand-gray w-full">
+          {!asTypeWriterHeading ? (
+            <h1 className="m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple">
+              {heading || ""}
+            </h1>
+          ) : (
+            <TypewriterEffect heading={heading} words={typingTexts || []} />
+          )}
+          <p className="m-0 mt-[24px] text-balance text-b18 capitalize font-normal leading-small text-brand-gray w-full">
             {subHeading || ""}
           </p>
         </div>

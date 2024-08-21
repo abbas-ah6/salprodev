@@ -75,7 +75,7 @@ const Header: React.FC = () => {
               href={isContact ? "#booking" : "/book-consultation"}
             >
               <CustomLink type="primary" loading={false} url="contact-us">
-                Book Consultation
+                Get in Touch
               </CustomLink>
             </Link>
             <Link
@@ -94,12 +94,50 @@ const Header: React.FC = () => {
       </header>
       {/* <div
         onClick={() => toggleMenu()}
-        className={`bigMenu w-full duration-500 delay-150	ease-linear absolute z-50 bg-brand-orange-alt ${
-          openMenu ? "h-full" : "h-0"
+        className={`bigMenu w-screen duration-500 delay-150 ease-linear absolute z-50 bg-gradient-conic backdrop-blur-lg from-[#8A2EFF]/65 via-[#8A2EFF] via-[#6800F8] to-[#8A2EFF]/65 at-bottom ${
+          openMenu ? "h-screen" : "h-0"
         }`}
       >
-        <div className="container mx-auto w-full h-full">
-
+        <div className="container flex mx-auto w-full h-full lg:py-[60px] py-[30px] px-[24px] lg:px-[30px]">
+          <div className="flex lg:flex-row flex-col w-full lg:justify-between justify-center lg:items-end items-center gap-32px">
+            <nav className="flex w-full">
+              <ul className="flex w-full lg:justifty-start items-start lg:text-start text-center flex-col list-none gap-6 whitespace-nowrap leading-small text-brand-black">
+                <li>
+                  <Link className={linkClass("/home")} href="/home">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link className={linkClass("/about-us")} href="/about-us">
+                    Company
+                  </Link>
+                </li>
+                <li>
+                  <Link className={linkClass("/services")} href="/services">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link className={linkClass("/blogs")} href="/blogs">
+                    Blogs
+                  </Link>
+                </li>
+                <li>
+                  <Link className={linkClass("/contact-us")} href="/contact-us">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+            <div className="flex flex-col justify-end text-end">
+              <div className="mb-4">
+                <h2 className="text-3xl font-bold">Contact Us</h2>
+              </div>
+              <p className="text-lg">Phone: (123) 456-7890</p>
+              <p className="text-lg">Email: contact@yourwebsite.com</p>
+              <p className="text-lg">Address: 123 Main Street, City, Country</p>
+            </div>
+          </div>
         </div>
       </div> */}
     </div>

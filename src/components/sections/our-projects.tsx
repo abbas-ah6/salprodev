@@ -85,7 +85,7 @@ const OurProjects: React.FC<IOurProjects> = ({
   const [selectedProject, setSelectedProject] = useState<IProject | null>(
     projects && projects.length > 0 ? projects[0] : null
   );
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   const handleMobileProjectClick = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -105,7 +105,7 @@ const OurProjects: React.FC<IOurProjects> = ({
           <p className="text-b18 text-brand-gray leading-medium mt-[24px]">
             {description || ""}
           </p>
-          <div className="mt-[24px] w-fit" href={"#"}>
+          <div className="mt-[24px] w-fit">
             <CustomLink
               type={link?.type}
               loading={false}
@@ -154,7 +154,7 @@ const OurProjects: React.FC<IOurProjects> = ({
               ))}
           </div>
         </div>
-        <div className="lg:hidden flex w-full gap-[12px]">
+        <div className="lg:hidden flex flex-col w-full gap-[12px] mt-[24px]">
           {projects &&
             projects.length > 0 &&
             projects.map((project, index) => (

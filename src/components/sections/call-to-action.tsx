@@ -13,7 +13,7 @@ const CallToAction: React.FC = () => {
         <div className="flex flex-1 justify-center items-center">
           <div>
             <CustomLink
-              children="Book Consultation"
+              children="Get in Touch"
               loading={false}
               type="primary"
               url="contact-us"

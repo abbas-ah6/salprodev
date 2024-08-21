@@ -80,6 +80,8 @@ export interface IHero {
   subHeading: string;
   buttons: IButton[];
   links: ILink[];
+  asTypeWriterHeading?: boolean;
+  typingTexts?: string[];
 }
 
 export interface IAboutUs {

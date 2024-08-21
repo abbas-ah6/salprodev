@@ -24,14 +24,14 @@ import WhyChooseUs from "@/components/sections/why-choose-us";
 import OurProcess from "@/components/sections/our-process";
 
 export const metadata: Metadata = {
-  title: "Exceptional Services Tailored to Meet Your Business Needs",
+  title: "Exceptional Services Tailored to Your Needs",
   description:
-    "Discover our range of professional services designed to help you achieve your business goals efficiently and with expertise in various fields.",
+    "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
   metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
   openGraph: {
-    title: "Exceptional Services Tailored to Meet Your Business Needs",
+    title: "Exceptional Services Tailored to Your Needs",
     description:
-      "Discover our range of professional services designed to help you achieve your business goals efficiently and with expertise in various fields.",
+      "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
     url: "https://salprodev-2hoy.vercel.app/services",
     siteName: "Salpro DEV",
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
         width: 1200,
         height: 630,
-        alt: "Exceptional Services Tailored to Meet Your Business Needs",
+        alt: "Exceptional Services Tailored to Your Needs",
       },
     ],
     locale: "en_US",
@@ -48,15 +48,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@salprodev",
-    title: "Exceptional Services Tailored to Meet Your Business Needs",
+    title: "Exceptional Services Tailored to Your Needs",
     description:
-      "Discover our range of professional services designed to help you achieve your business goals efficiently and with expertise in various fields.",
+      "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
     images: [
       {
         url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
         width: 1200,
         height: 630,
-        alt: "Exceptional Services Tailored to Meet Your Business Needs",
+        alt: "Exceptional Services Tailored to Your Needs",
       },
     ],
   },
@@ -77,9 +77,9 @@ const heroData = {
 } as IHero;
 
 const ourServiceData = {
-  heading: "Our Services",
+  heading: "Discover Our Comprehensive Services",
   description:
-    "Check out our extensive list of services, each one designed to fulfill your particular company's requirements and promote your success.",
+    "From innovative solutions to expert consultations, explore how our diverse offerings can drive your success and cater to your unique needs.",
   link: {
     type: "primary",
     children: "Contact Us",
@@ -88,14 +88,24 @@ const ourServiceData = {
   },
   services: [
     {
-      name: "Custom Software Development",
+      name: "Branding",
+      serviceImage: {
+        src: "/images/ui-ux-design.png",
+        alt: "UI/UX Design",
+      },
+      serviceUrl: "/services/branding",
+      shortDescription:
+        "Build a brand that speaks volumes. We craft distinctive brand identities that resonate with your target audience and leave a lasting impression.",
+    },
+    {
+      name: "Web Development",
       serviceImage: {
         src: "/images/custom-software-development.png",
-        alt: "Custom Software Development",
+        alt: "Web Development",
       },
-      serviceUrl: "services/custom-software-development",
+      serviceUrl: "services/web-development",
       shortDescription:
-        "Tailored software solutions to streamline your business processes and enhance efficiency. From web applications to enterprise systems, we build software that fits your needs.",
+        "Your website is your digital storefront. We create responsive, user-friendly websites that not only look great but also deliver exceptional performance.",
     },
     {
       name: "Digital Marketing",
@@ -103,19 +113,9 @@ const ourServiceData = {
         src: "/images/digital-marketing.png",
         alt: "Digital Marketing",
       },
-      serviceUrl: "#",
+      serviceUrl: "/services/digital-marketing",
       shortDescription:
-        "Innovative marketing strategies to boost your online presence. We offer SEO, social media marketing, and PPC campaigns to connect you with your target audience.",
-    },
-    {
-      name: "UI/UX Designt",
-      serviceImage: {
-        src: "/images/ui-ux-design.png",
-        alt: "UI/UX Design",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Crafting user-friendly and visually appealing interfaces. Our design team ensures an intuitive user experience that enhances engagement and satisfaction.",
+        "Drive traffic, engage customers, and boost your bottom line. Our data-driven marketing strategies help you reach and convert your ideal audience.",
     },
     {
       name: "Mobile App Development",
@@ -123,40 +123,40 @@ const ourServiceData = {
         src: "/images/mobile-app-development.png",
         alt: "Mobile App Development",
       },
-      serviceUrl: "#",
+      serviceUrl: "/services/mobile-app-development",
       shortDescription:
-        "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
+        "Transform your vision into reality. Our expert developers build scalable, high-performance mobile apps tailored to your business needs.",
     },
-    {
-      name: "E-commerce Solutions",
-      serviceImage: {
-        src: "/images/e-commerce-solutions.png",
-        alt: "E-commerce Solutions",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Comprehensive e-commerce solutions, including website development, payment gateway integration, and inventory management. We help you build a thriving online store.",
-    },
-    {
-      name: "Deployment Services",
-      serviceImage: {
-        src: "/images/deployment-services.png",
-        alt: "Deployment Services",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
-    },
-    {
-      name: "CMS Development",
-      serviceImage: {
-        src: "/images/cms-development.png",
-        alt: "CMS Development",
-      },
-      serviceUrl: "#",
-      shortDescription:
-        "Expert guidance on technology strategy and implementation. Our consulting services help you navigate the complexities of IT and leverage technology to achieve your business goals.",
-    },
+    // {
+    //   name: "E-commerce Solutions",
+    //   serviceImage: {
+    //     src: "/images/e-commerce-solutions.png",
+    //     alt: "E-commerce Solutions",
+    //   },
+    //   serviceUrl: "#",
+    //   shortDescription:
+    //     "Comprehensive e-commerce solutions, including website development, payment gateway integration, and inventory management. We help you build a thriving online store.",
+    // },
+    // {
+    //   name: "Deployment Services",
+    //   serviceImage: {
+    //     src: "/images/deployment-services.png",
+    //     alt: "Deployment Services",
+    //   },
+    //   serviceUrl: "#",
+    //   shortDescription:
+    //     "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
+    // },
+    // {
+    //   name: "CMS Development",
+    //   serviceImage: {
+    //     src: "/images/cms-development.png",
+    //     alt: "CMS Development",
+    //   },
+    //   serviceUrl: "#",
+    //   shortDescription:
+    //     "Expert guidance on technology strategy and implementation. Our consulting services help you navigate the complexities of IT and leverage technology to achieve your business goals.",
+    // },
   ],
 } as IServicesGrid;
 
@@ -209,9 +209,9 @@ const hubSpotFormData = {
 } as IHubSpotForm;
 
 const whyChooseUsData = {
-  heading: "Why Choose SalPro DEV",
+  heading: "Why Choose Us",
   description:
-    "Unmatched Expertise, Proven Results—Discover why our clients trust SalPro DEV to deliver exceptional software solutions and outstanding service every time.",
+    "Our team comprises seasoned professionals with deep expertise in branding, web development, app development, and digital marketing, ensuring top-notch results every time.",
   link: {
     children: "About Us",
     loading: false,
@@ -224,27 +224,27 @@ const whyChooseUsData = {
   },
   cards: [
     {
-      heading: "Innovative Solutions",
+      heading: "Tailored Solutions for Your Business",
       description:
-        "We leverage cutting-edge technology and creative approaches to deliver solutions that drive growth and efficiency.",
+        "We don’t believe in one-size-fits-all. We provide customized solutions that align with your unique business goals and industry needs.",
       icon: {
         src: "/icons/bulb.svg",
         alt: "Innovative Solutions",
       },
     },
     {
-      heading: "Proven Track Record",
+      heading: "Proven Track Record of Success",
       description:
-        "Our history of successful projects and satisfied clients speaks for itself. We consistently achieve results that exceed expectations.",
+        "With a portfolio of successful projects and satisfied clients, we have a proven track record of delivering digital solutions that drive growth.",
       icon: {
         src: "/icons/trophy.svg",
         alt: "Proven Track Record",
       },
     },
     {
-      heading: "Client-Centric Approach",
+      heading: "End-to-End Project Management",
       description:
-        "We prioritize your needs and work closely with you to tailor our services to your specific goals and challenges.",
+        "From initial concept to final deployment, we manage every aspect of your project, ensuring a seamless and stress-free experience.",
       icon: {
         src: "/icons/handshake.svg",
         alt: "Client-Centric Approach",
@@ -269,57 +269,48 @@ const ourProcessData = {
     "Explore our comprehensive, step-by-step approach to transforming your ideas into reality. Our process is designed to ensure precision, creativity, and continuous support throughout the project lifecycle.",
   cards: [
     {
-      heading: "Discovery & Planning",
+      heading: "Research",
       description:
-        "We start by deeply understanding your vision and goals. This phase involves detailed conversations and research to uncover your needs and challenges. We develop a strategic plan that outlines project milestones, deliverables, and success criteria. This foundation ensures alignment and clarity for all stakeholders before moving forward.",
+        "We dive deep into understanding your business, market, and customers to develop a strategy that sets you apart.",
       icon: {
         src: "/icons/magnifying-glass.svg",
         alt: "Discovery & Planning",
       },
     },
     {
-      heading: "Design & Prototyping",
+      heading: "Design & Prototype",
       description:
-        "Our design team translates your ideas into visual concepts. We create detailed wireframes and interactive prototypes that illustrate how your product will look and function. This phase allows you to visualize the end result, refine the design, and make adjustments based on feedback. Our goal is to ensure the design meets your expectations and is ready for development.",
+        "Our creative team crafts innovative designs and interactive prototypes that align with your brand and user needs.",
       icon: {
         src: "/icons/pencil.svg",
-        alt: "Design & Prototyping",
+        alt: "Design & Planning",
       },
     },
     {
-      heading: "Development & Quality Assurance",
+      heading: "Development",
       description:
-        "With the design approved, our developers begin the implementation process using cutting-edge technologies. We focus on creating a high-performance and user-friendly product. Our quality assurance team rigorously tests every feature to identify and resolve issues, ensuring the final product is reliable, secure, and free of bugs.",
+        "We turn your vision into reality with clean, efficient code, ensuring your website or app performs flawlessly.",
       icon: {
         src: "/icons/code-brackets.svg",
-        alt: "Development & Quality Assurance",
+        alt: "Development",
       },
     },
     {
-      heading: "Launch & Ongoing Support",
+      heading: "Testing",
       description:
-        "Once development is complete, we launch your product with a thorough deployment strategy. Post-launch, our support team provides ongoing maintenance, updates, and troubleshooting to address any issues that arise. We are committed to ensuring your product continues to perform optimally and evolves according to your needs.",
-      icon: {
-        src: "/icons/rocket-md.svg",
-        alt: "Launch & Ongoing Support",
-      },
-    },
-    {
-      heading: "Feedback & Iteration",
-      description:
-        "Following the launch, we actively seek your feedback and gather user insights to assess the product’s performance. This phase involves analyzing feedback, identifying areas for improvement, and implementing necessary updates. Iteration ensures that the product evolves based on real-world use and meets the changing needs of your users.",
+        "Rigorous testing guarantees a bug-free, user-friendly experience, ensuring everything works as intended before launch.",
       icon: {
         src: "/icons/feedback-form.svg",
-        alt: "Feedback & Iteration",
+        alt: "Testing",
       },
     },
     {
-      heading: "Optimization & Growth",
+      heading: "Deployment",
       description:
-        "As your product matures, we focus on optimizing its performance and scaling it to support growth. This includes performance enhancements, feature expansions, and adapting to market trends. We work closely with you to ensure the product remains competitive and continues to deliver value as your business and technology landscape evolve.",
+        "We launch your project with precision, ensuring a smooth go-live process and providing ongoing support as needed.",
       icon: {
-        src: "/icons/upward-arrow.svg",
-        alt: "Optimization & Growth",
+        src: "/icons/rocket-md.svg",
+        alt: "Deployment",
       },
     },
   ],
