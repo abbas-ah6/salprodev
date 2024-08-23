@@ -15,24 +15,35 @@ import WhyChooseUs from "@/components/sections/why-choose-us";
 import OurProcess from "@/components/sections/our-process";
 import ServiceHero from "@/components/sections/service-hero";
 import TextWithImage from "@/components/sections/text-with-image";
+import TechnologyStack from "@/components/elements/TechnologyStack";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development Services | SalPro DEV",
+  title: "Expert Web Development Services | SalPro DEV",
   description:
-    "Explore SalPro DEV's custom software development services designed to drive innovation and growth. Our expert team is dedicated to turning your vision into reality with precision and efficiency.",
+    "Unlock the potential of your online presence with SalPro DEV's professional web development services. From responsive websites to complex web applications, we deliver tailored solutions that drive business growth.",
   metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  keywords: [
+    "Web Development",
+    "Website Design",
+    "Responsive Web Design",
+    "Front-End Development",
+    "Back-End Development",
+    "Full-Stack Development",
+    "Custom Websites",
+    "SalPro DEV",
+  ],
   openGraph: {
-    title: "Custom Software Development Services | SalPro DEV",
+    title: "Expert Web Development Services | SalPro DEV",
     description:
-      "Explore SalPro DEV's custom software development services designed to drive innovation and growth. Our expert team is dedicated to turning your vision into reality with precision and efficiency.",
-    url: "https://salprodev-2hoy.vercel.app/services/custom-software-development",
-    siteName: "Salpro DEV",
+      "Unlock the potential of your online presence with SalPro DEV's professional web development services. From responsive websites to complex web applications, we deliver tailored solutions that drive business growth.",
+    url: "https://salprodev-2hoy.vercel.app/services/web-development",
+    siteName: "SalPro DEV",
     images: [
       {
         url: "https://salprodev-2hoy.vercel.app/images/custom-software-development.png",
         width: 1200,
         height: 630,
-        alt: "Custom Software Development Services",
+        alt: "Professional Web Development Services",
       },
     ],
     locale: "en_US",
@@ -41,45 +52,45 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@salprodev",
-    title: "Custom Software Development Services | SalPro DEV",
+    title: "Expert Web Development Services | SalPro DEV",
     description:
-      "Explore SalPro DEV's custom software development services designed to drive innovation and growth. Our expert team is dedicated to turning your vision into reality with precision and efficiency.",
+      "Unlock the potential of your online presence with SalPro DEV's professional web development services. From responsive websites to complex web applications, we deliver tailored solutions that drive business growth.",
     images: [
       {
         url: "https://salprodev-2hoy.vercel.app/images/custom-software-development.png",
         width: 1200,
         height: 630,
-        alt: "Custom Software Development Services",
+        alt: "Professional Web Development Services",
       },
     ],
   },
 };
 
 const heroData = {
-  heading: "Custom Software Development",
+  heading: "Your Vision, Our Expertise",
   subHeading:
-    "At SalPro DEV, we specialize in delivering custom software development services that drive innovation and growth. Whether you're looking to streamline operations, enhance customer experiences, or create a unique digital product, our team of experts is here to turn your vision into reality with precision and efficiency.",
+    "At SalPro DEV, we bring your ideas to life with cutting-edge web development services. Whether you need a responsive website, a robust e-commerce platform, or a custom web application, our skilled developers create tailored solutions that align with your business goals.",
   links: [
     {
       type: "primary",
-      children: "Contact Now!",
+      children: "Start Your Project",
       loading: false,
       url: "/contact-us",
     },
   ],
   image: {
     src: "/images/custom-software-development.png",
-    alt: "Custom Software Development Image",
+    alt: "Web Development Services Image",
   },
 } as IServiceHero;
 
 const textWithImageData = {
-  heading: "Why Choose Custom Software Development?",
+  heading: "Why Choose Our Web Development Services?",
   description:
-    "In a rapidly evolving digital landscape, off-the-shelf solutions often fall short of addressing specific business needs. Custom software development offers a tailored approach, providing solutions that are built to match your unique requirements, ensuring scalability, efficiency, and a competitive edge.",
+    "In today's digital-first world, your website is often the first point of contact with your customers. Our web development services ensure your site is not only visually stunning but also optimized for performance, user experience, and search engines. We focus on creating websites that drive conversions and provide a seamless experience across all devices.",
   image: {
     src: "/images/why-custom-software.png",
-    alt: "Why Custom Software Development Image",
+    alt: "Why Choose Our Web Development Services Image",
   },
   link: {
     children: "Contact Us",
@@ -89,22 +100,95 @@ const textWithImageData = {
   },
   bulletPoints: [
     {
-      text: "Tailored Solutions: Software designed to fit your exact business processes and goals.",
+      text: "Responsive Design: Websites that look great on all devices, from desktops to smartphones.",
     },
     {
-      text: "Scalability: Easily adapt and scale the software as your business grows.",
+      text: "SEO Optimization: Built-in SEO best practices to improve your site's visibility and ranking.",
     },
     {
-      text: "Enhanced Security: Custom-built solutions offer robust security features specific to your needs.",
+      text: "Custom Solutions: Tailored web applications that meet your specific business needs.",
     },
     {
-      text: "Integration: Seamlessly integrate with existing systems and platforms.",
+      text: "User-Centric Design: Focus on creating intuitive, engaging user experiences.",
     },
     {
-      text: "Competitive Advantage: Gain a unique edge with software designed to stand out.",
+      text: "Performance & Security: Fast, secure websites that provide a reliable experience for your users.",
     },
   ],
 } as ITextWithImage;
+
+const webDevelopmentServicesData = {
+  heading: "Our Comprehensive Web Development Services",
+  description:
+    "Explore our range of web development services designed to help your business thrive online. From design to deployment, we ensure every aspect of your website is crafted with excellence.",
+  link: {
+    children: "Contact Us",
+    loading: false,
+    type: "primary",
+    url: "/contact-us",
+  },
+  image: {
+    src: "/images/checklist-image.png",
+    alt: "Web Development Process Image",
+  },
+  cards: [
+    {
+      heading: "Custom Website Development",
+      description:
+        "Bespoke websites that reflect your brand's unique identity and cater to your specific audience.",
+      icon: {
+        src: "/icons/website.svg",
+        alt: "Custom Website Development",
+      },
+    },
+    {
+      heading: "E-Commerce Solutions",
+      description:
+        "Scalable e-commerce platforms that provide a seamless shopping experience and drive sales.",
+      icon: {
+        src: "/icons/ecommerce.svg",
+        alt: "E-Commerce Solutions",
+      },
+    },
+    {
+      heading: "Web Application Development",
+      description:
+        "Robust, interactive web applications that solve complex business challenges and enhance productivity.",
+      icon: {
+        src: "/icons/web-app.svg",
+        alt: "Web Application Development",
+      },
+    },
+    {
+      heading: "Content Management Systems",
+      description:
+        "User-friendly CMS solutions that allow you to easily manage and update your website content.",
+      icon: {
+        src: "/icons/cms.svg",
+        alt: "Content Management Systems",
+      },
+    },
+    {
+      heading: "Website Maintenance & Support",
+      description:
+        "Ongoing maintenance and support services to keep your website running smoothly and securely.",
+      icon: {
+        src: "/icons/maintenance.svg",
+        alt: "Website Maintenance & Support",
+      },
+    },
+    {
+      heading: "API Integration Services",
+      description:
+        "Integrate third-party services and APIs to enhance your website's functionality and performance.",
+      icon: {
+        src: "/icons/api.svg",
+        alt: "API Integration Services",
+      },
+    },
+  ],
+  imageAlignment: "right",
+} as IWhyChooseUs;
 
 const faqsData = {
   heading: "Got Questions?",
@@ -153,76 +237,6 @@ const hubSpotFormData = {
   subHeading:
     "Get in touch with our team and get professional services from our experts.",
 } as IHubSpotForm;
-
-const customSoftwareServicesData = {
-  heading: "Our Custom Software Development Services",
-  description:
-    "Explore our range of custom software development services designed to meet diverse business needs.",
-  link: {
-    children: "About Us",
-    loading: false,
-    type: "primary",
-    url: "/about-us",
-  },
-  image: {
-    src: "/images/checklist-image.png",
-    alt: "Whu Choose Us Image",
-  },
-  cards: [
-    {
-      heading: "Enterprise Software Solutions",
-      description:
-        "Large-scale, complex software tailored for enterprise-level operations.",
-      icon: {
-        src: "/icons/server.svg",
-        alt: "Enterprise Software Solutions",
-      },
-    },
-    {
-      heading: "Mobile App Development",
-      description: "Custom mobile applications for iOS and Android platforms.",
-      icon: {
-        src: "/icons/smartphone.svg",
-        alt: "Mobile App Development",
-      },
-    },
-    {
-      heading: "Web Application Development",
-      description: "Interactive and user-friendly web applications.",
-      icon: {
-        src: "/icons/monitor.svg",
-        alt: "Web Application Development",
-      },
-    },
-    {
-      heading: "CRM and ERP Systems",
-      description:
-        "Tailored solutions for managing customer relationships and enterprise resources.",
-      icon: {
-        src: "/icons/database.svg",
-        alt: "CRM and ERP Systems",
-      },
-    },
-    {
-      heading: "Software Integration Services",
-      description: "Seamless integration with existing systems and platforms.",
-      icon: {
-        src: "/icons/workflow.svg",
-        alt: "Software Integration Services",
-      },
-    },
-    {
-      heading: "Custom APIs and Middleware",
-      description:
-        "Develop APIs and middleware solutions to enhance connectivity and functionality.",
-      icon: {
-        src: "/icons/link.svg",
-        alt: "CRM and ERP Systems",
-      },
-    },
-  ],
-  imageAlignment: "right",
-} as IWhyChooseUs;
 
 const whyChooseUsData = {
   heading: "Why Choose Us",
@@ -336,9 +350,10 @@ const Page: React.FC = () => {
   return (
     <div>
       <ServiceHero {...heroData} />
+      <TechnologyStack />
       <TextWithImage {...textWithImageData} />
+      <WhyChooseUs {...webDevelopmentServicesData} />
       <OurProcess {...ourProcessData} />
-      <WhyChooseUs {...customSoftwareServicesData} />
       <WhyChooseUs {...whyChooseUsData} />
       <Faqs {...faqsData} />
       <HubSpotForm {...hubSpotFormData} />

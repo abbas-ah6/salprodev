@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
                         UI/UX Design
                       </a>
                       <a
-                        href="/services/mobile-app-development"
+                        href="/services/app-development"
                         className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
                         Mobile App

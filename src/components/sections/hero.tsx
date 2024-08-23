@@ -70,7 +70,7 @@ const Hero: React.FC<IHero> = ({
             </span>
           )}
           {!asTypeWriterHeading ? (
-            <h1 className="m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple">
+            <h1 className="m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple text-balance">
               {heading || ""}
             </h1>
           ) : (

@@ -1,6 +1,5 @@
 import React from "react";
 
-import Button from "../elements/button";
 import { IServiceHero } from "@/types";
 import Image from "next/image";
 import CustomLink from "../elements/CustomLink";
@@ -21,10 +20,10 @@ const ServiceHero: React.FC<IServiceHero> = ({
               {tag || ""}
             </span>
           )}
-          <h1 className="m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple">
+          <h1 className="m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple text-balance">
             {heading || ""}
           </h1>
-          <p className="m-0 mt-[24px] text-b18 capitalize font-normal leading-small text-brand-gray w-full">
+          <p className="m-0 mt-[24px] text-b18 capitalize font-normal leading-medium text-brand-gray w-full text-balance">
             {subHeading || ""}
           </p>
           <div className="mt-[56px] flex flex-col lg:items-start items-center w-full justify-center lg:justify-start gap-[24px] lg:flex-row">

@@ -3,12 +3,13 @@ import "./globals.css";
 import Footer from "@/components/sections/footer";
 import Header from "@/components/sections/header";
 import ScrollIndicator from "@/components/elements/ScrollIndicator";
+import { Raleway } from "next/font/google";
 
 const raleway = Raleway({
-  subsets: ['latin'],
-  variable: '--ralway',
-  display: 'swap',
-  weight: ["400", "700"]
+  subsets: ["latin"],
+  variable: "--ralway",
+  display: "swap",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {

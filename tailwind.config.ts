@@ -28,7 +28,7 @@ const config: Config = {
         "brand-offwhite": "#FCFAFF",
       },
       fontSize: {
-        h1: "56px",
+        h1: "52px",
         h2: "48px",
         h3: "42px",
         h4: "36px",

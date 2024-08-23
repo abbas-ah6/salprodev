@@ -3,7 +3,7 @@
 const nextConfig = {
   /* config options here */
   images: {
-    domains: ['cdn.builder.io', 'azaccountingservices.com', 'azaccountingservices.com.au', 'localhost'],
+    domains: ['cdn.builder.io', 'localhost', 'upload.wikimedia.org'],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if

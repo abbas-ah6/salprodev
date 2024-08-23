@@ -164,7 +164,7 @@ const OurServiceData = {
         src: "/images/mobile-app-development.png",
         alt: "Mobile App Development",
       },
-      serviceUrl: "/services/mobile-app-development",
+      serviceUrl: "/services/app-development",
       shortDescription:
         "Transform your vision into reality. Our expert developers build scalable, high-performance mobile apps tailored to your business needs.",
     },

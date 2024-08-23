@@ -1,45 +1,47 @@
-import React, { Children } from "react";
+import React from "react";
 import { Metadata } from "next";
-import "../globals.css";
-import Hero from "@/components/sections/hero";
 import {
-  IAboutUs,
-  IBlogCarousel,
   IFaqs,
-  IHero,
   IHubSpotForm,
   IOurProcess,
-  IOurProjects,
-  IServicesGrid,
+  IServiceHero,
+  ITextWithImage,
   IWhyChooseUs,
 } from "@/types";
-import AboutUsBanner from "@/components/sections/about-us";
-import OurServicesGrid from "@/components/sections/our-services-grid";
-import OurProjects from "@/components/sections/our-projects";
-import OurBlogsCarousel from "@/components/sections/our-blogs-carousel";
 import Faqs from "@/components/sections/faqs";
 import CallToAction from "@/components/sections/call-to-action";
 import HubSpotForm from "@/components/sections/hubspot-form";
 import WhyChooseUs from "@/components/sections/why-choose-us";
 import OurProcess from "@/components/sections/our-process";
+import ServiceHero from "@/components/sections/service-hero";
+import TextWithImage from "@/components/sections/text-with-image";
+import TechnologyStack from "@/components/elements/TechnologyStack";
 
 export const metadata: Metadata = {
-  title: "Exceptional Services Tailored to Your Needs",
+  title: "Top-Tier App Development Services | SalPro DEV",
   description:
-    "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
+    "Transform your ideas into powerful mobile applications with SalPro DEV's expert app development services. We specialize in creating innovative, user-centric apps that drive business growth and enhance user engagement.",
   metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  keywords: [
+    "App Development",
+    "Mobile App Development",
+    "iOS Development",
+    "Android Development",
+    "Custom App Development",
+    "SalPro DEV",
+  ],
   openGraph: {
-    title: "Exceptional Services Tailored to Your Needs",
+    title: "Top-Tier App Development Services | SalPro DEV",
     description:
-      "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
-    url: "https://salprodev-2hoy.vercel.app/services",
-    siteName: "Salpro DEV",
+      "Transform your ideas into powerful mobile applications with SalPro DEV's expert app development services. We specialize in creating innovative, user-centric apps that drive business growth and enhance user engagement.",
+    url: "https://salprodev-2hoy.vercel.app/services/app-development",
+    siteName: "SalPro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
+        url: "https://salprodev-2hoy.vercel.app/images/app-development.png",
         width: 1200,
         height: 630,
-        alt: "Exceptional Services Tailored to Your Needs",
+        alt: "App Development Services",
       },
     ],
     locale: "en_US",
@@ -48,117 +50,143 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@salprodev",
-    title: "Exceptional Services Tailored to Your Needs",
+    title: "Top-Tier App Development Services | SalPro DEV",
     description:
-      "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
+      "Transform your ideas into powerful mobile applications with SalPro DEV's expert app development services. We specialize in creating innovative, user-centric apps that drive business growth and enhance user engagement.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
+        url: "https://salprodev-2hoy.vercel.app/images/app-development.png",
         width: 1200,
         height: 630,
-        alt: "Exceptional Services Tailored to Your Needs",
+        alt: "App Development Services",
       },
     ],
   },
 };
 
 const heroData = {
-  tag: "POWERED BY AI",
-  heading: "Exceptional Services Tailored to Your Needs",
+  heading: "Innovative App Development",
   subHeading:
-    "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
-  buttons: [
+    "At SalPro DEV, we turn your ideas into powerful mobile applications. Whether you're looking to create a user-friendly mobile app or a robust enterprise-level solution, our team is here to deliver exceptional results that align with your business objectives.",
+  links: [
     {
       type: "primary",
-      children: "Explore Services",
+      children: "Get Started Today!",
       loading: false,
+      url: "/contact-us",
     },
   ],
-} as IHero;
+  image: {
+    src: "/images/app-development.png",
+    alt: "App Development Image",
+  },
+} as IServiceHero;
 
-const ourServiceData = {
-  heading: "Discover Our Comprehensive Services",
+const textWithImageData = {
+  heading: "Why Choose Our App Development Services?",
   description:
-    "From innovative solutions to expert consultations, explore how our diverse offerings can drive your success and cater to your unique needs.",
+    "In today's mobile-first world, having a high-quality app is essential for engaging customers and staying competitive. Our app development services are tailored to create apps that are not only functional but also intuitive and visually appealing. We focus on delivering apps that provide value and enhance user engagement.",
+  image: {
+    src: "/images/why-custom-software.png",
+    alt: "Why Choose Our App Development Services Image",
+  },
   link: {
-    type: "primary",
     children: "Contact Us",
     loading: false,
-    url: "contact-us",
+    type: "primary",
+    url: "/contact-us",
   },
-  services: [
+  bulletPoints: [
     {
-      name: "Branding",
-      serviceImage: {
-        src: "/images/ui-ux-design.png",
-        alt: "UI/UX Design",
-      },
-      serviceUrl: "/services/branding",
-      shortDescription:
-        "Build a brand that speaks volumes. We craft distinctive brand identities that resonate with your target audience and leave a lasting impression.",
+      text: "Cross-Platform Development: Reach users across multiple platforms with a single codebase.",
     },
     {
-      name: "Web Development",
-      serviceImage: {
-        src: "/images/custom-software-development.png",
-        alt: "Web Development",
-      },
-      serviceUrl: "services/web-development",
-      shortDescription:
-        "Your website is your digital storefront. We create responsive, user-friendly websites that not only look great but also deliver exceptional performance.",
+      text: "User-Centric Design: Apps designed with the user experience in mind to maximize engagement.",
     },
     {
-      name: "Digital Marketing",
-      serviceImage: {
-        src: "/images/digital-marketing.png",
-        alt: "Digital Marketing",
-      },
-      serviceUrl: "/services/digital-marketing",
-      shortDescription:
-        "Drive traffic, engage customers, and boost your bottom line. Our data-driven marketing strategies help you reach and convert your ideal audience.",
+      text: "Performance Optimization: Fast, responsive apps that deliver a seamless experience.",
     },
     {
-      name: "Mobile App Development",
-      serviceImage: {
-        src: "/images/mobile-app-development.png",
-        alt: "Mobile App Development",
-      },
-      serviceUrl: "/services/app-development",
-      shortDescription:
-        "Transform your vision into reality. Our expert developers build scalable, high-performance mobile apps tailored to your business needs.",
+      text: "Custom Features: Tailored functionality to meet your specific business needs.",
     },
-    // {
-    //   name: "E-commerce Solutions",
-    //   serviceImage: {
-    //     src: "/images/e-commerce-solutions.png",
-    //     alt: "E-commerce Solutions",
-    //   },
-    //   serviceUrl: "#",
-    //   shortDescription:
-    //     "Comprehensive e-commerce solutions, including website development, payment gateway integration, and inventory management. We help you build a thriving online store.",
-    // },
-    // {
-    //   name: "Deployment Services",
-    //   serviceImage: {
-    //     src: "/images/deployment-services.png",
-    //     alt: "Deployment Services",
-    //   },
-    //   serviceUrl: "#",
-    //   shortDescription:
-    //     "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
-    // },
-    // {
-    //   name: "CMS Development",
-    //   serviceImage: {
-    //     src: "/images/cms-development.png",
-    //     alt: "CMS Development",
-    //   },
-    //   serviceUrl: "#",
-    //   shortDescription:
-    //     "Expert guidance on technology strategy and implementation. Our consulting services help you navigate the complexities of IT and leverage technology to achieve your business goals.",
-    // },
+    {
+      text: "Ongoing Support: Continuous maintenance and updates to keep your app running smoothly.",
+    },
   ],
-} as IServicesGrid;
+} as ITextWithImage;
+
+const appDevelopmentServicesData = {
+  heading: "Our App Development Services",
+  description:
+    "Explore our comprehensive range of app development services designed to bring your ideas to life and help your business thrive in the digital landscape.",
+  link: {
+    children: "Contact Us",
+    loading: false,
+    type: "primary",
+    url: "/contact-us",
+  },
+  image: {
+    src: "/images/checklist-image.png",
+    alt: "App Development Services Image",
+  },
+  cards: [
+    {
+      heading: "iOS App Development",
+      description:
+        "Custom iOS apps designed to provide a superior experience for Apple users.",
+      icon: {
+        src: "/icons/ios-app.svg",
+        alt: "iOS App Development",
+      },
+    },
+    {
+      heading: "Android App Development",
+      description:
+        "Innovative Android apps that reach a wide audience on the Google Play Store.",
+      icon: {
+        src: "/icons/android-app.svg",
+        alt: "Android App Development",
+      },
+    },
+    {
+      heading: "Cross-Platform Development",
+      description:
+        "Apps that work seamlessly across iOS, Android, and web platforms.",
+      icon: {
+        src: "/icons/cross-platform.svg",
+        alt: "Cross-Platform Development",
+      },
+    },
+    {
+      heading: "Progressive Web Apps (PWA)",
+      description:
+        "Web applications that offer a native app-like experience on any device.",
+      icon: {
+        src: "/icons/pwa.svg",
+        alt: "Progressive Web Apps (PWA)",
+      },
+    },
+    {
+      heading: "App UI/UX Design",
+      description:
+        "User-friendly interfaces designed to engage and retain users.",
+      icon: {
+        src: "/icons/ui-ux.svg",
+        alt: "App UI/UX Design",
+      },
+    },
+    {
+      heading: "App Maintenance & Support",
+      description:
+        "Continuous support and maintenance to ensure your app remains up-to-date and functional.",
+      icon: {
+        src: "/icons/support.svg",
+        alt: "App Maintenance & Support",
+      },
+    },
+  ],
+  imageAlignment: "right",
+} as IWhyChooseUs;
 
 const faqsData = {
   heading: "Got Questions?",
@@ -316,13 +344,15 @@ const ourProcessData = {
   ],
 } as IOurProcess;
 
-const Services: React.FC = () => {
+const Page: React.FC = () => {
   return (
     <div>
-      <Hero {...heroData} />
-      <OurServicesGrid {...ourServiceData} />
-      <WhyChooseUs {...whyChooseUsData} />
+      <ServiceHero {...heroData} />
+      <TechnologyStack/>
+      <TextWithImage {...textWithImageData} />
       <OurProcess {...ourProcessData} />
+      <WhyChooseUs {...appDevelopmentServicesData} />
+      <WhyChooseUs {...whyChooseUsData} />
       <Faqs {...faqsData} />
       <HubSpotForm {...hubSpotFormData} />
       <CallToAction />
@@ -330,4 +360,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default Page;

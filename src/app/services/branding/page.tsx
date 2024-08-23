@@ -1,45 +1,48 @@
-import React, { Children } from "react";
+import React from "react";
 import { Metadata } from "next";
-import "../globals.css";
-import Hero from "@/components/sections/hero";
 import {
-  IAboutUs,
-  IBlogCarousel,
   IFaqs,
-  IHero,
   IHubSpotForm,
   IOurProcess,
-  IOurProjects,
-  IServicesGrid,
+  IServiceHero,
+  ITextWithImage,
   IWhyChooseUs,
 } from "@/types";
-import AboutUsBanner from "@/components/sections/about-us";
-import OurServicesGrid from "@/components/sections/our-services-grid";
-import OurProjects from "@/components/sections/our-projects";
-import OurBlogsCarousel from "@/components/sections/our-blogs-carousel";
 import Faqs from "@/components/sections/faqs";
 import CallToAction from "@/components/sections/call-to-action";
 import HubSpotForm from "@/components/sections/hubspot-form";
 import WhyChooseUs from "@/components/sections/why-choose-us";
 import OurProcess from "@/components/sections/our-process";
+import ServiceHero from "@/components/sections/service-hero";
+import TextWithImage from "@/components/sections/text-with-image";
+import TechnologyStack from "@/components/elements/TechnologyStack";
 
 export const metadata: Metadata = {
-  title: "Exceptional Services Tailored to Your Needs",
+  title: "Professional Branding Services | SalPro DEV",
   description:
-    "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
+    "Elevate your brand with SalPro DEV's expert branding services. From brand strategy to visual identity, we craft compelling brand experiences that resonate with your audience and drive business success.",
   metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  keywords: [
+    "Branding",
+    "Brand Identity",
+    "Logo Design",
+    "Visual Identity",
+    "Brand Strategy",
+    "Corporate Branding",
+    "SalPro DEV",
+  ],
   openGraph: {
-    title: "Exceptional Services Tailored to Your Needs",
+    title: "Professional Branding Services | SalPro DEV",
     description:
-      "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
-    url: "https://salprodev-2hoy.vercel.app/services",
-    siteName: "Salpro DEV",
+      "Elevate your brand with SalPro DEV's expert branding services. From brand strategy to visual identity, we craft compelling brand experiences that resonate with your audience and drive business success.",
+    url: "https://salprodev-2hoy.vercel.app/services/branding",
+    siteName: "SalPro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
+        url: "https://salprodev-2hoy.vercel.app/images/branding.png",
         width: 1200,
         height: 630,
-        alt: "Exceptional Services Tailored to Your Needs",
+        alt: "Professional Branding Services",
       },
     ],
     locale: "en_US",
@@ -48,117 +51,143 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@salprodev",
-    title: "Exceptional Services Tailored to Your Needs",
+    title: "Professional Branding Services | SalPro DEV",
     description:
-      "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
+      "Elevate your brand with SalPro DEV's expert branding services. From brand strategy to visual identity, we craft compelling brand experiences that resonate with your audience and drive business success.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
+        url: "https://salprodev-2hoy.vercel.app/images/branding.png",
         width: 1200,
         height: 630,
-        alt: "Exceptional Services Tailored to Your Needs",
+        alt: "Professional Branding Services",
       },
     ],
   },
 };
 
 const heroData = {
-  tag: "POWERED BY AI",
-  heading: "Exceptional Services Tailored to Your Needs",
+  heading: "Transform Your Brand Identity",
   subHeading:
-    "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
-  buttons: [
+    "At SalPro DEV, we specialize in creating powerful brand identities that resonate with your audience. From strategic brand development to stunning visual design, our expert team is dedicated to helping your brand stand out and achieve lasting success.",
+  links: [
     {
       type: "primary",
-      children: "Explore Services",
+      children: "Get Started Today!",
       loading: false,
+      url: "/contact-us",
     },
   ],
-} as IHero;
-
-const ourServiceData = {
-  heading: "Discover Our Comprehensive Services",
-  description:
-    "From innovative solutions to expert consultations, explore how our diverse offerings can drive your success and cater to your unique needs.",
-  link: {
-    type: "primary",
-    children: "Contact Us",
-    loading: false,
-    url: "contact-us",
+  image: {
+    src: "/images/branding.png",
+    alt: "Branding Image",
   },
-  services: [
+} as IServiceHero;
+
+const textWithImageData = {
+  heading: "Why Invest in Professional Branding?",
+  description:
+    "In today's competitive market, a strong brand is more than just a logo—it's the cornerstone of your business identity. Professional branding services ensure your brand communicates your values, connects with your target audience, and stands out in a crowded marketplace.",
+  image: {
+    src: "/images/why-custom-software.png",
+    alt: "Why Invest in Branding Image",
+  },
+  link: {
+    children: "Learn More",
+    loading: false,
+    type: "primary",
+    url: "/contact-us",
+  },
+  bulletPoints: [
     {
-      name: "Branding",
-      serviceImage: {
-        src: "/images/ui-ux-design.png",
-        alt: "UI/UX Design",
-      },
-      serviceUrl: "/services/branding",
-      shortDescription:
-        "Build a brand that speaks volumes. We craft distinctive brand identities that resonate with your target audience and leave a lasting impression.",
+      text: "Strategic Brand Development: Align your brand with your business goals and audience expectations.",
     },
     {
-      name: "Web Development",
-      serviceImage: {
-        src: "/images/custom-software-development.png",
-        alt: "Web Development",
-      },
-      serviceUrl: "services/web-development",
-      shortDescription:
-        "Your website is your digital storefront. We create responsive, user-friendly websites that not only look great but also deliver exceptional performance.",
+      text: "Visual Identity Design: Create a cohesive and memorable visual presence.",
     },
     {
-      name: "Digital Marketing",
-      serviceImage: {
-        src: "/images/digital-marketing.png",
-        alt: "Digital Marketing",
-      },
-      serviceUrl: "/services/digital-marketing",
-      shortDescription:
-        "Drive traffic, engage customers, and boost your bottom line. Our data-driven marketing strategies help you reach and convert your ideal audience.",
+      text: "Brand Consistency: Ensure your brand message is clear and consistent across all platforms.",
     },
     {
-      name: "Mobile App Development",
-      serviceImage: {
-        src: "/images/mobile-app-development.png",
-        alt: "Mobile App Development",
-      },
-      serviceUrl: "/services/app-development",
-      shortDescription:
-        "Transform your vision into reality. Our expert developers build scalable, high-performance mobile apps tailored to your business needs.",
+      text: "Customer Loyalty: Build trust and loyalty with a brand that resonates with your audience.",
     },
-    // {
-    //   name: "E-commerce Solutions",
-    //   serviceImage: {
-    //     src: "/images/e-commerce-solutions.png",
-    //     alt: "E-commerce Solutions",
-    //   },
-    //   serviceUrl: "#",
-    //   shortDescription:
-    //     "Comprehensive e-commerce solutions, including website development, payment gateway integration, and inventory management. We help you build a thriving online store.",
-    // },
-    // {
-    //   name: "Deployment Services",
-    //   serviceImage: {
-    //     src: "/images/deployment-services.png",
-    //     alt: "Deployment Services",
-    //   },
-    //   serviceUrl: "#",
-    //   shortDescription:
-    //     "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
-    // },
-    // {
-    //   name: "CMS Development",
-    //   serviceImage: {
-    //     src: "/images/cms-development.png",
-    //     alt: "CMS Development",
-    //   },
-    //   serviceUrl: "#",
-    //   shortDescription:
-    //     "Expert guidance on technology strategy and implementation. Our consulting services help you navigate the complexities of IT and leverage technology to achieve your business goals.",
-    // },
+    {
+      text: "Competitive Edge: Stand out in the market with a unique and compelling brand identity.",
+    },
   ],
-} as IServicesGrid;
+} as ITextWithImage;
+
+const brandingServicesData = {
+  heading: "Our Comprehensive Branding Services",
+  description:
+    "Explore our range of branding services designed to elevate your business and connect with your audience on a deeper level.",
+  link: {
+    children: "About Us",
+    loading: false,
+    type: "primary",
+    url: "/about-us",
+  },
+  image: {
+    src: "/images/checklist-image.png",
+    alt: "Our Branding Process Image",
+  },
+  cards: [
+    {
+      heading: "Brand Strategy",
+      description:
+        "Craft a strong brand strategy that aligns with your business goals and market position.",
+      icon: {
+        src: "/icons/strategy.svg",
+        alt: "Brand Strategy",
+      },
+    },
+    {
+      heading: "Visual Identity Design",
+      description:
+        "Create a unique and cohesive visual identity that speaks to your audience.",
+      icon: {
+        src: "/icons/identity.svg",
+        alt: "Visual Identity Design",
+      },
+    },
+    {
+      heading: "Brand Messaging",
+      description:
+        "Develop clear and consistent messaging that communicates your brand values.",
+      icon: {
+        src: "/icons/message.svg",
+        alt: "Brand Messaging",
+      },
+    },
+    {
+      heading: "Logo Design",
+      description:
+        "Design a memorable logo that captures the essence of your brand.",
+      icon: {
+        src: "/icons/logo.svg",
+        alt: "Logo Design",
+      },
+    },
+    {
+      heading: "Brand Guidelines",
+      description:
+        "Establish brand guidelines to maintain consistency across all platforms.",
+      icon: {
+        src: "/icons/guidelines.svg",
+        alt: "Brand Guidelines",
+      },
+    },
+    {
+      heading: "Brand Audit and Refresh",
+      description:
+        "Evaluate and enhance your existing brand to ensure it remains relevant and effective.",
+      icon: {
+        src: "/icons/audit.svg",
+        alt: "Brand Audit and Refresh",
+      },
+    },
+  ],
+  imageAlignment: "right",
+} as IWhyChooseUs;
 
 const faqsData = {
   heading: "Got Questions?",
@@ -316,13 +345,15 @@ const ourProcessData = {
   ],
 } as IOurProcess;
 
-const Services: React.FC = () => {
+const Page: React.FC = () => {
   return (
     <div>
-      <Hero {...heroData} />
-      <OurServicesGrid {...ourServiceData} />
-      <WhyChooseUs {...whyChooseUsData} />
+      <ServiceHero {...heroData} />
+      <TechnologyStack/>
+      <TextWithImage {...textWithImageData} />
+      <WhyChooseUs {...brandingServicesData} />
       <OurProcess {...ourProcessData} />
+      <WhyChooseUs {...whyChooseUsData} />
       <Faqs {...faqsData} />
       <HubSpotForm {...hubSpotFormData} />
       <CallToAction />
@@ -330,4 +361,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default Page;

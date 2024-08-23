@@ -1,45 +1,50 @@
-import React, { Children } from "react";
+import React from "react";
 import { Metadata } from "next";
-import "../globals.css";
-import Hero from "@/components/sections/hero";
 import {
-  IAboutUs,
-  IBlogCarousel,
   IFaqs,
-  IHero,
   IHubSpotForm,
   IOurProcess,
-  IOurProjects,
-  IServicesGrid,
+  IServiceHero,
+  ITextWithImage,
   IWhyChooseUs,
 } from "@/types";
-import AboutUsBanner from "@/components/sections/about-us";
-import OurServicesGrid from "@/components/sections/our-services-grid";
-import OurProjects from "@/components/sections/our-projects";
-import OurBlogsCarousel from "@/components/sections/our-blogs-carousel";
 import Faqs from "@/components/sections/faqs";
 import CallToAction from "@/components/sections/call-to-action";
 import HubSpotForm from "@/components/sections/hubspot-form";
 import WhyChooseUs from "@/components/sections/why-choose-us";
 import OurProcess from "@/components/sections/our-process";
+import ServiceHero from "@/components/sections/service-hero";
+import TextWithImage from "@/components/sections/text-with-image";
+import TechnologyStack from "@/components/elements/TechnologyStack";
 
 export const metadata: Metadata = {
-  title: "Exceptional Services Tailored to Your Needs",
+  title: "Top-Notch Digital Marketing Services | SalPro DEV",
   description:
-    "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
+    "Boost your online presence with SalPro DEV's expert digital marketing services. From SEO to social media, we deliver customized strategies that drive traffic, engagement, and conversions.",
   metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  keywords: [
+    "Digital Marketing",
+    "SEO",
+    "Search Engine Optimization",
+    "Social Media Marketing",
+    "PPC Advertising",
+    "Content Marketing",
+    "Email Marketing",
+    "SalPro DEV",
+  ],
+
   openGraph: {
-    title: "Exceptional Services Tailored to Your Needs",
+    title: "Top-Notch Digital Marketing Services | SalPro DEV",
     description:
-      "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
-    url: "https://salprodev-2hoy.vercel.app/services",
-    siteName: "Salpro DEV",
+      "Boost your online presence with SalPro DEV's expert digital marketing services. From SEO to social media, we deliver customized strategies that drive traffic, engagement, and conversions.",
+    url: "https://salprodev-2hoy.vercel.app/services/digital-marketing",
+    siteName: "SalPro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
+        url: "https://salprodev-2hoy.vercel.app/images/social-media.png",
         width: 1200,
         height: 630,
-        alt: "Exceptional Services Tailored to Your Needs",
+        alt: "Professional Digital Marketing Services",
       },
     ],
     locale: "en_US",
@@ -48,117 +53,143 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@salprodev",
-    title: "Exceptional Services Tailored to Your Needs",
+    title: "Top-Notch Digital Marketing Services | SalPro DEV",
     description:
-      "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
+      "Boost your online presence with SalPro DEV's expert digital marketing services. From SEO to social media, we deliver customized strategies that drive traffic, engagement, and conversions.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
+        url: "https://salprodev-2hoy.vercel.app/images/social-media.png",
         width: 1200,
         height: 630,
-        alt: "Exceptional Services Tailored to Your Needs",
+        alt: "Professional Digital Marketing Services",
       },
     ],
   },
 };
 
 const heroData = {
-  tag: "POWERED BY AI",
-  heading: "Exceptional Services Tailored to Your Needs",
+  heading: "Elevate Your Digital Presence",
   subHeading:
-    "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
-  buttons: [
+    "At SalPro DEV, our digital marketing services are designed to grow your brand online. Whether you need targeted SEO strategies, impactful social media campaigns, or comprehensive PPC management, we tailor our approach to meet your business goals and maximize ROI.",
+  links: [
     {
       type: "primary",
-      children: "Explore Services",
+      children: "Get Started Today!",
       loading: false,
+      url: "/contact-us",
     },
   ],
-} as IHero;
+  image: {
+    src: "/images/social-media.png",
+    alt: "Digital Marketing Services Image",
+  },
+} as IServiceHero;
 
-const ourServiceData = {
-  heading: "Discover Our Comprehensive Services",
+const textWithImageData = {
+  heading: "Why Invest in Digital Marketing?",
   description:
-    "From innovative solutions to expert consultations, explore how our diverse offerings can drive your success and cater to your unique needs.",
+    "In the digital age, having a strong online presence is crucial for business success. Our digital marketing services help you reach your target audience, improve brand visibility, and increase engagement. With our expertise, you can turn digital interactions into meaningful customer relationships and measurable business results.",
+  image: {
+    src: "/images/why-custom-software.png",
+    alt: "Why Invest in Digital Marketing Image",
+  },
   link: {
-    type: "primary",
     children: "Contact Us",
     loading: false,
-    url: "contact-us",
+    type: "primary",
+    url: "/contact-us",
   },
-  services: [
+  bulletPoints: [
     {
-      name: "Branding",
-      serviceImage: {
-        src: "/images/ui-ux-design.png",
-        alt: "UI/UX Design",
-      },
-      serviceUrl: "/services/branding",
-      shortDescription:
-        "Build a brand that speaks volumes. We craft distinctive brand identities that resonate with your target audience and leave a lasting impression.",
+      text: "Search Engine Optimization (SEO): Enhance your website's visibility on search engines and attract more organic traffic.",
     },
     {
-      name: "Web Development",
-      serviceImage: {
-        src: "/images/custom-software-development.png",
-        alt: "Web Development",
-      },
-      serviceUrl: "services/web-development",
-      shortDescription:
-        "Your website is your digital storefront. We create responsive, user-friendly websites that not only look great but also deliver exceptional performance.",
+      text: "Pay-Per-Click (PPC) Advertising: Drive targeted traffic with data-driven PPC campaigns that deliver results.",
     },
     {
-      name: "Digital Marketing",
-      serviceImage: {
-        src: "/images/digital-marketing.png",
-        alt: "Digital Marketing",
-      },
-      serviceUrl: "/services/digital-marketing",
-      shortDescription:
-        "Drive traffic, engage customers, and boost your bottom line. Our data-driven marketing strategies help you reach and convert your ideal audience.",
+      text: "Social Media Marketing: Engage your audience on social media platforms with tailored content and strategies.",
     },
     {
-      name: "Mobile App Development",
-      serviceImage: {
-        src: "/images/mobile-app-development.png",
-        alt: "Mobile App Development",
-      },
-      serviceUrl: "/services/app-development",
-      shortDescription:
-        "Transform your vision into reality. Our expert developers build scalable, high-performance mobile apps tailored to your business needs.",
+      text: "Content Marketing: Create and distribute valuable content that attracts, engages, and converts your audience.",
     },
-    // {
-    //   name: "E-commerce Solutions",
-    //   serviceImage: {
-    //     src: "/images/e-commerce-solutions.png",
-    //     alt: "E-commerce Solutions",
-    //   },
-    //   serviceUrl: "#",
-    //   shortDescription:
-    //     "Comprehensive e-commerce solutions, including website development, payment gateway integration, and inventory management. We help you build a thriving online store.",
-    // },
-    // {
-    //   name: "Deployment Services",
-    //   serviceImage: {
-    //     src: "/images/deployment-services.png",
-    //     alt: "Deployment Services",
-    //   },
-    //   serviceUrl: "#",
-    //   shortDescription:
-    //     "Developing responsive and high-performance mobile applications for both Android and iOS platforms. We turn your ideas into accessible and engaging mobile experiences.",
-    // },
-    // {
-    //   name: "CMS Development",
-    //   serviceImage: {
-    //     src: "/images/cms-development.png",
-    //     alt: "CMS Development",
-    //   },
-    //   serviceUrl: "#",
-    //   shortDescription:
-    //     "Expert guidance on technology strategy and implementation. Our consulting services help you navigate the complexities of IT and leverage technology to achieve your business goals.",
-    // },
+    {
+      text: "Email Marketing: Build lasting customer relationships with personalized and effective email campaigns.",
+    },
   ],
-} as IServicesGrid;
+} as ITextWithImage;
+
+const digitalMarketingServicesData = {
+  heading: "Our Comprehensive Digital Marketing Services",
+  description:
+    "Explore our full range of digital marketing services designed to boost your online presence and drive business growth.",
+  link: {
+    children: "Learn More",
+    loading: false,
+    type: "primary",
+    url: "/contact-us",
+  },
+  image: {
+    src: "/images/checklist-image.png",
+    alt: "Digital Marketing Services Process Image",
+  },
+  cards: [
+    {
+      heading: "SEO Services",
+      description:
+        "Improve your website's search engine rankings with our expert SEO strategies, driving organic traffic to your site.",
+      icon: {
+        src: "/icons/seo.svg",
+        alt: "SEO Services",
+      },
+    },
+    {
+      heading: "PPC Management",
+      description:
+        "Maximize your ROI with our targeted PPC campaigns, designed to drive high-quality traffic to your website.",
+      icon: {
+        src: "/icons/ppc.svg",
+        alt: "PPC Management",
+      },
+    },
+    {
+      heading: "Social Media Marketing",
+      description:
+        "Engage and grow your audience on social media platforms with customized strategies and compelling content.",
+      icon: {
+        src: "/icons/social-media.svg",
+        alt: "Social Media Marketing",
+      },
+    },
+    {
+      heading: "Content Marketing",
+      description:
+        "Create and share valuable content that resonates with your audience and supports your business objectives.",
+      icon: {
+        src: "/icons/content-marketing.svg",
+        alt: "Content Marketing",
+      },
+    },
+    {
+      heading: "Email Marketing",
+      description:
+        "Build customer loyalty and drive conversions with targeted, personalized email campaigns.",
+      icon: {
+        src: "/icons/email-marketing.svg",
+        alt: "Email Marketing",
+      },
+    },
+    {
+      heading: "Analytics & Reporting",
+      description:
+        "Gain insights into your marketing performance with our comprehensive analytics and reporting services.",
+      icon: {
+        src: "/icons/analytics.svg",
+        alt: "Analytics & Reporting",
+      },
+    },
+  ],
+  imageAlignment: "right",
+} as IWhyChooseUs;
 
 const faqsData = {
   heading: "Got Questions?",
@@ -316,13 +347,15 @@ const ourProcessData = {
   ],
 } as IOurProcess;
 
-const Services: React.FC = () => {
+const Page: React.FC = () => {
   return (
     <div>
-      <Hero {...heroData} />
-      <OurServicesGrid {...ourServiceData} />
-      <WhyChooseUs {...whyChooseUsData} />
+      <ServiceHero {...heroData} />
+      <TechnologyStack/>
+      <TextWithImage {...textWithImageData} />
+      <WhyChooseUs {...digitalMarketingServicesData} />
       <OurProcess {...ourProcessData} />
+      <WhyChooseUs {...whyChooseUsData} />
       <Faqs {...faqsData} />
       <HubSpotForm {...hubSpotFormData} />
       <CallToAction />
@@ -330,4 +363,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default Page;
