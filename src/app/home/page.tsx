@@ -22,7 +22,6 @@ import CallToAction from "@/components/sections/call-to-action";
 import HubSpotForm from "@/components/sections/hubspot-form";
 import WhyChooseUs from "@/components/sections/why-choose-us";
 import OurProcess from "@/components/sections/our-process";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Building High-Quality Tech Solutions for Community Growth",
@@ -76,8 +75,8 @@ export const metadata: Metadata = {
 };
 
 const heroData = {
-  tag: "POWERED BY AI",
-  heading: "We Help You Excel in",
+  tag: "We Help You Excel in",
+  heading: "",
   subHeading:
     "At SalPro Dev, we transform your business ideas into powerful digital experiences. From creating compelling brand identities to developing cutting-edge web and mobile applications, our expert team delivers solutions that drive growth and success.",
   links: [
@@ -98,8 +97,8 @@ const heroData = {
   ],
   asTypeWriterHeading: true,
   typingTexts: [
-    "Custom Software Development",
     "Web Development",
+    "Digital Marketing",
     "App Development",
     "Branding",
   ],
@@ -294,7 +293,7 @@ const OurBlogsData = {
       name: "Innovative E-commerce Platform",
       shortDescription:
         "We developed a cutting-edge e-commerce platform for a leading retail brand, integrating seamless shopping experiences with advanced analytics. Our solution",
-      blogUrl: "blogs/innovative-e-commerce-platform",
+      blogUrl: "/blogs/innovative-e-commerce-platform",
     },
     {
       blogImage: {
@@ -304,7 +303,7 @@ const OurBlogsData = {
       name: "Custom CRM Solution",
       shortDescription:
         "Our team created a tailored Customer Relationship Management (CRM) system for a growing financial services company. This project focused on enhancing",
-      blogUrl: "#",
+      blogUrl: "/blogs/innovative-e-commerce-platform",
     },
     {
       blogImage: {
@@ -314,7 +313,7 @@ const OurBlogsData = {
       name: "Creative Marketing Campaign",
       shortDescription:
         "We partnered with a fashion startup to design and execute a creative marketing campaign that included a brand refresh, engaging social media content, and interactive",
-      blogUrl: "#",
+      blogUrl: "/blogs/innovative-e-commerce-platform",
     },
   ],
 } as IBlogCarousel;

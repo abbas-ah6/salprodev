@@ -2,75 +2,68 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Button from "../elements/button";
+import { usePathname } from "next/navigation";
 
 const MobileHeader: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [openMenu, setOpemMenu] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setOpemMenu(!openMenu);
   };
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const linkClass = (path: string) =>
+    `hover:text-brand-orange text-h4 p-[12px] duration-300 flex justify-center items-center flex-col ${
+      pathname === path
+        ? "border-b border-brand-orange text-brand-orange"
+        : "text-white"
+    }`;
 
   return (
     <div className="flex flex-row items-center w-full lg:hidden justify-end">
-      <nav
-        className={`${
-          menuOpen ? "flex" : "hidden"
-        } w-full px-4 fixed top-0 right-0 bottom-0 bg-black bg-opacity-80 overflow-hidden transition-all duration-500 ease-in-out flex flex-col items-center justify-center z-[9999]`}
+      <div
+        onClick={() => toggleMenu()}
+        className={`bigMenu overflow-hidden w-screen duration-500 delay-150 ease-linear inset-0 absolute z-50 bg-gradient-conic backdrop-blur-lg from-[#8A2EFF]/65 via-[#8A2EFF] via-[#6800F8] to-[#8A2EFF]/65 at-bottom ${
+          openMenu ? "h-full" : "h-0"
+        }`}
       >
-        <button
-          className="absolute top-5 right-5 bg-none border-none text-2xl text-white cursor-pointer"
-          onClick={closeMenu}
-        >
-          ×
-        </button>
-        <ul className="flex gap-5 whitespace-nowrap leading-[164%] text-4xl text-center text-white flex-col">
-          <li>
-            <Link
-              onClick={closeMenu}
-              className="hover:text-[#F17720] duration-200"
-              href="/home"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={closeMenu}
-              className="hover:text-[#F17720] duration-200"
-              href="/about-us"
-            >
-              Company
-            </Link>
-          </li>
-          {/* <li>
-            <Link onClick={closeMenu}
-              className="hover:text-[#F17720] duration-200"
-              href="/services"
-            >
-              Services
-            </Link>
-          </li> */}
-          <li>
-            <Link
-              onClick={closeMenu}
-              className="hover:text-[#F17720] duration-200"
-              href={"/contact-us"}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
+        <div className="container flex mx-auto w-full h-full lg:py-[60px] py-[30px] px-[24px] lg:px-[30px]">
+          <nav className="flex w-full justify-center items-top pt-[64px]">
+            <ul className="flex w-full m-0 p-0 items-center text-center flex-col list-none gap-6 whitespace-nowrap leading-small text-brand-black">
+              <li>
+                <Link className={linkClass("/home")} href="/home">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link className={linkClass("/about-us")} href="/about-us">
+                  Company
+                </Link>
+              </li>
+              <li>
+                <Link className={linkClass("/services")} href="/services">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link className={linkClass("/blogs")} href="/blogs">
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link className={linkClass("/contact-us")} href="/contact-us">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       <button
         className="bg-none border-none p-4 text-2xl font-semibold duration-200 cursor-pointer"
         onClick={toggleMenu}
       >
-        {menuOpen ? "///" : "|||"}
+        {openMenu ? "///" : "|||"}
       </button>
     </div>
   );

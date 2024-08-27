@@ -22,7 +22,7 @@ const TypewriterEffect: React.FC<TypewriterEffect> = ({ heading, words }) => {
           : fullText.substring(0, currentWord.length + 1)
       );
 
-      setTypingSpeed(isDeleting ? 50 : 200);
+      setTypingSpeed(isDeleting ? 50 : 100);
 
       if (!isDeleting && currentWord === fullText) {
         setTimeout(() => setIsDeleting(true), 500);
@@ -37,8 +37,10 @@ const TypewriterEffect: React.FC<TypewriterEffect> = ({ heading, words }) => {
   }, [currentWord, isDeleting, loopNum, words]);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple">
-      <h1 className="">{heading + " " + currentWord}</h1>
+    <div className="w-full h-full min-h-[38px] lg:min-h-[66px] flex flex-col justify-center items-center m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple">
+      <h1 className="min-h-[38px] lg:min-h-[66px]">
+        {heading + " " + currentWord}
+      </h1>
     </div>
   );
 };

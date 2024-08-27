@@ -12,7 +12,7 @@ const ServiceCard: React.FC<IService> = ({
   shortDescription,
 }) => (
   <Link href={serviceUrl || "#"}>
-    <div className="group relative flex flex-col pb-[12px] border-b border-transparent">
+    <div className="group relative flex flex-col pb-[12px] border-b border-transparent text-center lg:text-start items-center lg:items-start">
       <div className="absolute right-0 w-0 group-hover:w-full duration-500 ease-in-out bottom-0 h-[2px] bg-gradient-to-l from-brand-blue to-white"></div>
       <div>
         <Image

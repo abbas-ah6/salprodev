@@ -40,10 +40,10 @@ const config: Config = {
         b14: "14px",
         b12: "12px",
 
-        h1M: "36px",
-        h2M: "34px",
-        h3M: "32px",
-        h4M: "30px",
+        h1M: "32px",
+        h2M: "28px",
+        h3M: "26px",
+        h4M: "24px",
       },
       lineHeight: {
         full: "100%",

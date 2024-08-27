@@ -70,17 +70,17 @@ const Hero: React.FC<IHero> = ({
             </span>
           )}
           {!asTypeWriterHeading ? (
-            <h1 className="m-0 mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple text-balance">
+            <h1 className="m-0 min-h-[35px] lg:min-h-[35px] mt-[24px] lg:text-h1 text-h1M capitalize font-light leading-small text-brand-purple text-balance">
               {heading || ""}
             </h1>
           ) : (
             <TypewriterEffect heading={heading} words={typingTexts || []} />
           )}
-          <p className="m-0 mt-[24px] text-balance text-b18 capitalize font-normal leading-small text-brand-gray w-full">
+          <p className="m-0 mt-[24px] text-balance text-b16 capitalize font-normal leading-small text-brand-gray w-full">
             {subHeading || ""}
           </p>
         </div>
-        <div className="z-10 mt-[56px] flex flex-col items-center w-full justify-center gap-14 lg:flex-row">
+        <div className="z-10 mt-[56px] flex flex-col items-center w-full justify-center lg:gap-[32px] gap-[24px] lg:flex-row">
           {links &&
             links.length > 0 &&
             links.map((item, index) => {
