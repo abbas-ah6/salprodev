@@ -4,6 +4,7 @@ import Footer from "@/components/sections/footer";
 import Header from "@/components/sections/header";
 import ScrollIndicator from "@/components/elements/ScrollIndicator";
 import { Raleway } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -78,6 +79,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <ScrollIndicator />
+        <Analytics />
       </body>
     </html>
   );
