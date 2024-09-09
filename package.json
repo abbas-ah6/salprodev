@@ -23,6 +23,7 @@
     "react-hook-form": "^7.52.0",
     "react-multi-carousel": "^2.8.5",
     "react-share": "^5.1.0",
+    "schema-dts": "^1.1.2",
     "sharp": "^0.33.4",
     "yup": "^1.4.0"
   },

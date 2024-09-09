@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { IFaqItem, IFaqs } from "@/types";
-import Button from "../elements/button";
+import { FAQPage } from "schema-dts";
 
 const FaqCard: React.FC<{
   faq: IFaqItem;
@@ -51,6 +51,18 @@ const Faqs: React.FC<IFaqs> = ({ description, heading, image, faqs }) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const faqsStructuredData: FAQPage = {
+    "@type": "FAQPage",
+    mainEntity: faqs?.map((faq) => ({
+      "@type": "Question",
+      name: faq?.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq?.answer,
+      },
+    })),
+  };
+
   return (
     <section className="flex flex-col w-full bg-white">
       <div className="flex flex-col lg:px-[30px] lg:py-[60px] py-[36px] px-[24px] w-full container mx-auto">
@@ -87,6 +99,10 @@ const Faqs: React.FC<IFaqs> = ({ description, heading, image, faqs }) => {
           </div>
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: faqsStructuredData }}
+      />
     </section>
   );
 };
