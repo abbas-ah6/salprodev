@@ -11,16 +11,16 @@ export const metadata: Metadata = {
   title: "Explore the Latest Insights & Articles | SalPro DEV",
   description:
     "Discover a curated collection of articles and resources at SalPro DEV. Stay informed on current trends, challenges, and industry insights.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   openGraph: {
     title: "Explore the Latest Insights & Articles | SalPro DEV",
     description:
       "Discover a curated collection of articles and resources at SalPro DEV. Stay informed on current trends, challenges, and industry insights.",
-    url: "https://salprodev-2hoy.vercel.app/blogs",
+    url: "https://salprodev.com/blogs",
     siteName: "Salpro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/blogs-hero.png",
+        url: "https://salprodev.com/images/blogs-hero.png",
         width: 1200,
         height: 630,
         alt: "Explore the Latest Insights & Articles",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "Discover a curated collection of articles and resources at SalPro DEV. Stay informed on current trends, challenges, and industry insights.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/blogs-hero.png",
+        url: "https://salprodev.com/images/blogs-hero.png",
         width: 120,
         height: 630,
         alt: "Explore the Latest Insights & Articles",
@@ -64,10 +64,10 @@ const ourBlogsData = {
   description:
     "Discover out latest blogs about the new technologies in the world of computer.",
   link: {
-    children: "See All Blogs",
+    children: "Contact Us",
     type: "primary",
     loading: false,
-    url: "blogs",
+    url: "/contact-us",
   },
   blogs: [
     {
@@ -78,27 +78,7 @@ const ourBlogsData = {
       name: "Innovative E-commerce Platform",
       shortDescription:
         "We developed a cutting-edge e-commerce platform for a leading retail brand, integrating seamless shopping experiences with advanced analytics. Our solution",
-      blogUrl: "#",
-    },
-    {
-      blogImage: {
-        src: "/images/blog-2.png",
-        alt: "Custom CRM Solution",
-      },
-      name: "Custom CRM Solution",
-      shortDescription:
-        "Our team created a tailored Customer Relationship Management (CRM) system for a growing financial services company. This project focused on enhancing",
-      blogUrl: "#",
-    },
-    {
-      blogImage: {
-        src: "/images/blog-3.png",
-        alt: "Creative Marketing Campaign",
-      },
-      name: "Creative Marketing Campaign",
-      shortDescription:
-        "We partnered with a fashion startup to design and execute a creative marketing campaign that included a brand refresh, engaging social media content, and interactive",
-      blogUrl: "#",
+      blogUrl: "/blogs/innovative-e-commerce-platform",
     },
   ],
 } as IBlogCarousel;

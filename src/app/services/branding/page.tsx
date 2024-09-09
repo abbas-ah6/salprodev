@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Professional Branding Services | SalPro DEV",
   description:
     "Elevate your brand with SalPro DEV's expert branding services. From brand strategy to visual identity, we craft compelling brand experiences that resonate with your audience and drive business success.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   keywords: [
     "Branding",
     "Brand Identity",
@@ -35,11 +35,11 @@ export const metadata: Metadata = {
     title: "Professional Branding Services | SalPro DEV",
     description:
       "Elevate your brand with SalPro DEV's expert branding services. From brand strategy to visual identity, we craft compelling brand experiences that resonate with your audience and drive business success.",
-    url: "https://salprodev-2hoy.vercel.app/services/branding",
+    url: "https://salprodev.com/services/branding",
     siteName: "SalPro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/branding.png",
+        url: "https://salprodev.com/images/branding.png",
         width: 1200,
         height: 630,
         alt: "Professional Branding Services",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       "Elevate your brand with SalPro DEV's expert branding services. From brand strategy to visual identity, we craft compelling brand experiences that resonate with your audience and drive business success.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/branding.png",
+        url: "https://salprodev.com/images/branding.png",
         width: 1200,
         height: 630,
         alt: "Professional Branding Services",

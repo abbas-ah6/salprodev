@@ -11,16 +11,16 @@ export const metadata: Metadata = {
   title: "Get in Touch with Us",
   description:
     "Whether you're ready to start a new project, have questions about our services, or just want to learn more about how we can help your business grow, we're here to assist you. Let's discuss how we can collaborate to achieve your digital goals.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   openGraph: {
     title: "Get in Touch with Us",
     description:
       "Whether you're ready to start a new project, have questions about our services, or just want to learn more about how we can help your business grow, we're here to assist you. Let's discuss how we can collaborate to achieve your digital goals.",
-    url: "https://salprodev-2hoy.vercel.app/contact-us",
+    url: "https://salprodev.com/contact-us",
     siteName: "Salpro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/salprodev-contact.png",
+        url: "https://salprodev.com/images/salprodev-contact.png",
         width: 1200,
         height: 630,
         alt: "Get in Touch with Us",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "Whether you're ready to start a new project, have questions about our services, or just want to learn more about how we can help your business grow, we're here to assist you. Let's discuss how we can collaborate to achieve your digital goals.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/salprodev-contact.png",
+        url: "https://salprodev.com/images/salprodev-contact.png",
         width: 1200,
         height: 630,
         alt: "Get in Touch with Us",

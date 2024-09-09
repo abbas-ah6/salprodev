@@ -20,16 +20,16 @@ export const metadata: Metadata = {
   title: "Revolutionary e-Commerce Platform | SalPro DEV",
   description:
     "Discover how our innovative e-commerce platform is transforming online shopping with cutting-edge technology and seamless user experiences.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   openGraph: {
     title: "Revolutionary e-Commerce Platform | SalPro DEV",
     description:
       "Discover how our innovative e-commerce platform is transforming online shopping with cutting-edge technology and seamless user experiences.",
-    url: "https://salprodev-2hoy.vercel.app/blogs/innovative-e-commerce-platform",
+    url: "https://salprodev.com/blogs/innovative-e-commerce-platform",
     siteName: "Salpro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/blog-1.png",
+        url: "https://salprodev.com/images/blog-1.png",
         width: 1200,
         height: 630,
         alt: "Revolutionary e-Commerce Platform",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "Discover how our innovative e-commerce platform is transforming online shopping with cutting-edge technology and seamless user experiences.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/blog-1.png",
+        url: "https://salprodev.com/images/blog-1.png",
         width: 1200,
         height: 630,
         alt: "Revolutionary e-Commerce Platform",

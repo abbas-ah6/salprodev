@@ -12,7 +12,7 @@ const CustomLink: React.FC<ILink> = ({
   url = "#",
 }) => {
   const linkClass = classNames(
-    "relative w-full text-base focus:outline-none leading-[120%] px-[32px] py-[16px] min-w-[216px] flex items-center gap-[10px] justify-center overflow-hidden group",
+    "relative w-full border border-purple-800/25 text-base focus:outline-none leading-[120%] px-[32px] py-[16px] min-w-[216px] flex items-center gap-[10px] justify-center overflow-hidden group",
     {
       "bg-white font-normal text-brand-black group-hover:text-white duration-500":
         type === "primary" && !loading,

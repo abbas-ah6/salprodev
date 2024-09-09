@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Top-Notch Digital Marketing Services | SalPro DEV",
   description:
     "Boost your online presence with SalPro DEV's expert digital marketing services. From SEO to social media, we deliver customized strategies that drive traffic, engagement, and conversions.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   keywords: [
     "Digital Marketing",
     "SEO",
@@ -37,11 +37,11 @@ export const metadata: Metadata = {
     title: "Top-Notch Digital Marketing Services | SalPro DEV",
     description:
       "Boost your online presence with SalPro DEV's expert digital marketing services. From SEO to social media, we deliver customized strategies that drive traffic, engagement, and conversions.",
-    url: "https://salprodev-2hoy.vercel.app/services/digital-marketing",
+    url: "https://salprodev.com/services/digital-marketing",
     siteName: "SalPro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/social-media.png",
+        url: "https://salprodev.com/images/social-media.png",
         width: 1200,
         height: 630,
         alt: "Professional Digital Marketing Services",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       "Boost your online presence with SalPro DEV's expert digital marketing services. From SEO to social media, we deliver customized strategies that drive traffic, engagement, and conversions.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/social-media.png",
+        url: "https://salprodev.com/images/social-media.png",
         width: 1200,
         height: 630,
         alt: "Professional Digital Marketing Services",

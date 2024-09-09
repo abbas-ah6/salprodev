@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: "Building High-Quality Tech Solutions for Community Growth",
   description:
     "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   keywords: [
     "tech solutions",
     "community growth",
@@ -44,11 +44,11 @@ export const metadata: Metadata = {
     title: "Building High-Quality Tech Solutions for Community Growth",
     description:
       "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
-    url: "https://salprodev-2hoy.vercel.app",
+    url: "https://salprodev.com",
     siteName: "Salpro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/salprodev-home.png",
+        url: "https://salprodev.com/images/salprodev-home.png",
         width: 1200,
         height: 630,
         alt: "Building High-Quality Tech Solutions for Community Growth",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
       "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/salprodev-home.png",
+        url: "https://salprodev.com/images/salprodev-home.png",
         width: 1200,
         height: 630,
         alt: "Building High-Quality Tech Solutions for Community Growth",
@@ -263,27 +263,7 @@ const OurBlogsData = {
       name: "Innovative E-commerce Platform",
       shortDescription:
         "We developed a cutting-edge e-commerce platform for a leading retail brand, integrating seamless shopping experiences with advanced analytics. Our solution",
-      blogUrl: "blogs/innovative-e-commerce-platform",
-    },
-    {
-      blogImage: {
-        src: "/images/blog-2.png",
-        alt: "Custom CRM Solution",
-      },
-      name: "Custom CRM Solution",
-      shortDescription:
-        "Our team created a tailored Customer Relationship Management (CRM) system for a growing financial services company. This project focused on enhancing",
-      blogUrl: "#",
-    },
-    {
-      blogImage: {
-        src: "/images/blog-3.png",
-        alt: "Creative Marketing Campaign",
-      },
-      name: "Creative Marketing Campaign",
-      shortDescription:
-        "We partnered with a fashion startup to design and execute a creative marketing campaign that included a brand refresh, engaging social media content, and interactive",
-      blogUrl: "#",
+      blogUrl: "/blogs/innovative-e-commerce-platform",
     },
   ],
 } as IBlogCarousel;

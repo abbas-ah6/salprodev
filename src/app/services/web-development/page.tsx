@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Expert Web Development Services | SalPro DEV",
   description:
     "Unlock the potential of your online presence with SalPro DEV's professional web development services. From responsive websites to complex web applications, we deliver tailored solutions that drive business growth.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   keywords: [
     "Web Development",
     "Website Design",
@@ -36,11 +36,11 @@ export const metadata: Metadata = {
     title: "Expert Web Development Services | SalPro DEV",
     description:
       "Unlock the potential of your online presence with SalPro DEV's professional web development services. From responsive websites to complex web applications, we deliver tailored solutions that drive business growth.",
-    url: "https://salprodev-2hoy.vercel.app/services/web-development",
+    url: "https://salprodev.com/services/web-development",
     siteName: "SalPro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/custom-software-development.png",
+        url: "https://salprodev.com/images/custom-software-development.png",
         width: 1200,
         height: 630,
         alt: "Professional Web Development Services",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       "Unlock the potential of your online presence with SalPro DEV's professional web development services. From responsive websites to complex web applications, we deliver tailored solutions that drive business growth.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/custom-software-development.png",
+        url: "https://salprodev.com/images/custom-software-development.png",
         width: 1200,
         height: 630,
         alt: "Professional Web Development Services",

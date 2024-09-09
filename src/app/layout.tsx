@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Building High-Quality Tech Solutions for Community Growth",
   description:
     "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   keywords: [
     "tech solutions",
     "community growth",
@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     title: "Building High-Quality Tech Solutions for Community Growth",
     description:
       "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
-    url: "https://salprodev-2hoy.vercel.app",
+    url: "https://salprodev.com",
     siteName: "Salpro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/salprodev-home.png",
+        url: "https://salprodev.com/images/salprodev-home.png",
         width: 1200,
         height: 630,
         alt: "Building High-Quality Tech Solutions for Community Growth",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
       "Delivering exceptional tech solutions tailored to drive community growth and engagement with a focus on innovation and excellence.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/salprodev-home.png",
+        url: "https://salprodev.com/images/salprodev-home.png",
         width: 1200,
         height: 630,
         alt: "Building High-Quality Tech Solutions for Community Growth",

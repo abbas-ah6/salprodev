@@ -28,10 +28,9 @@ const FooterWrapper: React.FC = () => {
                     alt="SalPro DEV Logo"
                   />
                 </Link>
-                <p className="text-b16 text-white leading-medium max-w-[420px] mt-[16px] text-center lg:text-left">
-                  We developed a cutting-edge e-commerce platform for a leading
-                  retail brand, integrating seamless shopping experiences with
-                  advanced analytics. Our solution.
+                <p className="text-b16 text-white text-balance leading-medium max-w-[420px] mt-[16px] text-center lg:text-left">
+                  Explore our range of professional services designed to help
+                  you achieve your goals with efficiency and expertise.
                 </p>
               </div>
               <div className="max-md:max-w-full">
@@ -60,16 +59,10 @@ const FooterWrapper: React.FC = () => {
                         Services
                       </a>
                       <a
-                        href="/projects"
+                        href="/blogs"
                         className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
-                        Projects
-                      </a>
-                      <a
-                        href="/team"
-                        className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
-                      >
-                        Team
+                        Blogs
                       </a>
                       <a
                         href="/contact-us"
@@ -85,10 +78,10 @@ const FooterWrapper: React.FC = () => {
                         Services
                       </div>
                       <a
-                        href="/services/custom-software-development"
+                        href="/services/web-development"
                         className="mt-8 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
-                        Custom Software
+                        Web Development
                       </a>
                       <a
                         href="/services/digital-marketing"
@@ -97,28 +90,16 @@ const FooterWrapper: React.FC = () => {
                         Digital Marketing
                       </a>
                       <a
-                        href="/services/uiux-design"
+                        href="/services/branding"
                         className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
-                        UI/UX Design
+                        Branding
                       </a>
                       <a
                         href="/services/app-development"
                         className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
                         Mobile App
-                      </a>
-                      <a
-                        href="/services/e-commerce-solutions"
-                        className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
-                      >
-                        e-Commerce Solutions
-                      </a>
-                      <a
-                        href="/services/cms-development"
-                        className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
-                      >
-                        CMS Development
                       </a>
                     </div>
                   </div>
@@ -128,10 +109,10 @@ const FooterWrapper: React.FC = () => {
                         Contact
                       </div>
                       <a
-                        href="mailto:info@salprodev.com"
+                        href="mailto:salprodevofficial@gmail.com"
                         className="mt-8 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
-                        Drop us an Email
+                        salprodevofficial@gmail.com
                       </a>
                       <a
                         href="tel:+923469564075"
@@ -150,8 +131,7 @@ const FooterWrapper: React.FC = () => {
                         target="_blank"
                         className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
-                        Bara Bandai, Swat, <br />
-                        Khyber Pakhtunkhwah
+                        Swat, Pakistan
                       </a>
                     </div>
                   </div>

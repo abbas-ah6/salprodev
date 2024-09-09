@@ -27,16 +27,16 @@ export const metadata: Metadata = {
   title: "Exceptional Services Tailored to Your Needs",
   description:
     "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   openGraph: {
     title: "Exceptional Services Tailored to Your Needs",
     description:
       "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
-    url: "https://salprodev-2hoy.vercel.app/services",
+    url: "https://salprodev.com/services",
     siteName: "Salpro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
+        url: "https://salprodev.com/images/services-hero.png",
         width: 1200,
         height: 630,
         alt: "Exceptional Services Tailored to Your Needs",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       "Explore our range of professional services designed to help you achieve your goals with efficiency and expertise",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/services-hero.png",
+        url: "https://salprodev.com/images/services-hero.png",
         width: 1200,
         height: 630,
         alt: "Exceptional Services Tailored to Your Needs",

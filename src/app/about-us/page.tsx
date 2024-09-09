@@ -19,16 +19,16 @@ export const metadata: Metadata = {
   title: "Empowering Businesses with Innovative Digital Solutions",
   description:
     "At Salpro DEV, we specialize in crafting innovative software, marketing, and design services that drive success and growth for businesses like yours.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   openGraph: {
     title: "Empowering Businesses with Innovative Digital Solutions",
     description:
       "At Salpro DEV, we specialize in crafting innovative software, marketing, and design services that drive success and growth for businesses like yours.",
-    url: "https://salprodev-2hoy.vercel.app/about-us",
+    url: "https://salprodev.com/about-us",
     siteName: "Salpro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/about-us-banner.png",
+        url: "https://salprodev.com/images/about-us-banner.png",
         width: 1200,
         height: 630,
         alt: "Empowering Businesses with Innovative Digital Solutions",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       "Salpro DEV offers innovative software, marketing, and design services tailored to drive success and growth for businesses of all sizes.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/about-us-banner.png",
+        url: "https://salprodev.com/images/about-us-banner.png",
         width: 1200,
         height: 630,
         alt: "Unlock Your Potential with Our Expert Solutions",

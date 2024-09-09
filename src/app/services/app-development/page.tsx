@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Top-Tier App Development Services | SalPro DEV",
   description:
     "Transform your ideas into powerful mobile applications with SalPro DEV's expert app development services. We specialize in creating innovative, user-centric apps that drive business growth and enhance user engagement.",
-  metadataBase: new URL("https://salprodev-2hoy.vercel.app"),
+  metadataBase: new URL("https://salprodev.com"),
   keywords: [
     "App Development",
     "Mobile App Development",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
     title: "Top-Tier App Development Services | SalPro DEV",
     description:
       "Transform your ideas into powerful mobile applications with SalPro DEV's expert app development services. We specialize in creating innovative, user-centric apps that drive business growth and enhance user engagement.",
-    url: "https://salprodev-2hoy.vercel.app/services/app-development",
+    url: "https://salprodev.com/services/app-development",
     siteName: "SalPro DEV",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/app-development.png",
+        url: "https://salprodev.com/images/app-development.png",
         width: 1200,
         height: 630,
         alt: "App Development Services",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
       "Transform your ideas into powerful mobile applications with SalPro DEV's expert app development services. We specialize in creating innovative, user-centric apps that drive business growth and enhance user engagement.",
     images: [
       {
-        url: "https://salprodev-2hoy.vercel.app/images/app-development.png",
+        url: "https://salprodev.com/images/app-development.png",
         width: 1200,
         height: 630,
         alt: "App Development Services",
