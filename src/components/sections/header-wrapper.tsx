@@ -9,9 +9,11 @@ import CustomLink from "../elements/CustomLink";
 
 const HeaderWrapper: React.FC = () => {
   const pathname = usePathname();
-
   const isLandingPage = pathname.startsWith("/l/");
   const isContact = pathname.startsWith("/book-consultation");
+
+  // State to toggle the dropdown visibility
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const linkClass = (path: string) =>
     `hover:text-brand-orange p-[12px] duration-300 flex justify-center items-center flex-col ${
@@ -33,7 +35,6 @@ const HeaderWrapper: React.FC = () => {
         </Link>
         {!isLandingPage && !isContact ? (
           <nav className="lg:flex hidden gap-14 max-md:flex-wrap max-md:max-w-full">
-            {/* <button onClick={() => toggleMenu()}>CLICK ME</button> */}
             <ul className="flex list-none gap-6 whitespace-nowrap leading-small text-brand-black">
               <li>
                 <Link className={linkClass("/home")} href="/home">
@@ -45,10 +46,58 @@ const HeaderWrapper: React.FC = () => {
                   Company
                 </Link>
               </li>
-              <li>
+              <li
+                className="relative"
+                onMouseEnter={() => setDropdownVisible(true)}
+                onMouseLeave={() => {
+                  setTimeout(() => {
+                    setDropdownVisible(false);
+                  }, 300);
+                }}
+              >
                 <Link className={linkClass("/services")} href="/services">
                   Services
                 </Link>
+                {/* Dropdown menu */}
+                <ul
+                  className={`absolute list-none p-0 appearance-none top-full left-0 w-fit min-w-[200px] bg-white z-50 rounded-lg transition-all duration-500 ease-in-out overflow-hidden ${
+                    isDropdownVisible
+                      ? "max-h-[580px] shadow-lg border-gray-200 border"
+                      : "max-h-0"
+                  }`}
+                  style={{ transitionProperty: "max-height" }}
+                >
+                  <li
+                    onMouseEnter={() => setDropdownVisible(true)}
+                    className="p-4 hover:text-brand-orange duration-300 ease-in-out"
+                  >
+                    <Link href="/services/branding">Branding</Link>
+                  </li>
+                  <li
+                    onMouseEnter={() => setDropdownVisible(true)}
+                    className="p-4 hover:text-brand-orange duration-300 ease-in-out"
+                  >
+                    <Link href="/services/web-development">
+                      Web Development
+                    </Link>
+                  </li>
+                  <li
+                    onMouseEnter={() => setDropdownVisible(true)}
+                    className="p-4 hover:text-brand-orange duration-300 ease-in-out"
+                  >
+                    <Link href="/services/digital-marketing">
+                      Digital Marketing
+                    </Link>
+                  </li>
+                  <li
+                    onMouseEnter={() => setDropdownVisible(true)}
+                    className="p-4 hover:text-brand-orange duration-300 ease-in-out"
+                  >
+                    <Link href="/services/app-development">
+                      Mobile App Development
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link className={linkClass("/blogs")} href="/blogs">

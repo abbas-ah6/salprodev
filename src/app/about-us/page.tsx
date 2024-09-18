@@ -318,7 +318,7 @@ const AboutUs: React.FC = () => {
       <Hero {...heroData} />
       <AboutUsBanner {...aboutUsBannerData} />
       <AboutUsMissionVision {...aboutUsMissionVisionData} />
-      <TeamMemebers {...teamMembersData} />
+      {/* <TeamMemebers {...teamMembersData} /> */}
       <Faqs {...faqsData} />
       <CallToAction />
     </div>

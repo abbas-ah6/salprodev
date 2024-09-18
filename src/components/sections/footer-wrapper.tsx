@@ -115,23 +115,16 @@ const FooterWrapper: React.FC = () => {
                         salprodevofficial@gmail.com
                       </a>
                       <a
-                        href="tel:+923469564075"
+                        href="tel:+923458826673"
                         className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
-                        +92 319 0960036
+                        +92 345 8826673
                       </a>{" "}
                       <a
                         href="tel:+923469564075"
                         className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
                       >
                         +92 346 9564075
-                      </a>
-                      <a
-                        href="https://maps.google.com"
-                        target="_blank"
-                        className="mt-3 max-md:mr-2.5 hover:text-brand-blue  duration-300 ease-in-out cursor-pointer"
-                      >
-                        Swat, Pakistan
                       </a>
                     </div>
                   </div>
@@ -152,38 +145,24 @@ const FooterWrapper: React.FC = () => {
               <div className="flex gap-5 px-1.5 mt-4 max-md:pr-5 w-full justify-center lg:justify-end flex-wrap">
                 <Link
                   target="_blank"
-                  href={"https://www.facebook.com"}
+                  href={"https://www.facebook.com/salprodevofficial"}
                   className="text-white text-b16 leading-small hover:text-brand-blue duration-300 ease-in-out"
                 >
                   Facebook
                 </Link>
                 <Link
                   target="_blank"
-                  href={"https://www.instagram.com"}
+                  href={"https://www.instagram.com/salprodevofficial"}
                   className="text-white text-b16 leading-small hover:text-brand-blue duration-300 ease-in-out"
                 >
                   Instagram
                 </Link>
                 <Link
                   target="_blank"
-                  href={"https://www.linkedin.com"}
+                  href={"https://www.linkedin.com/company/salprodevofficial"}
                   className="text-white text-b16 leading-small hover:text-brand-blue duration-300 ease-in-out"
                 >
                   LinkedIn
-                </Link>
-                <Link
-                  target="_blank"
-                  href={"https://www.twitter.com"}
-                  className="text-white text-b16 leading-small hover:text-brand-blue duration-300 ease-in-out"
-                >
-                  Twitter
-                </Link>
-                <Link
-                  target="_blank"
-                  href={"https://www.whatsapp.com"}
-                  className="text-white text-b16 leading-small hover:text-brand-blue duration-300 ease-in-out"
-                >
-                  WhatsApp
                 </Link>
               </div>
             </div>
